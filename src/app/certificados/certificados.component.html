@@ -1,0 +1,106 @@
+<!--
+		=============================================
+			Inner Banner
+		==============================================
+		-->
+		<div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative" style="background-image: url(assets/images/media/img_34.jpg);">
+			<div class="container position-relative">
+				<div class="row align-items-center">
+
+                    <div class="col-xl-4 col-lg-5 ms-auto">
+                        <p class="text-white text-lg mb-70 lg-mb-40">Descarga aquí tus certificados de nuestros seminarios.</p>
+
+                    </div>
+				</div>
+			</div>
+		</div>
+		<!-- /.inner-banner-one -->
+
+
+
+
+		<!--
+		=====================================================
+			Service Details
+		=====================================================
+		-->
+		<div class="contact-us-section pt-150 lg-pt-80">
+      <div class="container">
+        <div class="position-relative">
+
+
+          <div class="bg-wrapper light-bg mt-80 lg-mt-40">
+            <div class="row">
+              <div class="col-lg-5">
+                <div class="d-flex flex-column flex-lg-column-reverse">
+                  <div class="row">
+                    <div class="col-md-8 col-6 me-auto ms-auto">
+                      <img
+                        src="assets/images/lazy.svg"
+                        data-src="images/assets/ils_07.svg"
+                        alt=""
+                        class="lazy-img me-auto ms-auto"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="title-one text-center text-lg-start md-mt-20 mb-70 md-mb-30"
+                  >
+                    <h2>Descarga tu certificado aquí</h2>
+                  </div>
+                  <!-- /.title-one -->
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="form-style-one ps-xl-5">
+                  <form
+
+                  >
+                    <div class="messages"></div>
+                    <div class="row controls">
+                      <div class="col-12">
+                        <div class="input-group-meta form-group mb-30">
+                          <label for="">Cédula</label>
+                          <input
+                            [(ngModel)]="cedula"
+                            type="text"
+                            placeholder="EJ:11223456789"
+                            name="cedula"
+                            required="required"
+                          />
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="input-group-meta form-group mb-30">
+                          <label for="">Seminario</label>
+                          <select [(ngModel)]="seminario" name="seminario" class="form-select form-select-lg mb-30" aria-label=".form-select-lg example">
+                            <option selected>Selecciona</option>
+                            <option *ngFor="let sem of seminarios" [value]="sem.valor">{{sem.nombre}}</option>
+
+                          </select>
+
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <button type="button" (click)="descargarCertificado()" class="btn-four tran3s w-100 d-block">
+                          Descargar
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- /.form-style-one -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br>
+		<!-- /.service-details -->
+
+
+

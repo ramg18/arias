@@ -1,0 +1,79 @@
+<!--
+		=============================================
+			Inner Banner
+		==============================================
+		-->
+<div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative"
+  style="background-image: url(assets/images/banners/banner3.jpg);">
+  <div class="container position-relative">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="hero-heading d-inline-block position-relative" style="color: white;">Mantente Informado
+          <!-- <img src="assets/images/shape/shape_35.svg" alt=""> -->
+          </h1>
+      </div>
+      <div class="col-xl-4 col-lg-5 ms-auto">
+        <p class="text-white text-lg mb-70 lg-mb-40">Conozca de nuestros expertos a cerca de los temas del mundo financiero</p>
+        <!-- <ul class="style-none d-inline-flex pager">
+          <li><a href="index.html">Home</a></li>
+          <li>/</li>
+          <li>Blog</li>
+        </ul> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.inner-banner-one -->
+
+<!--
+		=====================================================
+			Blog Section Two
+		=====================================================
+		-->
+<div class="blog-section-two position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
+  <div class="container">
+    <div class="position-relative">
+      <div class="row gx-xxl-5">
+        <div class="row">
+          <div class="col-md-6" *ngFor="let post of posts">
+            <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
+              <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+              [ngStyle]="{'background-image': 'url(http://blogarias.test/storage/' + post.image_url  + ')'}">
+                <a (click)="irEntrada(post.id)" class="stretched-link rounded-5 date tran3s">
+                  {{ post.created_at | date:'dd MMM' }}
+                </a>
+              </figure>
+              <div class="post-data">
+                <div class="d-flex justify-content-between align-items-center flex-wrap">
+                  <a (click)="irEntrada(post.id)" class="blog-title">
+                    <h4>{{ post.title }}</h4>
+                  </a>
+                  <a (click)="irEntrada(post.id)"
+                     class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+                    <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+                <div class="post-info">
+                  {{ post.name }}
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination-one mt-20">
+        <ul class="style-none d-flex align-items-center justify-content-center">
+          <li><a disabled="current_page == 1" (click)="lista_retrocede()" ><i class="bi bi-arrow-left"></i></a></li>
+            <li *ngFor="let pagina of total_paginas[posicion_lista]" >
+              <a (click)="cambioPagina(pagina.page)"  [ngClass]="{'active':pagina.page == current_page}">{{pagina.page}}</a>
+            </li>
+
+            <li><a disabled="current_page >= last_page" (click)="lista_avanza()"><i class="bi bi-arrow-right"></i></a></li>
+        </ul>
+      </div>
+      <!-- /.pagination-one -->
+    </div>
+  </div>
+</div>
+<!-- /.blog-section-two -->

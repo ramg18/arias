@@ -1,0 +1,146 @@
+<!--
+		=============================================
+			Inner Banner
+		==============================================
+		-->
+		<div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative" style="background-image: url(assets/images/media/img_32.jpg);">
+			<div class="container position-relative">
+				<div class="row align-items-center">
+
+                    <div class="col-xl-4 col-lg-5 ms-auto">
+                        <p class="text-white text-lg mb-70 lg-mb-40">Ofreciendo soluciones y servicios para abordar un espectro de problemas financieros.</p>
+
+                    </div>
+				</div>
+			</div>
+		</div>
+		<!-- /.inner-banner-one -->
+
+
+
+
+		<!--
+		=====================================================
+			Service Details
+		=====================================================
+		-->
+		<div class="service-details mt-150 lg-mt-80 mb-100 lg-mb-80">
+			<div class="container">
+				<div class="row">
+          <div class="col-xxl-9 col-lg-8 order-lg-last">
+						<div *ngIf="contable" class="details-meta ps-xxl-5 ps-xl-3">
+							<h3>Asuntos Contables</h3>
+							<p>
+                Actuamos en todas las fases del proceso contable de su organización. Contamos con un equipo de profesionales certificados en contabilidad internacional, con experiencia en diferentes sectores de la industria, que contribuyen a responder a las necesidades locales, regionales y globales de cada cliente. Entre nuestros servicios encontrarán:
+              </p>
+							<ul class="style-none list-item pb-20">
+								<li>Procesamiento de toda la información contable.</li>
+								<li>Preparación de los reportes contables y financieros específicos de propósito general o específico, de cada empresa de forma mensual, anual y/o con la periodicidad requerida.</li>
+								<li>Elaboración de documentos electrónicos equivalentes y acuse de facturas emitidas por terceros y reportadas a la DIAN.</li>
+								<li>Aplicación actualizada de normatividad contable local que es basada bajo NIIF (IFRS).</li>
+								<li>Apoyo en el ciclo financiero de tesorería, control de costos, presupuestos.</li>
+								<li>Preparación de Estados Financieros bajo NIIF (IFRS) tanto para accionistas como entidades de control, a nivel individual, separado o consolidado.</li>
+								<li>Emisión de los libros oficiales.</li>
+								<li>Elaboración y presentación de informes / reportes financieros bajo XBRL.</li>
+								<li>Conciliación de cuentas contables.</li>
+								<li>Control de cuentas por pagar, cobrar, facturación, control de activos fijos e inventarios.</li>
+								<li>Reconstrucciones de contabilidad de periodos anteriores.</li>
+								<li>Conciliación de causación de facturas y aplicativos de facturación incluyendo las recibidas por la autoridad tributaria – DIAN.</li>
+								<li>Actuamos como el Contador de su compañía.  CPA certificado y domiciliado en Colombia.</li>
+								<li>Entendimiento modelos de negocios con Activos Virtuales/ Criptoactivos.</li>
+								<li>Asesoría en transacciones específicas propias del negocio.</li>
+							</ul>
+
+						</div>
+						<div *ngIf="juridico" class="details-meta ps-xxl-5 ps-xl-3">
+							<h3>Asuntos Jurídicos</h3>
+							<p>
+                Buscamos generar valor agregado a las empresas a través de la asistencia jurídica en los diferentes asuntos relacionados con el derecho laboral, comercial y administrativo,
+                participando activamente en el desarrollo de los negocioa de nuestros clientes por media del acompañamiento jurídico que ofrecemos y de esta forma fortalecer y brindar seguridad
+                 a sus actividades en todos los temas legales.
+              </p>
+              <ul class="style-none list-item pb-20">
+								<li>Derecho Civil.</li>
+								<li>Derecho Administrativo.</li>
+								<li>Derecho Comercial.</li>
+								<li>Derecho Tributario.</li>
+								<li>Derecho Laboral.</li>
+							</ul>
+
+
+						</div>
+						<div *ngIf="tributario" class="details-meta ps-xxl-5 ps-xl-3">
+							<h3>Asuntos Tributarios</h3>
+							<p>
+                Ofrecemos servicios de:
+              </p>
+							<ul class="style-none list-item pb-20">
+								<li>Asesoría, consultoría y auditoría en impuestos de carácter internacional, nacional y municipal.</li>
+								<li>Elaboración de declaraciones tributarias.</li>
+								<li>Solicitud y Trámites de Devolución de Saldos a Favor por Impuestos, Saldos a Favor por Pagos en Exceso y Pago de lo no Debido.</li>
+								<li>Capacitación Empresarial en Temas Tributarios.</li>
+								<li>Atención de Requerimientos Ordinarios y Especiales.</li>
+								<li>Planeación Tributaria para que nuestros clientes logren optimizar el pago de sus Impuestos.</li>
+								<li>Elaboración y Presentación de la Información Tributaria (Información Exógena).</li>
+
+							</ul>
+
+						</div>
+						<div *ngIf="revisoria" class="details-meta ps-xxl-5 ps-xl-3">
+							<h3>Revisoría Fiscal</h3>
+							<p>
+                La revisoría fiscal brinda un enfoque integral, preventivo y oportuno de los diferentes riesgos a los que se expone cada ente económico.
+              </p>
+							<ul class="style-none list-item pb-20">
+								<li>Conocimiento del negocio y evaluación de controles.</li>
+								<li>Aseguramiento de la información financiera.</li>
+								<li>Análisis de la información financiera de la empresa.</li>
+								<li>Emisión de un concepto técnico e independiente, con recomendaciones orientadas a la mejora de los procedimientos en la gestión financiera.</li>
+								<li>Metodología enfocada en el cumplimiento de los estándares de auditoria, proporcionando la integridad profesional y la ética como principios inherentes a nuestra propuesta de valor.</li>
+								<li>Verificación del cumplimiento de las disposiciones legales y disposiciones estatutarias.</li>
+
+							</ul>
+
+						</div>
+          </div>
+          <div class="col-xxl-3 col-lg-4 order-lg-first">
+            <aside class="md-mt-40">
+                <div class="service-nav-item">
+                    <ul class="style-none">
+                        <li><a (click)="mostrar(1)" style="cursor: pointer;" class="d-flex align-items-center w-100">
+                            <img src="assets/images/lazy.svg" data-src="assets/images/icon/icon_72.svg" alt="" class="lazy-img">
+                            <span>Asuntos Contables</span>
+                        </a></li>
+                        <li><a (click)="mostrar(2)" style="cursor: pointer;" class="d-flex align-items-center w-100">
+                            <img src="assets/images/lazy.svg" data-src="assets/images/icon/icon_73.svg" alt="" class="lazy-img">
+                            <span>Asuntos Jurídicos</span>
+                        </a></li>
+                        <li><a (click)="mostrar(3)" style="cursor: pointer;" class="d-flex align-items-center w-100">
+                            <img src="assets/images/lazy.svg" data-src="assets/images/icon/icon_74.svg" alt="" class="lazy-img">
+                            <span>Asuntos Tributarios</span>
+                        </a></li>
+                        <li><a (click)="mostrar(4)" style="cursor: pointer;" class="d-flex align-items-center w-100">
+                            <img src="assets/images/lazy.svg" data-src="assets/images/icon/icon_75.svg" alt="" class="lazy-img">
+                            <span>Revisoría Fiscal</span>
+                        </a></li>
+
+                    </ul>
+                </div>
+              <div class="contact-portfolio text-center mt-40 lg-mt-20">
+                <h3 class="mb-20">Descarga aquí nuestro portafolio</h3>
+                <a href="https://ariasyasociados.co/assets/portafolio/portafolio.pdf" target="_blank" class="tran3s fw-500">Hablemos</a>
+              </div>
+              <div class="contact-banner text-center mt-40 lg-mt-20">
+                <h3 class="mb-20">Tienes Preguntas?</h3>
+                <a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios." target="_blank" class="tran3s fw-500">Hablemos</a>
+              </div>
+  <!-- /.contact-banner -->
+            </aside>
+          </div>
+        </div>
+			</div>
+		</div>
+		<!-- /.service-details -->
+
+
+

@@ -1,0 +1,59 @@
+<!--
+		=============================================
+			Inner Banner
+		==============================================
+		-->
+    <div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative"
+    style="background-image: url(assets/images/banners/blog.jpg);">
+    <div class="container position-relative">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+
+        </div>
+        <div class="col-xl-4 col-lg-5 ms-auto">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.inner-banner-one -->
+
+
+
+  <!--
+      =====================================================
+        Blog Details
+      =====================================================
+      -->
+  <div class="blog-details position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
+    <div class="container">
+      <div class="row gx-xl-5">
+        <div class="col-lg-10">
+          <article class="blog-meta-two style-two">
+            <figure class="post-img position-relative d-flex align-items-end m0"
+            [ngStyle]="{'background-image': 'url(http://blogarias.test/storage/' + entrada.image_url  + ')'}">
+              <div class="date">{{ entrada.created_at | date:'dd MMM' }}</div>
+            </figure>
+            <div class="post-data">
+              <div class="post-info">{{ entrada.user.name  }}</div>
+              <div class="blog-title">
+                <h4>{{entrada.title}}</h4>
+              </div>
+              <div class="post-details-meta" [innerHTML]="entrada.body">
+
+
+
+              </div>
+              <!-- /.post-details-meta -->
+
+            </div>
+            <!-- /.post-data -->
+          </article>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- /.blog-details -->

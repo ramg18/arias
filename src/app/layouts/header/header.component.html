@@ -1,0 +1,117 @@
+<header
+  class="theme-main-menu menu-overlay menu-style-one white-vr sticky-menu"
+>
+  <div class="inner-content position-relative">
+    <div class="top-header">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="logo order-lg-0">
+          <a  [routerLink]="['/home']" class="d-flex align-items-center">
+            <img
+              style="width: 40%"
+              src="assets/images/logo/logo-arias.svg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- logo -->
+        <div class="right-widget ms-auto ms-lg-0 me-3 me-lg-0 order-lg-3">
+          <ul class="d-flex align-items-center style-none">
+            <li class="d-none d-md-block">
+              <a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios." target="_blank" class="btn-one tran3s">Hablemos!</a>
+            </li>
+          </ul>
+
+        </div>
+
+        <!--/.right-widget-->
+        <nav class="navbar navbar-expand-lg p0 order-lg-2">
+          <button
+            class="navbar-toggler d-block d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav align-items-lg-center">
+              <li class="d-block d-lg-none">
+                <div class="logo">
+                  <a  [routerLink]="['/home']" class="d-block">
+                    <!-- <img style="width: 45%;" src="assets/images/logo/logo-arias.svg" alt=""> -->
+                  </a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link "
+
+                  [routerLink]="['/home']"
+
+                  >Inicio
+                </a>
+
+              </li>
+              <li class="nav-item dropdown mega-dropdown-sm">
+                <a
+                  class="nav-link "
+
+                  [routerLink]="['/servicios']"
+
+                  >Servicios
+                </a>
+
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a
+                  class="nav-link "
+                  href="#clientes"
+                  >Clientes
+                </a>
+
+              </li> -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link "
+
+                  [routerLink]="['/certificados']"
+                  role="button"
+
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                  >Certificados
+                </a>
+
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link "
+
+                  [routerLink]="['/blog']"
+
+                  >Blog
+                </a>
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  [routerLink]="['/contacto']"  role="button"
+                  >Contáctanos</a
+                >
+              </li>
+              <li class="d-md-none ps-2 pe-2">
+                <a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios." target="_blank" class="btn-one w-100 mt-15 tran3s"
+                  >Hablemos!</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!--/.top-header-->
+  </div>
+  <!-- /.inner-content -->
+</header>
