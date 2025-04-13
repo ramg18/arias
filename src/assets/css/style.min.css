@@ -244,8 +244,8 @@ hr {
     border-color:#000000
 }
 .btn-three {
-    font-size:18px;
-    font-weight:700;
+    font-size:24px;
+    font-weight:800;
     color:#000
 }
 .btn-three img {
@@ -6532,7 +6532,9 @@ iframe {
 }
 .blog-details .post-details-meta p {
     line-height:1.8em;
-    margin-bottom:30px
+    margin-bottom:30px;
+    text-align: justify;
+
 }
 .blog-details .post-details-meta .quote-wrapper {
     text-align:center;
@@ -6676,7 +6678,7 @@ iframe {
     text-transform:uppercase;
     letter-spacing:0px;
     text-align:center;
-    width:60px;
+    width:100px;
     line-height:25px;
     background:#000000;
     border-radius:3px

@@ -1,0 +1,36 @@
+.blog-keyword {
+  background-color: #ffe32a; /* Fondo claro para el contenedor */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave para resaltar el contenedor */
+  max-width: 400px; /* Controlar el ancho del contenedor */
+  margin: auto; /* Centrado */
+}
+
+.sidebar-title {
+  text-align: center; /* Título centrado */
+  color: #333; /* Color del texto oscuro para mejor contraste */
+  margin-bottom: 15px; /* Espacio después del título */
+}
+
+.indicator-list {
+  list-style-type: none; /* No bullets */
+  padding: 0; /* No padding */
+  margin: 0; /* No margin */
+  display: flex; /* Flexbox para alineación */
+  flex-direction: column; /* Elementos en columna */
+}
+
+.indicator-item {
+  font-size: 16px; /* Tamaño de fuente adecuado */
+  color: #666; /* Color de texto */
+  margin-bottom: 10px; /* Espacio entre elementos */
+}
+
+.indicator-item span {
+  font-weight: bold; /* Negrita para la etiqueta de la moneda */
+}
+
+.indicator-item:last-child {
+  margin-bottom: 0; /* No margin for the last item */
+}

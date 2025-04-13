@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogservicesService } from '../services/blogservices.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detalle-blog',
@@ -12,10 +12,11 @@ export class DetalleBlogComponent implements OnInit {
   identrada:any;
   entrada:any;
 
-  constructor( private router: Router, private BlogSvc:BlogservicesService ){
-    const navigation = this.router.getCurrentNavigation();
-    this.identrada = navigation?.id;
-    console.log(navigation);
+  constructor( private router: ActivatedRoute, private BlogSvc:BlogservicesService ){
+    this.router.params.subscribe(params => {
+      this.identrada = params['id'];
+    });
+    console.log(this.identrada);
   }
 
   ngOnInit(): void {

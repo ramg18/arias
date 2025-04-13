@@ -3,57 +3,84 @@
 			Inner Banner
 		==============================================
 		-->
-    <div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative"
-    style="background-image: url(assets/images/banners/blog.jpg);">
-    <div class="container position-relative">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
+<div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative"
+  style="background-image: url(assets/images/banners/blog.jpg);">
+  <div class="container position-relative">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
 
-        </div>
-        <div class="col-xl-4 col-lg-5 ms-auto">
-
-        </div>
       </div>
+      <div class="col-xl-4 col-lg-5 ms-auto">
+        <p class="text-white text-lg mb-70 lg-mb-40">Conozca de nuestros expertos a cerca de los temas del mundo financiero</p>
+
+    </div>
     </div>
   </div>
-  <!-- /.inner-banner-one -->
+</div>
+<!-- /.inner-banner-one -->
 
 
 
-  <!--
+<!--
       =====================================================
         Blog Details
       =====================================================
       -->
-  <div class="blog-details position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
-    <div class="container">
-      <div class="row gx-xl-5">
-        <div class="col-lg-10">
-          <article class="blog-meta-two style-two">
-            <figure class="post-img position-relative d-flex align-items-end m0"
-            [ngStyle]="{'background-image': 'url(http://blogarias.test/storage/' + entrada.image_url  + ')'}">
-              <div class="date">{{ entrada.created_at | date:'dd MMM' }}</div>
-            </figure>
-            <div class="post-data">
-              <div class="post-info">{{ entrada.user.name  }}</div>
-              <div class="blog-title">
-                <h4>{{entrada.title}}</h4>
-              </div>
-              <div class="post-details-meta" [innerHTML]="entrada.body">
-
-
-
-              </div>
-              <!-- /.post-details-meta -->
-
+<div class="blog-details position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
+  <div class="container">
+    <div class="row gx-xl-6">
+      <div class="col-lg-8">
+        <article class="blog-meta-two style-two">
+          <!-- <figure class="post-img position-relative d-flex align-items-end m0">
+            <div class="date">{{ entrada.created_at | date:'dd MMM yyyy' }}</div>
+          </figure> -->
+          <div class="post-data">
+            <!-- <div class="post-info">{{ entrada.user.name }}</div> -->
+            <div class="blog-title">
+              <h4>{{entrada.title}}</h4>
             </div>
-            <!-- /.post-data -->
-          </article>
+            <div class="post-details-meta" [innerHTML]="entrada.body">
+            </div>
+            <!-- /.post-details-meta -->
 
+          </div>
+          <!-- /.post-data -->
+        </article>
+
+        <div class="blog-comment-area grey-bg">
+
+          <div class="comment d-flex">
+            <img src="assets/images/team/a.png" data-src="assets/team/a.png" alt=""
+              class="lazy-img user-avatar rounded-circle">
+            <div class="comment-text">
+              <div class="d-md-flex align-items-center justify-content-between">
+                <div class="name fw-500">{{entrada.user.name}}</div>
+                <div class="date">{{ entrada.created_at | date:'dd MMM yyyy' }}</div>
+              </div>
+
+              <a href="#" style="width: 100px;" class="reply-btn fw-500 tran3s">CEO Arias & Asociados</a>
+            </div> <!-- /.comment-text -->
+          </div> <!-- /.comment -->
         </div>
 
-
       </div>
+      <div class="col-lg-4 col-md-8">
+        <div class="blog-sidebar md-mt-80 ps-xxl-4">
+
+          <!-- /.blog-keyword -->
+          <div class="contact-banner text-center mt-40 lg-mt-20">
+            <h3 class="mb-20">Tienes Preguntas?</h3>
+            <a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios." target="_blank" class="tran3s fw-500">Hablemos</a>
+          </div>
+          <br><br>
+          <app-indicadores-economicos></app-indicadores-economicos>
+          <!-- /.contact-banner -->
+        </div>
+        <!-- /.blog-sidebar -->
+      </div>
+
     </div>
   </div>
-  <!-- /.blog-details -->
+</div>
+
+<!-- /.blog-details -->

@@ -35,14 +35,14 @@
     <div class="position-relative">
       <div class="row gx-xxl-5">
         <div class="row">
-          <div class="col-md-6" *ngFor="let post of posts">
+          <div class="col-md-3" *ngFor="let post of posts">
             <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
-              <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
-              [ngStyle]="{'background-image': 'url(http://blogarias.test/storage/' + post.image_url  + ')'}">
+              <!-- <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+              [ngStyle]="{'background-image': 'url(https://blog.ariasyasociados.co/storage/' + post.image_url  + ')'}">
                 <a (click)="irEntrada(post.id)" class="stretched-link rounded-5 date tran3s">
-                  {{ post.created_at | date:'dd MMM' }}
+                  {{ post.created_at | date:'dd MMM yyyy' }}
                 </a>
-              </figure>
+              </figure> -->
               <div class="post-data">
                 <div class="d-flex justify-content-between align-items-center flex-wrap">
                   <a (click)="irEntrada(post.id)" class="blog-title">
@@ -52,26 +52,38 @@
                      class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
                     <i class="bi bi-arrow-up-right"></i>
                   </a>
+                  <p style="text-align: justify;" [innerHTML]="post.body"></p>
                 </div>
                 <div class="post-info">
-                  {{ post.name }}
+                  <span class="fw-500 text-dark">{{post.user.name}}</span> {{ post.created_at | date:'dd MMM yyyy' }}
                 </div>
               </div>
+
             </article>
           </div>
         </div>
       </div>
 
-      <div class="pagination-one mt-20">
+      <div class="pagination-one mt-20" *ngIf="total_paginas > 0">
         <ul class="style-none d-flex align-items-center justify-content-center">
-          <li><a disabled="current_page == 1" (click)="lista_retrocede()" ><i class="bi bi-arrow-left"></i></a></li>
-            <li *ngFor="let pagina of total_paginas[posicion_lista]" >
-              <a (click)="cambioPagina(pagina.page)"  [ngClass]="{'active':pagina.page == current_page}">{{pagina.page}}</a>
+            <li>
+                <a href="#" (click)="goToPage(1, $event)" [class.disabled]="current_page === 1">1</a>
             </li>
-
-            <li><a disabled="current_page >= last_page" (click)="lista_avanza()"><i class="bi bi-arrow-right"></i></a></li>
+            <li *ngIf="current_page > 3">
+                <span>...</span>
+            </li>
+            <li *ngFor="let page of getMiddlePages()">
+                <a href="#" (click)="goToPage(page, $event)" [class.active]="current_page === page">{{ page }}</a>
+            </li>
+            <li *ngIf="current_page < total_paginas - 2">
+                <span>...</span>
+            </li>
+            <li *ngIf="total_paginas > 1">
+                <a href="#" (click)="goToPage(total_paginas, $event)" [class.disabled]="current_page === total_paginas">Última</a>
+            </li>
         </ul>
-      </div>
+    </div>
+
       <!-- /.pagination-one -->
     </div>
   </div>

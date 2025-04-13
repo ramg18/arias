@@ -20,7 +20,7 @@ const routes: Routes = [
   {path: 'servicios', component: ServiciosComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'entrada', component: EntradaComponent},
-  {path: 'blog-details', component: DetalleBlogComponent},
+  {path: 'blog-details/:id', component: DetalleBlogComponent},
 ];
 
 @NgModule({

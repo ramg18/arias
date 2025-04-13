@@ -16,6 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RutasPipe } from './pipes/rutas.pipe';
 import { DetalleBlogComponent } from './detalle-blog/detalle-blog.component';
+import { IndicadoresEconomicosComponent } from './components/indicadores-economicos/indicadores-economicos.component';
+import { IndicadoresService } from './services/indicadores.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { DetalleBlogComponent } from './detalle-blog/detalle-blog.component';
     EntradaComponent,
     ServiciosComponent,
     RutasPipe,
-    DetalleBlogComponent
+    DetalleBlogComponent,
+    IndicadoresEconomicosComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,7 @@ import { DetalleBlogComponent } from './detalle-blog/detalle-blog.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [IndicadoresService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

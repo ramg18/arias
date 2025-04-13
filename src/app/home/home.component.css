@@ -1,0 +1,38 @@
+a {
+  cursor: pointer;
+}
+/* Estilos para el contenedor de la burbuja */
+.chat-bubble {
+  position: fixed;
+  bottom: 60px;
+  left: 20px;
+  width: 90px;
+  height: 90px;
+  background-color: #ffe32a;  /* Azul por defecto, cambia a lo que prefieras */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Estilos para el contenedor del chat */
+.chat-container {
+  position: fixed;
+  bottom: 150px;
+  left: 80px;
+  width: 300px;
+  max-height: 400px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+  display: none; /* Oculto por defecto */
+  z-index: 1000;
+}
+
+/* Estilo para mostrar el chat */
+.show-chat {
+  display: block;
+}

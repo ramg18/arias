@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogservicesService } from '../services/blogservices.service';
+import { Router } from '@angular/router';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 declare var $: any;
 
 @Component({
@@ -11,12 +13,10 @@ export class HomeComponent implements OnInit {
   posts: any[] = [];
   links: any[] = [];
   current_page: number = 1;
-  last_page = 0;
-  total_paginas: any = [];
-  posicion_lista: any = 0;
-  totalPosts: number = 0;
+  showChat = false;
 
-  constructor(private BlogSvc:BlogservicesService){}
+
+  constructor(private BlogSvc:BlogservicesService, public route: Router, private sanitizer: DomSanitizer){}
 
   ngOnInit(): void {
     this.getPosts(this.current_page);
@@ -239,36 +239,41 @@ export class HomeComponent implements OnInit {
   getPosts(pagina: number) {
     this.BlogSvc.listEntradas(pagina).subscribe((response: any) => {
       console.log(response);
+      this.posts = response.data.map((post: any) => ({
+        ...post, // Copia todas las propiedades existentes del post
+        body: this.truncateAndSanitizeHtml(post.body, 200) // Solo actualiza 'body'
+      }));
+      // this.posts = response.data;  // Posts en la página actual
 
-      this.posts = response.data;  // Posts en la página actual
-      this.current_page = response.current_page;
-      this.last_page = response.last_page;
-      let page = this.paginacion(this.last_page);
-      this.total_paginas = page;
 
     });
   }
 
-  paginacion(last: number){
-    const total_paginas: any[] = [];
-    const paginasPorGrupo = 10;
-    let grupoActual: any[] = [];
+  truncateAndSanitizeHtml(html: string, limit: number): SafeHtml {
 
-    for (let i = 1; i <= last; i++) {
-      grupoActual.push({ page: i });
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const textContent = doc.body.textContent || '';
 
-      if (i % paginasPorGrupo === 0 || i === last) {
-        total_paginas.push(grupoActual);
-        grupoActual = [];
-      }
+    if (textContent.length > limit) {
+      const truncatedText = textContent.substr(0, limit) + '...';
+      console.log(truncatedText);
+
+      return this.sanitizer.bypassSecurityTrustHtml(truncatedText);
     }
 
-    // Elimina los grupos vacíos al final (si los hay)
-    while (total_paginas.length > 0 && total_paginas[total_paginas.length - 1].length === 0) {
-      total_paginas.pop();
-    }
+    return this.sanitizer.bypassSecurityTrustHtml(html);
+  }
 
-    return total_paginas;
-	}
+
+  irEntrada(identrada: string){
+    console.log(identrada);
+
+    this.route.navigate(['/blog-details/',identrada]);
+  }
+
+  toggleChat() {
+    this.showChat = !this.showChat;
+  }
 
 }

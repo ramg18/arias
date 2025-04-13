@@ -1,0 +1,12 @@
+<div *ngIf="!indicadores">
+  <p>Cargando indicadores...</p>
+</div>
+<div *ngIf="indicadores" class="blog-keyword mt-60 lg-mt-40">
+  <h5 class="sidebar-title">Apertura indicadores económicos</h5>
+  <ul class="style-none d-flex flex-wrap indicator-list">
+    <li class="indicator-item"><span>Dólar: </span>{{ indicadores.dolar | currency:'USD' }}</li>
+    <li class="indicator-item"><span><strong>Euro: </strong> </span>{{ indicadores.euro | currency:'EUR' }}</li>
+    <li class="indicator-item"><span><strong>Yen: </strong> </span>{{ indicadores.yen | currency:'JPY' }}</li>
+    <li class="indicator-item"><span><strong>Libra Esterlina: </strong> </span>{{ indicadores.libraEsterlina | currency:'GBP' }}</li>
+  </ul>
+</div>
