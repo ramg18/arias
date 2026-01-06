@@ -1,23 +1,18 @@
-<header
-  class="theme-main-menu menu-overlay menu-style-one white-vr sticky-menu"
->
+<header class="theme-main-menu menu-overlay menu-style-one white-vr sticky-menu">
   <div class="inner-content position-relative">
     <div class="top-header">
       <div class="d-flex align-items-center justify-content-between">
         <div class="logo order-lg-0">
-          <a  [routerLink]="['/home']" class="d-flex align-items-center">
-            <img
-              style="width: 40%"
-              src="assets/images/logo/logo-arias.svg"
-              alt=""
-            />
+          <a [routerLink]="['/home']" class="d-flex align-items-center">
+            <img style="width: 40%" src="assets/images/logo/logo-arias.svg" alt="" />
           </a>
         </div>
         <!-- logo -->
         <div class="right-widget ms-auto ms-lg-0 me-3 me-lg-0 order-lg-3">
           <ul class="d-flex align-items-center style-none">
             <li class="d-none d-md-block">
-              <a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios." target="_blank" class="btn-one tran3s">Hablemos!</a>
+              <a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios." target="_blank"
+                class="btn-one tran3s">Hablemos!</a>
             </li>
           </ul>
 
@@ -25,46 +20,90 @@
 
         <!--/.right-widget-->
         <nav class="navbar navbar-expand-lg p0 order-lg-2">
-          <button
-            class="navbar-toggler d-block d-lg-none"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav align-items-lg-center">
               <li class="d-block d-lg-none">
                 <div class="logo">
-                  <a  [routerLink]="['/home']" class="d-block">
-                    <!-- <img style="width: 45%;" src="assets/images/logo/logo-arias.svg" alt=""> -->
+                  <a [routerLink]="['/home']" class="d-block">
+                    <img style="width: 45%;" src="assets/images/logo/logo-arias.svg" alt="">
                   </a>
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a
-                  class="nav-link "
-
-                  [routerLink]="['/home']"
-
-                  >Inicio
+                <a class="nav-link " [routerLink]="['/home']">Inicio
                 </a>
 
               </li>
-              <li class="nav-item dropdown mega-dropdown-sm">
-                <a
-                  class="nav-link "
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside" aria-expanded="false">Servicios</a>
 
-                  [routerLink]="['/servicios']"
-
-                  >Servicios
-                </a>
-
+                <div class="dropdown-menu mega-menu"> <!-- Cambiar <ul> por <div> -->
+                  <div class="row gx-1">
+                    <div class="col-lg-4">
+                      <div class="menu-column">
+                        <div class="style-none mega-dropdown-list"> <!-- Cambiar <ul> por <div> -->
+                          <a class="dropdown-item" [routerLink]="['/servicios-contables']">
+                            Servicios Contables
+                          </a>
+                          <a class="dropdown-item" [routerLink]="['/servicios-juridicos']">
+                            Servicios Jurídicos
+                          </a>
+                          <a class="dropdown-item" [routerLink]="['/servicios-tributarios']">
+                            Servicios Tributarios
+                          </a>
+                          <a class="dropdown-item" [routerLink]="['/revisoria-fiscal']">
+                            Revisoria Fiscal
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
+
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside" aria-expanded="false">Servicios
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="row gx-1">
+                    <div class="col-lg-4">
+                      <div class="menu-column">
+                        <ul class="style-none mega-dropdown-list">
+                          <li class="nav-item dropdown mega-dropdown-sm">
+                            <a class="nav-link " [routerLink]="['/servicios-contables']">Servicios Contables
+                            </a>
+
+                          </li>
+                          <li class="nav-item dropdown mega-dropdown-sm">
+                            <a class="nav-link " [routerLink]="['/servicios-juridicos']">Servicios Jurídicos
+                            </a>
+
+                          </li>
+                          <li class="nav-item dropdown mega-dropdown-sm">
+                            <a class="nav-link " [routerLink]="['/servicios-tributarios']">Servicios Tributarios
+                            </a>
+
+                          </li>
+                          <li class="nav-item dropdown mega-dropdown-sm">
+                            <a class="nav-link " [routerLink]="['/revisoria-fiscal']">Revisoria Fiscal
+                            </a>
+
+                          </li>
+
+                        </ul>
+                      </div> 
+                    </div>
+
+                  </li>
+                </ul>
+              </li> -->
+
               <!-- <li class="nav-item dropdown">
                 <a
                   class="nav-link "
@@ -74,37 +113,22 @@
 
               </li> -->
               <li class="nav-item dropdown">
-                <a
-                  class="nav-link "
-
-                  [routerLink]="['/certificados']"
-                  role="button"
-
-                  data-bs-auto-close="outside"
-                  aria-expanded="false"
-                  >Certificados
+                <a class="nav-link " [routerLink]="['/certificados']" role="button" data-bs-auto-close="outside"
+                  aria-expanded="false">Certificados
                 </a>
 
               </li>
               <li class="nav-item dropdown">
-                <a
-                  class="nav-link "
-
-                  [routerLink]="['/blog']"
-
-                  >Blog
+                <a class="nav-link " [routerLink]="['/blog']">Blog
                 </a>
 
               </li>
               <li class="nav-item">
-                <a class="nav-link"  [routerLink]="['/contacto']"  role="button"
-                  >Contáctanos</a
-                >
+                <a class="nav-link" [routerLink]="['/contacto']" role="button">Contáctanos</a>
               </li>
               <li class="d-md-none ps-2 pe-2">
-                <a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios." target="_blank" class="btn-one w-100 mt-15 tran3s"
-                  >Hablemos!</a
-                >
+                <a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios." target="_blank"
+                  class="btn-one w-100 mt-15 tran3s">Hablemos!</a>
               </li>
             </ul>
           </div>

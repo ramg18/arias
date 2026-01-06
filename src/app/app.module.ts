@@ -18,6 +18,10 @@ import { RutasPipe } from './pipes/rutas.pipe';
 import { DetalleBlogComponent } from './detalle-blog/detalle-blog.component';
 import { IndicadoresEconomicosComponent } from './components/indicadores-economicos/indicadores-economicos.component';
 import { IndicadoresService } from './services/indicadores.service';
+import { AsutoTributarioComponent } from './asuto-tributario/asuto-tributario.component';
+import { AsutoJuridicoComponent } from './asuto-juridico/asuto-juridico.component';
+import { AsutoContableComponent } from './asuto-contable/asuto-contable.component';
+import { RevisoriaFiscalComponent } from './revisoria-fiscal/revisoria-fiscal.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { IndicadoresService } from './services/indicadores.service';
     ServiciosComponent,
     RutasPipe,
     DetalleBlogComponent,
-    IndicadoresEconomicosComponent
+    IndicadoresEconomicosComponent,
+    AsutoTributarioComponent,
+    AsutoJuridicoComponent,
+    AsutoContableComponent,
+    RevisoriaFiscalComponent
   ],
   imports: [
     BrowserModule,

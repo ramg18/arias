@@ -16,7 +16,7 @@ export class DetalleBlogComponent implements OnInit {
     this.router.params.subscribe(params => {
       this.identrada = params['id'];
     });
-    console.log(this.identrada);
+    
   }
 
   ngOnInit(): void {
@@ -28,7 +28,7 @@ export class DetalleBlogComponent implements OnInit {
     this.BlogSvc.detalleEntrada(this.identrada).subscribe(
       (res:any)=>{
         this.entrada = res;
-        console.log(res);
+        
 
       }
     );

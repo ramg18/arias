@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ServiciosComponent {
 
-  contable = true;
+  quienessomos = true;
+  contable = false;
   tributario = false;
   revisoria = false;
   juridico = false;
@@ -15,25 +16,36 @@ export class ServiciosComponent {
 mostrar(numero: any){
   switch (numero) {
     case 1:
-      this.contable = true;
+      this.quienessomos = true;
+      this.contable = false;
       this.tributario = false;
       this.revisoria = false;
       this.juridico = false;
 
       break;
     case 2:
+      this.quienessomos = false;
+      this.contable = true;
+      this.tributario = false;
+      this.revisoria = false;
+      this.juridico = false;
+      break;
+    case 3:
+      this.quienessomos = false;
       this.contable = false;
       this.tributario = false;
       this.revisoria = false;
       this.juridico = true;
       break;
-    case 3:
+    case 4:
+      this.quienessomos = false;
       this.contable = false;
       this.tributario = true;
       this.revisoria = false;
       this.juridico = false;
       break;
-    case 4:
+    case 5:
+      this.quienessomos = false;
       this.contable = false;
       this.tributario = false;
       this.revisoria = true;

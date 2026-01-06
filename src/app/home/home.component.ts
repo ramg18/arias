@@ -238,7 +238,7 @@ export class HomeComponent implements OnInit {
 
   getPosts(pagina: number) {
     this.BlogSvc.listEntradas(pagina).subscribe((response: any) => {
-      console.log(response);
+      
       this.posts = response.data.map((post: any) => ({
         ...post, // Copia todas las propiedades existentes del post
         body: this.truncateAndSanitizeHtml(post.body, 200) // Solo actualiza 'body'
@@ -257,7 +257,7 @@ export class HomeComponent implements OnInit {
 
     if (textContent.length > limit) {
       const truncatedText = textContent.substr(0, limit) + '...';
-      console.log(truncatedText);
+      
 
       return this.sanitizer.bypassSecurityTrustHtml(truncatedText);
     }
@@ -267,7 +267,7 @@ export class HomeComponent implements OnInit {
 
 
   irEntrada(identrada: string){
-    console.log(identrada);
+    
 
     this.route.navigate(['/blog-details/',identrada]);
   }

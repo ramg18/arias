@@ -1,31 +1,25 @@
-<!--
-		=============================================
-			Inner Banner
-		==============================================
-		-->
-<div
-  class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative"
-  style="background-image: url(assets/images/media/img_01.jpg)"
->
+<div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative"
+  style="background-image: url(assets/images/media/img_01.jpg)">
   <div class="container position-relative">
     <div class="row align-items-center">
-      <div class="col-lg-7">
+      <div class="col-lg-9 iframe-wrapper">
         <h3 class="hero-heading text-white d-inline-block position-relative">
-          Contáctanos para inquietudes
+          ¿Como lo hacemos?
           <img src="assets/images/shape/shape_10.svg" alt="" />
         </h3>
+        <a href="https://youtu.be/ybIj9gYqJ08?si=Np8INVIQbX43Dt3e" class="btn-two icon-link fancybox wow fadeInUp"
+          data-fancybox data-width="640" data-height="360" data-wow-delay="0.2s">
+          <span>Ver video</span>
+          <img src="assets/images/icon/icon_29.svg" data-src="images/icon/icon_29.svg" alt=""
+            class="lazy-img icon ms-2 color" />
+        </a>
+
       </div>
 
     </div>
   </div>
 </div>
-<!-- /.inner-banner-one -->
 
-<!--
-		=============================================
-			Contact Us
-		==============================================
-		-->
 <div class="contact-us-section pt-150 lg-pt-80">
   <div class="container">
     <div class="position-relative">
@@ -34,55 +28,34 @@
           <div class="row">
             <div class="col-md-4">
               <div class="address-block-one text-center mb-40 wow fadeInUp">
-                <div
-                  class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"
-                >
-                  <img
-                    src="assets/images/icon/icon_90.svg"
-                    data-src="assets/images/icon/icon_90.svg"
-                    alt=""
-                    class="lazy-img"
-                  />
+                <div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
+                  <img src="assets/images/icon/icon_90.svg" data-src="assets/images/icon/icon_90.svg" alt=""
+                    class="lazy-img" />
                 </div>
                 <h5 class="title">Dirección</h5>
                 <p class="call text-lg fw-500">CALLE 28 22 B 24 <br />Ciudad Jardín</p>
               </div>
-              <!-- /.address-block-one -->
+
             </div>
             <div class="col-md-4">
               <div class="address-block-one text-center mb-40 wow fadeInUp">
-                <div
-                  class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"
-                >
-                  <img
-                    src="assets/images/icon/icon_91.svg"
-                    data-src="assets/images/icon/icon_91.svg"
-                    alt=""
-                    class="lazy-img"
-                  />
+                <div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
+                  <img src="assets/images/icon/icon_91.svg" data-src="assets/images/icon/icon_91.svg" alt=""
+                    class="lazy-img" />
                 </div>
-                <h5 class="title">Teléfono</h5>
+                <h5 class="title">Teléfonos</h5>
                 <p>
-                  Llama ahora <br /><a
-                    href="tel:+573113094098"
-                    class="call text-lg fw-500"
-                    >311-309-4098</a
-                  >
+                  Llama ahora <br /><a href="tel:+573113094098" class="call text-lg fw-500">+57-311-309-4098 /
+                    605-278-7593</a>
                 </p>
               </div>
-              <!-- /.address-block-one -->
+
             </div>
             <div class="col-md-4">
               <div class="address-block-one text-center mb-40 wow fadeInUp">
-                <div
-                  class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"
-                >
-                  <img
-                    src="assets/images/icon/icon_92.svg"
-                    data-src="assets/images/icon/icon_92.svg"
-                    alt=""
-                    class="lazy-img"
-                  />
+                <div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
+                  <img src="assets/images/icon/icon_92.svg" data-src="assets/images/icon/icon_92.svg" alt=""
+                    class="lazy-img" />
                 </div>
                 <h5 class="title">Horarios De Atención</h5>
                 <p class="call text-lg fw-500">
@@ -90,14 +63,113 @@
                   8:00 AM - 06:00 PM
                 </p>
               </div>
-              <!-- /.address-block-one -->
+
             </div>
           </div>
         </div>
       </div>
+      <div class="bg-wrapper light-bg mt-80 lg-mt-40 mb-40">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="d-flex flex-column flex-lg-column-reverse">
+              <div class="row">
+                <div class="col-md-8 col-6 me-auto ms-auto"><img src="images/lazy.svg"
+                    data-src="images/assets/ils_07.svg" alt="" class="lazy-img me-auto ms-auto"></div>
+              </div>
+              <div class="title-one text-center text-lg-start md-mt-20 mb-70 md-mb-30">
+                <h2>¿Tienes alguna pregunta? Contáctanos.</h2>
+              </div>
 
+            </div>
+          </div>
+          <div class="col-lg-7">
+          <div class="form-style-one ps-xl-5">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+              <div class="messages"></div>
+              <div class="row controls">
+                <div class="col-12">
+                  <div class="input-group-meta form-group mb-30">
+                    <label for="name">Nombre*</label>
+                    <input 
+                      type="text" 
+                      id="name"
+                      placeholder="Nombre*" 
+                      formControlName="nombre"
+                      [class.is-invalid]="isFieldInvalid('nombre')"
+                      class="form-control">
+                    <div class="help-block with-errors" *ngIf="isFieldInvalid('nombre')">
+                      <div class="text-danger">{{ getErrorMessage('nombre') }}</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-12">
+                  <div class="input-group-meta form-group mb-40">
+                    <label for="email">Email*</label>
+                    <input 
+                      type="email" 
+                      id="email"
+                      placeholder="Email*" 
+                      formControlName="email"
+                      [class.is-invalid]="isFieldInvalid('email')"
+                      class="form-control">
+                    <div class="help-block with-errors" *ngIf="isFieldInvalid('email')">
+                      <div class="text-danger">{{ getErrorMessage('email') }}</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-12">
+                  <div class="input-group-meta form-group mb-40">
+                    <label for="celular">Celular*</label>
+                    <input 
+                      type="tel" 
+                      id="celular"
+                      placeholder="Celular*" 
+                      formControlName="celular"
+                      [class.is-invalid]="isFieldInvalid('celular')"
+                      class="form-control">
+                    <div class="help-block with-errors" *ngIf="isFieldInvalid('celular')">
+                      <div class="text-danger">{{ getErrorMessage('celular') }}</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-12">
+                  <div class="input-group-meta form-group mb-35">
+                    <label for="message">Mensaje*</label>
+                    <textarea 
+                      id="message"
+                      placeholder="Por favor deja tu mensaje*" 
+                      formControlName="mensaje"
+                      [class.is-invalid]="isFieldInvalid('mensaje')"
+                      class="form-control"
+                      rows="5"></textarea>
+                    <div class="help-block with-errors" *ngIf="isFieldInvalid('mensaje')">
+                      <div class="text-danger">{{ getErrorMessage('mensaje') }}</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-12">
+                  <button 
+                    type="submit" 
+                    class="btn-four tran3s w-100 d-block"
+                    [disabled]="isLoading">
+                    <span *ngIf="!isLoading">Enviar mensaje</span>
+                    <span *ngIf="isLoading">
+                      <i class="spinner-border spinner-border-sm me-2"></i>
+                      Enviando...
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        </div>
+      </div>
 
     </div>
   </div>
-
-<!-- ./contact-us-section -->
