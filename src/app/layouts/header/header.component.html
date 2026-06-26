@@ -9,13 +9,67 @@
         </div>
         <!-- logo -->
         <div class="right-widget ms-auto ms-lg-0 me-3 me-lg-0 order-lg-3">
-          <ul class="d-flex align-items-center style-none">
+          <ul class="d-flex align-items-center style-none gap-2">
+            <!-- Language toggle button -->
+            <li>
+              <button
+                (click)="toggleLanguage()"
+                class="lang-toggle-btn tran3s"
+                [title]="languageSvc.getCurrentLang() === 'es' ? 'Switch to English' : 'Cambiar a Español'"
+                style="
+                  background: transparent;
+                  border: 1px solid rgba(255,255,255,0.5);
+                  border-radius: 20px;
+                  color: white !important;
+                  cursor: pointer;
+                  font-size: 13px;
+                  font-weight: 600;
+                  padding: 4px 12px;
+                  display: flex;
+                  align-items: center;
+                  gap: 5px;
+                  letter-spacing: 0.5px;
+                  transition: all 0.2s ease;
+                "
+                onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                onmouseout="this.style.background='transparent'"
+              >
+                <span>{{ languageSvc.getCurrentLang() === 'es' ? '🇺🇸 EN' : '🇨🇴 ES' }}</span>
+              </button>
+            </li>
+            <!-- Admin button -->
+            <li>
+              <a
+                [routerLink]="['/admin/publicar']"
+                class="admin-toggle-btn tran3s"
+                [title]="'Panel de Administración'"
+                style="
+                  background: rgba(255,255,255,0.1);
+                  border: 1px solid rgba(255,255,255,0.3);
+                  border-radius: 20px;
+                  color: white !important;
+                  cursor: pointer;
+                  font-size: 13px;
+                  font-weight: 600;
+                  padding: 4px 12px;
+                  display: flex;
+                  align-items: center;
+                  gap: 5px;
+                  letter-spacing: 0.5px;
+                  transition: all 0.2s ease;
+                "
+                onmouseover="this.style.background='rgba(255,255,255,0.25)'"
+                onmouseout="this.style.background='rgba(255,255,255,0.1)'"
+              >
+                <i class="bi bi-shield-lock" style="font-size: 14px;"></i>
+                <span>{{ (authService.isLoggedIn$ | async) ? ('Panel Admin' | uppercase) : ('Acceso Admin' | uppercase) }}</span>
+              </a>
+            </li>
             <li class="d-none d-md-block">
-              <a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios." target="_blank"
-                class="btn-one tran3s">Hablemos!</a>
+              <a [href]="'https://wa.me/573113094098?text=' + ('NAV.WA_TEXT' | translate)" target="_blank"
+                class="btn-one tran3s">{{ 'NAV.CTA' | translate }}</a>
             </li>
           </ul>
-
         </div>
 
         <!--/.right-widget-->
@@ -34,30 +88,29 @@
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link " [routerLink]="['/home']">Inicio
+                <a class="nav-link " [routerLink]="['/home']">{{ 'NAV.HOME' | translate }}
                 </a>
-
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  data-bs-auto-close="outside" aria-expanded="false">Servicios</a>
+                  data-bs-auto-close="outside" aria-expanded="false">{{ 'NAV.SERVICES' | translate }}</a>
 
-                <div class="dropdown-menu mega-menu"> <!-- Cambiar <ul> por <div> -->
+                <div class="dropdown-menu mega-menu">
                   <div class="row gx-1">
                     <div class="col-lg-4">
                       <div class="menu-column">
-                        <div class="style-none mega-dropdown-list"> <!-- Cambiar <ul> por <div> -->
+                        <div class="style-none mega-dropdown-list">
                           <a class="dropdown-item" [routerLink]="['/servicios-contables']">
-                            Servicios Contables
+                            {{ 'NAV.ACCOUNTING' | translate }}
                           </a>
                           <a class="dropdown-item" [routerLink]="['/servicios-juridicos']">
-                            Servicios Jurídicos
+                            {{ 'NAV.LEGAL' | translate }}
                           </a>
                           <a class="dropdown-item" [routerLink]="['/servicios-tributarios']">
-                            Servicios Tributarios
+                            {{ 'NAV.TAX' | translate }}
                           </a>
                           <a class="dropdown-item" [routerLink]="['/revisoria-fiscal']">
-                            Revisoria Fiscal
+                            {{ 'NAV.FISCAL' | translate }}
                           </a>
                         </div>
                       </div>
@@ -66,69 +119,39 @@
                 </div>
               </li>
 
-              <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  data-bs-auto-close="outside" aria-expanded="false">Servicios
-                </a>
-                <ul class="dropdown-menu">
-                  <li class="row gx-1">
-                    <div class="col-lg-4">
-                      <div class="menu-column">
-                        <ul class="style-none mega-dropdown-list">
-                          <li class="nav-item dropdown mega-dropdown-sm">
-                            <a class="nav-link " [routerLink]="['/servicios-contables']">Servicios Contables
-                            </a>
-
-                          </li>
-                          <li class="nav-item dropdown mega-dropdown-sm">
-                            <a class="nav-link " [routerLink]="['/servicios-juridicos']">Servicios Jurídicos
-                            </a>
-
-                          </li>
-                          <li class="nav-item dropdown mega-dropdown-sm">
-                            <a class="nav-link " [routerLink]="['/servicios-tributarios']">Servicios Tributarios
-                            </a>
-
-                          </li>
-                          <li class="nav-item dropdown mega-dropdown-sm">
-                            <a class="nav-link " [routerLink]="['/revisoria-fiscal']">Revisoria Fiscal
-                            </a>
-
-                          </li>
-
-                        </ul>
-                      </div> 
-                    </div>
-
-                  </li>
-                </ul>
-              </li> -->
-
-              <!-- <li class="nav-item dropdown">
-                <a
-                  class="nav-link "
-                  href="#clientes"
-                  >Clientes
-                </a>
-
-              </li> -->
               <li class="nav-item dropdown">
                 <a class="nav-link " [routerLink]="['/certificados']" role="button" data-bs-auto-close="outside"
-                  aria-expanded="false">Certificados
+                  aria-expanded="false">{{ 'NAV.CERTIFICATES' | translate }}
                 </a>
-
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link " [routerLink]="['/blog']">Blog
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link " [routerLink]="['/blog']">{{ 'NAV.BLOG' | translate }}
                 </a>
-
-              </li>
+              </li> -->
               <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/contacto']" role="button">Contáctanos</a>
+                <a class="nav-link" [routerLink]="['/contacto']" role="button">{{ 'NAV.CONTACT' | translate }}</a>
+              </li>
+              <!-- Language toggle inside mobile menu -->
+              <li class="d-lg-none ps-2 pe-2 mt-2">
+                <button
+                  (click)="toggleLanguage()"
+                  class="btn-four tran3s w-100"
+                  style="font-size: 13px; font-weight: 600; padding: 8px 16px; color: white !important;">
+                  {{ languageSvc.getCurrentLang() === 'es' ? '🇺🇸 Switch to English' : '🇨🇴 Cambiar a Español' }}
+                </button>
+              </li>
+              <!-- Admin Access inside mobile menu -->
+              <li class="d-lg-none ps-2 pe-2 mt-2">
+                <a
+                  [routerLink]="['/admin/publicar']"
+                  class="btn-three tran3s w-100 text-center"
+                  style="font-size: 13px; font-weight: 600; padding: 8px 16px;">
+                  <i class="bi bi-shield-lock me-2"></i> {{ (authService.isLoggedIn$ | async) ? 'Panel Administrador' : 'Acceso Administrador' }}
+                </a>
               </li>
               <li class="d-md-none ps-2 pe-2">
-                <a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios." target="_blank"
-                  class="btn-one w-100 mt-15 tran3s">Hablemos!</a>
+                <a [href]="'https://wa.me/573113094098?text=' + ('NAV.WA_TEXT' | translate)" target="_blank"
+                  class="btn-one w-100 mt-15 tran3s">{{ 'NAV.CTA' | translate }}</a>
               </li>
             </ul>
           </div>

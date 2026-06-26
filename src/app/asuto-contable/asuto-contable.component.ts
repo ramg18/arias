@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-asuto-contable',
   templateUrl: './asuto-contable.component.html',
   styleUrls: ['./asuto-contable.component.css']
 })
-export class AsutoContableComponent {
+export class AsutoContableComponent implements OnInit {
+
+  constructor(private titleService: Title, private metaService: Meta) {}
+
+  ngOnInit(): void {
+    this.titleService.setTitle('Asesoría Contable | Arias & Asociados');
+    this.metaService.updateTag({ name: 'description', content: 'Gestión contable eficiente, cumplimiento normativo y análisis financiero para tu empresa en Sincelejo.' });
+  }
 
   como = true;
   cumplimiento = false;

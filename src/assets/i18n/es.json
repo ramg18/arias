@@ -1,0 +1,429 @@
+{
+  "NAV": {
+    "HOME": "Inicio",
+    "SERVICES": "Servicios",
+    "ACCOUNTING": "Servicios Contables",
+    "LEGAL": "Servicios Jurídicos",
+    "TAX": "Servicios Tributarios",
+    "FISCAL": "Revisoria Fiscal",
+    "CERTIFICATES": "Certificados",
+    "BLOG": "Blog",
+    "CONTACT": "Contáctanos",
+    "CTA": "Hablemos!",
+    "WA_TEXT": "Hola, estoy interesado conocer sus servicios."
+  },
+  "FOOTER": {
+    "TAGLINE": "Firma reconocida",
+    "TAGLINE_SUB": "Consultoría para tu éxito.",
+    "LINKS": "Vínculos",
+    "COMPANY": "Empresa",
+    "PRIVACY": "Políticas de Privacidad",
+    "COPYRIGHT": "© 2024 Arias & Asociados S.A.S. Todos los derechos reservados."
+  },
+  "HOME": {
+    "HERO_TITLE": "Tu Aliado Estratégico en Soluciones Empresariales Contables, Jurídicas y Tributarias",
+    "HERO_DESC": "Fortalece tu negocio con estrategias innovadoras y soluciones efectivas.",
+    "HERO_CTA": "Hablemos!",
+    "GET_STARTED": "Que te parece si <span>EMPEZAMOS</span>",
+    "SATISFIED_CLIENTS": "Clientes satisfechos",
+    "FEATURE1_TITLE": "Precios competitivos",
+    "FEATURE1_DESC": "Gracias a nuestra eficiencia operativa y alianzas estratégicas con proveedores, aseguramos valor y calidad a nuestros clientes.",
+    "FEATURE2_TITLE": "Asesores expertos",
+    "FEATURE2_DESC": "Nuestro equipo combina experiencia y conocimiento para ofrecer soluciones a medida y resultados óptimos.",
+    "FEATURE3_TITLE": "Soporte efectivo",
+    "FEATURE3_DESC": "Garantizamos respuestas rápidas y soluciones precisas para cada desafío.",
+    "SERVICES_TITLE": "Proporcionamos servicios de calidad.",
+    "SVC_ACCOUNTING_TITLE": "Asuntos Contables",
+    "SVC_ACCOUNTING_DESC": "Asesoramos a nuestros clientes de manera integral, permitiéndoles conocer de forma clara y sencilla las fortalezas de su empresa.",
+    "SVC_LEGAL_TITLE": "Asuntos Jurídicos",
+    "SVC_LEGAL_DESC": "Buscamos generar valor agregado a las empresas a través de la asistencia jurídica en los diferentes asuntos relacionados con el derecho laboral, comercial y administrativo.",
+    "SVC_TAX_TITLE": "Asuntos Tributarios",
+    "SVC_TAX_DESC": "En nuestra firma contamos con una amplia experiencia en brindar asesoría especializada en materia tributaria.",
+    "SVC_FISCAL_TITLE": "Revisoría Fiscal",
+    "SVC_FISCAL_DESC": "La revisoría fiscal brinda un enfoque integral, preventivo y oportuno de los diferentes riesgos a los que se expone cada ente económico.",
+    "PORTFOLIO_DESC": "Nos dedicamos a proporcionar servicios de calidad superior, superando las expectativas de nuestros clientes en cada proyecto.",
+    "DOWNLOAD_PORTFOLIO": "Descarga nuestro portafolio",
+    "CLIENTS_TITLE": "+20 Clientes usan nuestros servicios.",
+    "CLIENTS_DESC": "Su éxito es nuestra misión. Como profesionales, ofrecemos orientación experta, liberando su potencial de crecimiento y rentabilidad.",
+    "CLIENTS_LIST1": "Confidencialidad de la información.",
+    "CLIENTS_LIST2": "Reputación y Confianza.",
+    "CLIENTS_LIST3": "Personalización de Servicios.",
+    "ABOUT_LABEL": "Nosotros",
+    "ABOUT_TITLE": "Comprende como hemos sido una marca de éxito.",
+    "MISSION_TITLE": "Misión",
+    "MISSION_DESC": "En Arias y Asociados brindamos soluciones estratégicas, integrales, personalizadas y de alta calidad en materia contable, financiera, tributaria y jurídica, orientadas a impulsar la sostenibilidad y el crecimiento de nuestros clientes. Nuestro compromiso es generar valor sostenible, optimizar la gestión de las organizaciones y contribuir al logro de sus objetivos estratégicos, actuando siempre con los más altos estándares de ética, confidencialidad y compromiso profesional.",
+    "VISION_TITLE": "Visión.",
+    "VISION_DESC": "Para el año 2028, ser una firma referente en la Región caribe y Colombia en la prestación de servicios profesionales en contabilidad, derecho, finanzas, y tributación, reconocida por su excelencia, innovación y cultura de servicio.",
+    "EXPERIENCE_LABEL": "Años de experiencia comprobada.",
+    "HISTORY_TITLE": "Historia.",
+    "HISTORY_DESC": "Arias & Asociados nace como producto de la visión clara sobre el resultado esperado, bajo la fórmula de la construcción en el proceso, con ingredientes de sacrificio, estudio y riesgo, fundamentales para el desarrollo y seguimiento de cualquier emprendimiento. Hoy somos una firma sólida y en constante crecimiento, reconocida por nuestra experiencia en asuntos contables, jurídicos, financieros, tributarios y administrativos. Nos distingue un equipo comprometido, apasionado y altamente capacitado, que asume cada reto con responsabilidad y excelencia. En Arias & Asociados creemos que más que servicios, ofrecemos confianza y resultados. Por eso, nuestro sello es claro: <strong>\"Tu tranquilidad en nuestras manos\"</strong>.",
+    "TEAM_TITLE": "Nuestros colaboradores.",
+    "ROLE_GENERAL_MANAGER": "Gerente General",
+    "ROLE_ACCOUNTING_DIRECTOR": "Directora Contable",
+    "ROLE_LEGAL_DIRECTOR": "Director Jurídico",
+    "ROLE_ACCOUNTING_ASSISTANT": "Asistente Contable",
+    "ROLE_COMMERCIAL_DIRECTOR": "Directora Comercial",
+    "TESTIMONIALS_TITLE": "Testimonios de clientes.",
+    "TESTIMONIAL1": "\"Con una larga trayectoria de más de 7 años de experiencia, ratificamos que son los mejores en lo que hacen. Con Arias & Asociados hemos encontrado un aliado estratégico que entiende a la perfección nuestras necesidades contables y financieras. Su asesoría precisa y su acompañamiento constante nos han permitido tomar decisiones clave para el crecimiento de nuestra empresa. Los recomendamos plenamente por ser un equipo confiable y plenamente profesional.\"",
+    "TESTIMONIAL2": "\"Arias & Asociados ha sido una de nuestras mejores decisiones. Su equipo nos ha brindado una visión integral para gestionar tanto los aspectos financieros como contables de nuestros proyectos. Gracias a su apoyo, podemos enfocarnos en lo que hacemos mejor: construir el futuro.\"",
+    "TESTIMONIAL3": "\"Manejar una clínica pediátrica es un desafío enorme, y saber que podemos contar con Arias & Asociados para todos los asuntos financieros y contables nos da tranquilidad. Son como un apoyo extra que siempre está a la mano. Lo mejor es que explican todo con un lenguaje simple y directo, sin tecnicismos. Nos hacen sentir acompañados en cada paso.\"",
+    "TESTIMONIAL4": "\"Es un honor contar con Arias & Asociados como aliados estratégicos. Son 7 años en el mercado y han sido un pilar fundamental en el manejo contable y legal de nuestra clínica. Su dedicación y atención al detalle nos han permitido concentrarnos en brindar una atención médica integral y de calidad, mientras ellos se encargan de todo lo demás con mayor eficiencia.\"",
+    "TESTIMONIAL5": "\"Gracias a Arias & Asociados hemos podido optimizar nuestra estructura contable y financiera, lo que nos ha permitido crecer de manera segura y eficiente. Su equipo está siempre disponible para resolver nuestras dudas y guiarnos con un enfoque personalizado y profesional.\"",
+    "BLOG_TITLE": "Últimas noticias.",
+    "BLOG_DESC": "Obtenga las últimas actualizaciones y tips de parte de nuestros expertos.",
+    "BLOG_ALL": "Todas las noticias",
+    "CLIENTS_SECTION_TITLE": "Nuestros Clientes."
+  },
+  "CONTACT": {
+    "PAGE_TITLE": "Contáctanos | Arias & Asociados S.A.S",
+    "META_DESC": "Ponte en contacto con nuestro equipo de expertos en asesoría contable y legal. Estamos listos para ayudarte.",
+    "BANNER_TITLE": "Contáctanos",
+    "WATCH_VIDEO": "Ver video",
+    "ADDRESS_TITLE": "Dirección",
+    "PHONE_TITLE": "Teléfono",
+    "HOURS_TITLE": "Horario de Atención",
+    "HOURS_VALUE": "Lunes - Viernes: 8:00 AM - 6:00 PM",
+    "FORM_TITLE": "Envíanos un mensaje",
+    "FORM_NAME": "Nombre",
+    "FORM_EMAIL": "Correo electrónico",
+    "FORM_PHONE": "Celular",
+    "FORM_MESSAGE": "Mensaje",
+    "FORM_SUBMIT": "Enviar mensaje",
+    "FORM_SENDING": "Enviando...",
+    "ERR_REQUIRED": "es requerido",
+    "ERR_EMAIL": "Formato de email inválido",
+    "ERR_MIN": "debe tener al menos {{min}} caracteres",
+    "ERR_PHONE": "Formato de celular inválido (10 dígitos)",
+    "SUCCESS_TITLE": "¡Éxito!",
+    "SUCCESS_TEXT": "Tu mensaje ha sido enviado correctamente. Te contactaremos pronto.",
+    "SUCCESS_BTN": "Aceptar",
+    "ERROR_BTN": "Intentar nuevamente",
+    "VALIDATION_TITLE": "Formulario incompleto",
+    "VALIDATION_TEXT": "Por favor, completa todos los campos requeridos correctamente.",
+    "VALIDATION_BTN": "Entendido"
+  },
+  "CERTIFICATES": {
+    "BANNER_DESC": "Descarga aquí tus certificados de nuestros seminarios.",
+    "FORM_TITLE": "Descarga tu certificado aquí",
+    "ID_LABEL": "Cédula",
+    "ID_PLACEHOLDER": "EJ:11223456789",
+    "SEMINAR_LABEL": "Seminario",
+    "SELECT_OPTION": "Selecciona",
+    "DOWNLOAD_BTN": "Descargar",
+    "PAGE_TITLE": "Certificados | Arias & Asociados",
+    "TITLE": "Certificados",
+    "DESC": "Descarga tus certificados aquí"
+  },
+  "BLOG": {
+    "BANNER_TITLE": "Mantente Informado",
+    "BANNER_DESC": "Conozca de nuestros expertos a cerca de los temas del mundo financiero",
+    "LAST_PAGE": "Última"
+  },
+  "SERVICES": {
+    "ABOUT": {
+      "TITLE": "¿Qué es Arias & Asociados?",
+      "VIDEO_TITLE": "Video Corporativo Arias & Asociados"
+    },
+    "ACCOUNTING_SECTION": {
+      "TITLE": "Asuntos Contables",
+      "DESC1": "En Arias y Asociados ofrecemos un acompañamiento contable y financiero integral, orientado a garantizar el cumplimiento normativo, la transparencia en la información financiera y la optimización de recursos. Nuestro equipo combina experiencia técnica y conocimiento actualizado de la normatividad colombiana, brindando soluciones estratégicas que apoyan la toma de decisiones y fortalecen la gestión empresarial.",
+      "DESC2": "Nos enfocamos en prestar servicios confiables, oportunos y adaptados a las necesidades de cada cliente, contribuyendo al crecimiento sostenible y a la correcta gestión de sus obligaciones contables y fiscales.",
+      "CUMPLIMIENTO": {
+        "TITLE": "Cumplimiento Normativo y Regulatorio",
+        "ITEM1": "Cumplimiento de obligaciones contables y societarias ante entes de control: Supersociedades, UGPP, DIAN y demás autoridades competentes.",
+        "ITEM2": "Aplicación actualizada de las Normas de Información Financiera (NIIF) conforme al marco técnico colombiano."
+      },
+      "ELABORACION": {
+        "TITLE": "Elaboración y Presentación de Estados Financieros",
+        "ITEM1": "Preparación y análisis de estados financieros.",
+        "ITEM2": "Elaboración y análisis de informes contables para juntas directivas, asambleas, entes de control y entidades financieras.",
+        "ITEM3": "Presentación de información financiera ante los diferentes entes de control (DIAN, Supersociedades, Supersalud, entidades municipales, entre otros)."
+      },
+      "OPTIMIZACION": {
+        "TITLE": "Optimización Fiscal y Tributaria",
+        "ITEM1": "Elaboración y revisión de declaraciones tributarias: renta, IVA, retenciones, ICA, industria y comercio, patrimonio, activos en el exterior entre otras.",
+        "ITEM2": "Cumplimiento de obligaciones formales y sustanciales para personas jurídicas y naturales obligadas a llevar contabilidad.",
+        "ITEM3": "Asesoría en planeación tributaria para optimizar cargas fiscales dentro del marco legal vigente."
+      },
+      "ANALISIS": {
+        "TITLE": "Análisis Financiero y Reportes Gerenciales",
+        "ITEM1": "Elaboración de análisis financieros e indicadores de gestión (liquidez, rentabilidad, endeudamiento, eficiencia operativa).",
+        "ITEM2": "Análisis por líneas de negocio para la toma estratégica de decisiones.",
+        "ITEM3": "Generación de informes ejecutivos para gerencia, inversionistas y socios.",
+        "ITEM4": "Proyecciones financieras para una gestión oportuna y estratégica."
+      },
+      "GESTION": {
+        "TITLE": "Gestión de Riesgos Contables y Control Interno",
+        "ITEM1": "Diagnóstico de riesgos contables, financieros y de cumplimiento normativo.",
+        "ITEM2": "Implementación o fortalecimiento de políticas contables internas.",
+        "ITEM3": "Revisión de procedimientos contables y formulación de recomendaciones para mitigar contingencias.",
+        "ITEM4": "Identificación de riesgos asociados a facturación electrónica, retenciones y obligaciones fiscales."
+      },
+      "PLANIFICACION": {
+        "TITLE": "Planificación Financiera y Presupuestal",
+        "ITEM1": "Elaboración de presupuestos operativos, de inversión y de flujo de caja.",
+        "ITEM2": "Acompañamiento en procesos de expansión, inversión o reestructuración financiera.",
+        "ITEM3": "Proyecciones de flujos de efectivo futuros, planes de inversión y estrategias de sostenibilidad."
+      }
+    },
+    "LEGAL_SECTION": {
+      "TITLE": "Asuntos Jurídicos",
+      "DESC": "Buscamos generar valor agregado a las empresas a través de la asistencia jurídica en los diferentes asuntos relacionados con el derecho laboral, comercial y administrativo, participando activamente en el desarrollo de los negocios de nuestros clientes por medio del acompañamiento jurídico que ofrecemos y de esta forma fortalecer y brindar seguridad a sus actividades en todos los temas legales.",
+      "PROTECCION_FAMILIAR": {
+        "TITLE": "Protección del Patrimonio Familiar",
+        "INTRO": "Acompañamos a las familias en la organización, preservación y transmisión segura de su patrimonio, evitando conflictos y asegurando su estabilidad generacional a través de:",
+        "PROTOCOLOS": {
+          "TITLE": "Protocolos de familia:",
+          "DESC": "El protocolo de familia es una herramienta esencial para mantener la armonía y la estabilidad del patrimonio familiar, especialmente cuando existen empresas o bienes comunes entre parientes. En Arias & Asociados diseñamos, estructuramos y formalizamos protocolos que: Definen reglas claras para la participación de los miembros de la familia en el negocio o en la administración del patrimonio. Regulan la sucesión, la toma de decisiones y la incorporación de nuevas generaciones. Establecen mecanismos de solución de conflictos y órganos de gobierno familiar."
+        },
+        "FIDEICOMISOS": {
+          "TITLE": "Fideicomisos y propiedad fiduciaria:",
+          "DESC": "El fideicomiso es una de las estructuras más efectivas para proteger y administrar el patrimonio familiar. A través de la propiedad fiduciaria, permitimos que los bienes sean gestionados bajo condiciones previamente definidas, asegurando su destino y la protección de los beneficiarios. En Arias & Asociados asesoramos en:",
+          "ITEM1": "La constitución de fideicomisos familiares o de administración para garantizar el manejo responsable del patrimonio.",
+          "ITEM2": "La transferencia de bienes a título fiduciario, evitando su exposición ante contingencias personales, conyugales o judiciales.",
+          "ITEM3": "La creación de fideicomisos sucesorales, que permiten la entrega ordenada y controlada de bienes tras el fallecimiento del constituyente."
+        },
+        "SUCESIONES": {
+          "TITLE": "Sucesiones notariales y judiciales:",
+          "DESC": "Brindamos acompañamiento integral en la planificación y ejecución de procesos sucesorales, tanto en vía notarial (cuando hay acuerdo entre herederos) como en vía judicial (cuando existen controversias). Nuestro enfoque combina agilidad, conciliación y técnica jurídica, para garantizar una distribución justa y transparente de los bienes. Asesoramos en la planeación sucesoral anticipada, incluyendo testamentos y pactos sucesorales al igual que el trámite de sucesiones notariales con enfoque en economía procesal y seguridad jurídica. Representamos a herederos o legatarios en procesos judiciales para la reclamación o defensa de derechos hereditarios."
+        },
+        "CAPITULACIONES": {
+          "TITLE": "Capitulaciónes matrimoniales y pactos de convivencia:",
+          "DESC": "Las capitulaciones son la herramienta más eficaz para proteger el patrimonio personal y empresarial antes o durante una unión. En Arias & Asociados elaboramos y registramos capitulaciones y pactos de convivencia que:",
+          "ITEM1": "Determinan qué bienes forman parte o no del patrimonio común.",
+          "ITEM2": "Previenen conflictos económicos en caso de separación o disolución.",
+          "ITEM3": "Permiten planificar financieramente la relación sin poner en riesgo los activos individuales o familiares."
+        },
+        "UNIONES": {
+          "TITLE": "Uniones maritales y liquidación de sociedades conyugales o patrimoniales:",
+          "DESC": "Ofrecemos asesoría completa en la formalización, reconocimiento o liquidación de uniones maritales de hecho y sociedades conyugales o patrimoniales, tanto en vía notarial como judicial. Nuestro trabajo se centra en garantizar que las decisiones económicas sean justas, transparentes y orientadas a la preservación del patrimonio común.",
+          "ITEM1": "Reconocimiento o disolución de uniones maritales de hecho.",
+          "ITEM2": "Liquidación de sociedades conyugales o patrimoniales.",
+          "ITEM3": "Asesoría en la división de bienes, manejo de pasivos y distribución equitativa.",
+          "ITEM4": "Representación judicial en controversias por bienes conyugales o de pareja."
+        },
+        "ALIMENTOS": {
+          "TITLE": "Asesoría en alimentos y regulación de relaciones familiares:",
+          "DESC": "Los conflictos derivados de las obligaciones alimentarias o de la regulación de relaciones familiares exigen sensibilidad y estrategia jurídica. Nuestro enfoque combina la protección de los derechos fundamentales con la seguridad patrimonial, buscando soluciones equilibradas y sostenibles.",
+          "ITEM1": "Asesoría en la fijación, aumento o reducción de cuotas alimentarias.",
+          "ITEM2": "Negociación y formalización de acuerdos de custodia, visitas y manutención.",
+          "ITEM3": "Defensa o reclamación de derechos ante autoridades de familia o juzgados.",
+          "ITEM4": "Regulación integral de relaciones familiares desde una perspectiva preventiva."
+        }
+      },
+      "PROTECCION_INMOBILIARIA": {
+        "TITLE": "Protección del Patrimonio Inmobiliario",
+        "INTRO": "En Arias & Asociados entendemos que el patrimonio inmobiliario es uno de los activos más valiosos y vulnerables, por ello nos enfocamos en proteger jurídicamente la propiedad, garantizar la legalidad en las transacciones y evitar riesgos que comprometan el valor o la posesión de los bienes. Asesoramos integralmente en su adquisición, tenencia, uso, administración y defensa, para asegurar la plena protección jurídica de los bienes raíces urbanos y rurales a través de:",
+        "ITEM1": "<strong>Contratos inmobiliarios:</strong> estructuración, revisión y acompañamiento en compraventas, promesas, arrendamientos, leasing, contratos de obra y fiducias inmobiliarias, servidumbres, expropiaciones, propiedad fiduciaria, usufructo.",
+        "ITEM2": "<strong>Propiedad horizontal:</strong> asesoría jurídica integral a conjuntos y edificios en su constitución, administración, reformas de reglamento y manejo de conflictos internos y reclamaciones ante promotoras.",
+        "ITEM3": "<strong>Procesos judiciales sobre bienes inmuebles:</strong> representación en procesos de pertenencia, reivindicación, restitución de tenencia y protección de la posesión.",
+        "ITEM4": "<strong>Restitución de tierras:</strong> defensa técnica tanto de reclamantes de tierras despojadas como de opositores legítimos, con enfoque en la protección del derecho de propiedad y la justicia transicional.",
+        "ITEM5": "<strong>Protección al consumidor inmobiliario:</strong> asesoría y defensa en casos de incumplimiento en proyectos de vivienda o afectación de derechos en la adquisición de inmuebles.",
+        "ITEM6": "<strong>Gestión predial y saneamiento de títulos:</strong> acompañamiento en procesos de formalización, tradición y administración de bienes rurales y urbanos."
+      },
+      "PROTECCION_EMPRESARIAL": {
+        "TITLE": "Protección del Patrimonio Empresarial",
+        "INTRO": "Acompañamos a los emprendedores y empresarios en todas las etapas del ciclo empresarial, desde la creación de su negocio hasta la defensa judicial de su estructura patrimonial. Nuestro propósito es fortalecer las decisiones corporativas con visión estratégica y jurídica sólida a través de las siguientes líneas de trabajo:",
+        "EMPRENDIMIENTO": {
+          "TITLE": "Emprendimiento y Constitución Empresarial:",
+          "DESC": "Pensado para emprendedores y negocios en etapa de creación, que necesitan comenzar con bases jurídicas seguras y estructuras patrimoniales eficientes. Ofrecemos:",
+          "ITEM1": "Constitución de sociedades y selección del tipo asociativo más conveniente. (contratos de cuentas en participación, joint venture, etc, agencia mercantil, etc.).",
+          "ITEM2": "Redacción de estatutos sociales y acuerdos fundacionales.",
+          "ITEM3": "Asesoría en la vinculación de socios, inversionistas o aliados estratégicos.",
+          "ITEM4": "Registro de marcas, patentes, nombres comerciales y demás activos de propiedad industrial.",
+          "ITEM5": "Estructuración contractual con proveedores, clientes y aliados.",
+          "ITEM6": "Acompañamiento legal inicial en el cumplimiento normativo y tributario."
+        },
+        "GESTION": {
+          "TITLE": "Empresas Formalizadas y Gestión Corporativa:",
+          "DESC": "Dirigido a empresas ya consolidadas o en crecimiento, que enfrentan retos de gobierno corporativo, control interno y sostenibilidad jurídica. Ofrecemos:",
+          "ITEM1": "Reformas estatutarias y actualización de órganos de administración.",
+          "ITEM2": "Elaboración de acuerdos de socios y protocolos de familia empresaria.",
+          "ITEM3": "Manejo de conflictos entre socios, accionistas o administradores.",
+          "ITEM4": "Asesoría en fusiones, escisiones, adquisiciones y reorganizaciones empresariales.",
+          "ITEM5": "Revisión de contratos mercantiles, distribución y representación.",
+          "ITEM6": "Implementación de programas de cumplimiento (compliance) y gestión de riesgos jurídicos.",
+          "ITEM7": "Protección de activos intangibles: marcas, patentes, know-how y derechos de autor empresariales."
+        },
+        "DEFENSA": {
+          "TITLE": "Protección Judicial y Defensa Societaria:",
+          "DESC": "Cuando surgen conflictos que amenazan el capital o la operación empresarial, defendemos el patrimonio corporativo con estrategia procesal y conocimiento especializado en derecho societario. Ofrecemos:",
+          "ITEM1": "Mediación y gestión extrajudicial y judicial entre socios, administradores o accionistas.",
+          "ITEM2": "Acciones de responsabilidad contra administradores y revisores fiscales.",
+          "ITEM3": "Impugnación de decisiones sociales y asambleas irregulares.",
+          "ITEM4": "Defensa frente a sanciones o investigaciones de autoridades administrativas.",
+          "ITEM5": "Litigios derivados de contratos mercantiles, incumplimientos o competencia desleal."
+        }
+      },
+      "PREVENTIVA": {
+        "TITLE": "Protección Patrimonial Preventiva",
+        "INTRO": "Anticipamos riesgos mediante asesorías preventivas, diseño contractual y diagnósticos legales, orientados a evitar pérdidas y contingencias futuras, a través de:",
+        "ITEM1": "Auditorías y diagnósticos jurídicos (due diligence).",
+        "ITEM2": "Redacción y revisión de contratos civiles, comerciales y laborales.",
+        "ITEM3": "Estructuración de modelos contractuales ajustados al negocio.",
+        "ITEM4": "Acompañamiento en trámites ante entidades públicas y privadas."
+      },
+      "LITIGIOSA": {
+        "TITLE": "Protección Patrimonial Litigiosa:",
+        "INTRO": "Cuando el conflicto es inevitable, defendemos el patrimonio de nuestros clientes con estrategia, técnica y evidencia jurídica sólida, buscando siempre el restablecimiento de sus derechos y la minimización del impacto económico a través de la gestión de procesos.",
+        "ITEM1": "Procesos civiles, comerciales, laborales y administrativos.",
+        "ITEM2": "Responsabilidad contractual y extracontractual.",
+        "ITEM4": "Cuantificación y prueba pericial de perjuicios patrimoniales y extrapatrimoniales."
+      }
+    },
+    "TAX_SECTION": {
+      "TITLE": "Servicios Tributarios",
+      "DESC": "Nuestro servicio de cumplimiento tributario busca dar un acompañamiento integral y permanente a las empresas y personas naturales de manera oportuna, mitigando el riesgo tributario, optimizando las cargas impositivas a través de la consultoría en:",
+      "ITEM1": "Elaboración de declaraciones de renta (Personas jurídicas y naturales).",
+      "ITEM2": "Elaboración de Informes de información exógena (Nacional y municipal).",
+      "ITEM3": "Elaboración de Declaraciones de Retención en la fuente, IVA, ICA e Impuesto al Patrimonio.",
+      "ITEM4": "Conciliación fiscal.",
+      "ITEM5": "Consultas técnicas de carácter tributario.",
+      "ITEM6": "Devoluciones y/o compensaciones de impuestos.",
+      "ITEM7": "Planeación tributaria.",
+      "ITEM8": "Diagnósticos de cumplimiento tributario.",
+      "ITEM9": "Acompañamiento en procesos ante las autoridades administrativas (DIAN, SHD, UGPP)."
+    },
+    "FISCAL_SECTION": {
+      "TITLE": "Revisoria Fiscal",
+      "DESC": "Realizamos una revisión integral de la gestión y operación de su organización, garantizando que el cumplimiento legal, estatutario y contable se desarrolle bajo los más altos estándares éticos y técnicos, protegiendo los intereses de los socios y terceros, así como promoviendo la transparencia administrativa y financiera de la compañía bajo las normas internacionales de auditoría.",
+      "ITEM1": "Aseguramos que la información financiera sea confiable y oportuna cumpliendo con los estándares de contabilidad e información financiera aceptados en Colombia.",
+      "ITEM2": "Garantizamos que la compañía cumpla con las normas legales, estatutarias y tributarias vigentes.",
+      "ITEM3": "Evaluamos la eficacia de los controles para mitigar riesgos operativos, financieros y de fraude.",
+      "ITEM4": "Damos fe pública sobre la razonabilidad de los estados financieros a través de dictámenes.",
+      "ITEM5": "Alertamos a la administración sobre debilidades o irregularidades en la operación, sugiriendo mejoras administrativas y de control."
+    },
+    "CERT_SECTION": {
+      "TITLE": "Certificados y Otros",
+      "DESC": "Brindamos servicios de certificación integral y apoyo en trámites administrativos para personas naturales y empresas, asegurando la veracidad de la información y agilidad en sus procesos.",
+      "ITEM1": "Certificados de ingresos (trabajadores independientes y empleados).",
+      "ITEM2": "Certificación de Estados financieros.",
+      "ITEM3": "Renovación de Matrícula Mercantil (Cámara de Comercio).",
+      "ITEM4": "Registro Único de Proponentes (RUP).",
+      "ITEM5": "Inscripciones ante organismos públicos y privados.",
+      "ITEM6": "Solicitudes de RUT y firmas electrónicas."
+    },
+    "SIDEBAR_DOWNLOAD": "Descarga aquí nuestro portafolio",
+    "SIDEBAR_DOWNLOAD_BTN": "Descargalo aquí",
+    "SIDEBAR_QUESTIONS": "Tienes Preguntas?",
+    "SIDEBAR_TALK": "Hablemos",
+    "HOW_WE_DO_IT": "¿Cómo lo hacemos?",
+    "BANNER_DESC": "Ofreciendo soluciones y servicios para abordar un espectro de problemas financieros."
+  },
+  "ACCOUNTING": {
+    "NAV1": "¿Cómo lo hacemos?",
+    "NAV2": "Cumplimiento Normativo y Regulatorio",
+    "NAV3": "Elaboración y Presentación de Estados Financieros",
+    "NAV4": "Optimización Fiscal y Tributaria",
+    "NAV5": "Análisis Financiero e Informes Gerenciales",
+    "NAV6": "Gestión de Riesgos Contables y Control Interno",
+    "NAV7": "Planificación Financiera y Presupuestal",
+    "INTRO": "En Arias y Asociados ofrecemos un acompañamiento contable y financiero integral, orientado a garantizar el cumplimiento normativo, la transparencia en la información financiera y la optimización de recursos. Nuestro equipo combina experiencia técnica y conocimiento actualizado de la normatividad colombiana, brindando soluciones estratégicas que apoyan la toma de decisiones y fortalecen la gestión empresarial. Nos enfocamos en prestar servicios confiables, oportunos y adaptados a las necesidades de cada cliente, contribuyendo al crecimiento sostenible y a la correcta gestión de sus obligaciones contables y fiscales.",
+    "CUMPLIMIENTO": {
+      "ITEM1": "Cumplimiento de obligaciones contables y societarias ante entes de control: Supersociedades, UGPP, DIAN y demás autoridades competentes.",
+      "ITEM2": "Aplicación actualizada de las Normas de Información Financiera (NIIF) conforme al marco técnico colombiano."
+    },
+    "ELABORACION": {
+      "ITEM1": "Preparación y análisis de estados financieros.",
+      "ITEM2": "Elaboración y análisis de informes contables para juntas directivas, asambleas, entes de control y entidades financieras.",
+      "ITEM3": "Presentación de información financiera ante los diferentes entes de control (DIAN, Supersociedades, Supersalud, entidades municipales, entre otros)."
+    },
+    "OPTIMIZACION": {
+      "ITEM1": "Elaboración y revisión de declaraciones tributarias: renta, IVA, retenciones, ICA, industria y comercio, patrimonio, activos en el exterior entre otras.",
+      "ITEM2": "Cumplimiento de obligaciones formales y sustanciales para personas jurídicas y naturales obligadas a llevar contabilidad.",
+      "ITEM3": "Asesoría en planeación tributaria para optimizar cargas fiscales dentro del marco legal vigente."
+    },
+    "ANALISIS": {
+      "ITEM1": "Elaboración de análisis financieros e indicadores de gestión (liquidez, rentabilidad, endeudamiento, eficiencia operativa).",
+      "ITEM2": "Análisis por líneas de negocio para la toma estratégica de decisiones.",
+      "ITEM3": "Generación de informes ejecutivos para gerencia, inversionistas y socios.",
+      "ITEM4": "Proyecciones financieras para una gestión oportuna y estratégica."
+    },
+    "RIESGOS": {
+      "ITEM1": "Diagnóstico de riesgos contables, financieros y de cumplimiento normativo.",
+      "ITEM2": "Implementación o fortalecimiento de políticas contables internas.",
+      "ITEM3": "Revisión de procedimientos contables y formulación de recomendaciones para mitigar contingencias.",
+      "ITEM4": "Identificación de riesgos asociados a facturación electrónica, retenciones y obligaciones fiscales."
+    },
+    "PLANIFICACION": {
+      "ITEM1": "Elaboración de presupuestos operativos, de inversión y de flujo de caja.",
+      "ITEM2": "Acompañamiento en procesos de expansión, inversión o reestructuración financiera.",
+      "ITEM3": "Proyecciones de flujos de efectivo futuros, planes de inversión y estrategias de sostenibilidad."
+    }
+  },
+  "LEGAL": {
+    "NAV1": "¿Cómo lo hacemos?",
+    "NAV2": "Protección del Patrimonio Familiar",
+    "NAV3": "Protección del Patrimonio Inmobiliario",
+    "NAV4": "Protección del Patrimonio Empresarial",
+    "NAV5": "Protección Patrimonial Preventiva",
+    "NAV6": "Protección Patrimonial Litigiosa"
+  },
+  "TAX": {
+    "NAV1": "¿Cómo lo hacemos?",
+    "NAV2": "Planeación Tributaria",
+    "NAV3": "Asesoría, Consultoría y Auditoría Tributaria",
+    "NAV4": "Devoluciones y Trámites Tributarios",
+    "NAV5": "Capacitación Empresarial",
+    "NAV6": "Atención de Requerimientos",
+    "INTRO": "En Arias & Asociados ofrecemos asesoría integral en materia fiscal, ayudando a nuestros clientes a cumplir con la normatividad vigente y optimizar su carga impositiva de manera estratégica.",
+    "PLANEACION": "Planeación Tributaria",
+    "ASESORIA": "Asesoría, Consultoría y Auditoría Tributaria",
+    "DEVOLUCIONES": "Devoluciones y Trámites Tributarios",
+    "REQUERIMIENTOS": "Atención de Requerimientos",
+    "ITEM1": "Auditorías y diagnósticos jurídicos (due diligence).",
+    "ITEM2": "Impuestos nacionales y municipales.",
+    "ITEM3": "Revisión y verificación de cumplimiento normativo.",
+    "ITEM4": "Solicitud y gestión de devoluciones de saldos a favor.",
+    "ITEM5": "Trámite de pagos en exceso y pagos no debidos.",
+    "ITEM6": "Formación a directivos y equipos en temas tributarios clave.",
+    "ITEM7": "Respuesta a requerimientos ordinarios y especiales de la DIAN, UGPP y demás autoridades municipales."
+  },
+  "FISCAL_AUDIT": {
+    "NAV1": "¿Cómo lo hacemos?",
+    "NAV2": "Conocimiento del negocio y evaluación de controles",
+    "NAV3": "Aseguramiento y análisis de la información financiera",
+    "NAV4": "Emisión de concepto independiente",
+    "NAV5": "Cumplimiento de estándares de auditoría",
+    "NAV6": "Verificación del marco legal y estatutario",
+    "INTRO": "En Arias & Asociados ofrecemos un servicio de revisoría fiscal con un enfoque integral, preventivo y oportuno, orientado a minimizar riesgos y garantizar la transparencia en la gestión empresarial y general valor.",
+    "ITEM1": "Análisis de procesos internos y revisión de mecanismos de control.",
+    "ITEM2": "Validación de la confiabilidad y exactitud de los estados financieros.",
+    "ITEM3": "Identificación de riesgos y áreas de mejora en la gestión financiera.",
+    "ITEM4": "Opinión técnica y objetiva sobre la situación financiera.",
+    "ITEM5": "Recomendaciones para fortalecer los procedimientos y la gestión.",
+    "ITEM6": "Aplicación de metodologías alineadas con la normativa vigente.",
+    "ITEM7": "Actuación bajo principios de ética, integridad y profesionalismo.",
+    "ITEM8": "Control del cumplimiento de disposiciones legales, fiscales y estatutarias."
+  },
+  "BLOG_PAGE": {
+    "TITLE": "Blog",
+    "SEARCH": "Buscar...",
+    "READ_MORE": "Leer más"
+  },
+  "PRIVACY": {
+    "TITLE": "Políticas de Privacidad"
+  },
+  "META": {
+    "SITE_TITLE": "Asesoría Contable y Legal para Empresas | Arias & Asociados S.A.S",
+    "SITE_DESC": "Descubre nuestros servicios de asesoría contable. Contamos con un equipo de expertos listos para ayudarte con la gestión contable eficiente y precisa para tu empresa."
+  },
+  "ADMIN": {
+    "LOGIN": "Iniciar Sesión Administrador",
+    "EMAIL": "Correo electrónico",
+    "PASSWORD": "Contraseña",
+    "LOGIN_BTN": "Ingresar",
+    "LOGOUT_BTN": "Cerrar Sesión",
+    "PUBLISH_TITLE": "Subir Publicación",
+    "FILE_LABEL": "Seleccionar archivo (PDF, DOCX, ZIP)",
+    "TYPE_LABEL": "Tipo de Publicación",
+    "TYPE_TAX": "Tributaria",
+    "TYPE_LEGAL": "Jurídica",
+    "TYPE_ACCOUNTING": "Contable",
+    "SUBMIT": "Realizar Publicación",
+    "SUCCESS": "Publicación realizada con éxito",
+    "ERROR_LOGIN": "Credenciales inválidas",
+    "DROP_FILE": "Arrastra y suelta el archivo aquí o haz clic para buscar",
+    "IMAGE_URL_INFO": "La imagen de portada se asignará automáticamente según el tipo."
+  }
+}

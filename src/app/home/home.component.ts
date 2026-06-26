@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogservicesService } from '../services/blogservices.service';
 import { Router } from '@angular/router';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml, Meta, Title } from '@angular/platform-browser';
 declare var $: any;
 
 @Component({
@@ -16,9 +16,18 @@ export class HomeComponent implements OnInit {
   showChat = false;
 
 
-  constructor(private BlogSvc:BlogservicesService, public route: Router, private sanitizer: DomSanitizer){}
+  constructor(
+    private BlogSvc: BlogservicesService,
+    public route: Router,
+    private sanitizer: DomSanitizer,
+    private titleService: Title,
+    private metaService: Meta
+  ) {}
 
   ngOnInit(): void {
+    this.titleService.setTitle('Asesoría Contable y Legal | Inicio - Arias & Asociados');
+    this.metaService.updateTag({ name: 'description', content: 'Expertos en revisoría fiscal, asesoría contable y jurídica en Sincelejo. Optimizamos la gestión financiera de tu empresa.' });
+    
     this.getPosts(this.current_page);
     $('.hero-slider-one').slick({
       dots: false,

@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-revisoria-fiscal',
   templateUrl: './revisoria-fiscal.component.html',
   styleUrls: ['./revisoria-fiscal.component.css']
 })
-export class RevisoriaFiscalComponent {
+export class RevisoriaFiscalComponent implements OnInit {
+
+  constructor(private titleService: Title, private metaService: Meta) {}
+
+  ngOnInit(): void {
+    this.titleService.setTitle('Revisoría Fiscal | Arias & Asociados');
+    this.metaService.updateTag({ name: 'description', content: 'Auditoría integral y aseguramiento de la información financiera para tu empresa.' });
+  }
 
   como = true;
     cumplimiento = false;

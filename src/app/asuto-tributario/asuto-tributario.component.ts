@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-asuto-tributario',
   templateUrl: './asuto-tributario.component.html',
   styleUrls: ['./asuto-tributario.component.css']
 })
-export class AsutoTributarioComponent {
+export class AsutoTributarioComponent implements OnInit {
+
+  constructor(private titleService: Title, private metaService: Meta) {}
+
+  ngOnInit(): void {
+    this.titleService.setTitle('Asesoría Tributaria | Arias & Asociados');
+    this.metaService.updateTag({ name: 'description', content: 'Optimización de impuestos y cumplimiento tributario. Evita sanciones y maximiza tus beneficios fiscales.' });
+  }
 
     como = true;
     cumplimiento = false;

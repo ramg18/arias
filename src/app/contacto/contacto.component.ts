@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { ContactoService } from '../services/contacto.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contacto',
@@ -13,7 +14,11 @@ export class ContactoComponent {
   contactForm: FormGroup;
   isLoading = false;
 
-  constructor(private formBuilder: FormBuilder, private contactoSvc: ContactoService){
+  constructor(
+    private formBuilder: FormBuilder,
+    private contactoSvc: ContactoService,
+    private translate: TranslateService
+  ){
     this.contactForm = this.formBuilder.group({
       nombre: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
@@ -31,34 +36,33 @@ export class ContactoComponent {
     return !!(field && field.invalid && (field.dirty || field.touched));
   }
 
-  // Método para obtener mensajes de error
   getErrorMessage(fieldName: string): string {
     const field = this.contactForm.get(fieldName);
     if (field?.errors) {
       if (field.errors['required']) {
-        return `${this.getFieldLabel(fieldName)} es requerido`;
+        return `${this.getFieldLabel(fieldName)} ${this.translate.instant('CONTACT.ERR_REQUIRED')}`;
       }
       if (field.errors['email']) {
-        return 'Formato de email inválido';
+        return this.translate.instant('CONTACT.ERR_EMAIL');
       }
       if (field.errors['minlength']) {
-        return `${this.getFieldLabel(fieldName)} debe tener al menos ${field.errors['minlength'].requiredLength} caracteres`;
+        return `${this.getFieldLabel(fieldName)} ${this.translate.instant('CONTACT.ERR_MIN', { min: field.errors['minlength'].requiredLength })}`;
       }
       if (field.errors['pattern']) {
-        return 'Formato de celular inválido (10 dígitos)';
+        return this.translate.instant('CONTACT.ERR_PHONE');
       }
     }
     return '';
   }
 
   private getFieldLabel(fieldName: string): string {
-    const labels: { [key: string]: string } = {
-      'nombre': 'Nombre',
-      'email': 'Email',
-      'celular': 'Celular',
-      'mensaje': 'Mensaje'
+    const keys: { [key: string]: string } = {
+      'nombre': 'CONTACT.FORM_NAME',
+      'email': 'CONTACT.FORM_EMAIL',
+      'celular': 'CONTACT.FORM_PHONE',
+      'mensaje': 'CONTACT.FORM_MESSAGE'
     };
-    return labels[fieldName] || fieldName;
+    return this.translate.instant(keys[fieldName] || fieldName);
   }
 
   onSubmit(): void {
@@ -70,23 +74,16 @@ export class ContactoComponent {
           this.showSuccessAlert();
           this.contactForm.reset();
         }
-      ),(error:any) =>{
-        
+      ),(error:any) => {
           this.isLoading = false;
           this.showErrorAlert(error.message);
-        
       };
-      
-
     } else {
       this.markFormGroupTouched();
       this.showValidationAlert();
     }
   }
 
-  
-
-  // Marcar todos los campos como tocados para mostrar errores
   private markFormGroupTouched(): void {
     Object.keys(this.contactForm.controls).forEach(key => {
       const control = this.contactForm.get(key);
@@ -94,35 +91,39 @@ export class ContactoComponent {
     });
   }
 
-  // Alertas con SweetAlert2
   private showSuccessAlert(): void {
-    Swal.fire({
-      title: '¡Éxito!',
-      text: 'Tu mensaje ha sido enviado correctamente. Te contactaremos pronto.',
-      icon: 'success',
-      confirmButtonText: 'Aceptar',
-      confirmButtonColor: '#28a745'
+    this.translate.get(['CONTACT.SUCCESS_TITLE','CONTACT.SUCCESS_TEXT','CONTACT.SUCCESS_BTN']).subscribe(t => {
+      Swal.fire({
+        title: t['CONTACT.SUCCESS_TITLE'],
+        text: t['CONTACT.SUCCESS_TEXT'],
+        icon: 'success',
+        confirmButtonText: t['CONTACT.SUCCESS_BTN'],
+        confirmButtonColor: '#28a745'
+      });
     });
   }
 
   private showErrorAlert(message: string): void {
-    Swal.fire({
-      title: 'Error',
-      text: message,
-      icon: 'error',
-      confirmButtonText: 'Intentar nuevamente',
-      confirmButtonColor: '#dc3545'
+    this.translate.get('CONTACT.ERROR_BTN').subscribe(btn => {
+      Swal.fire({
+        title: 'Error',
+        text: message,
+        icon: 'error',
+        confirmButtonText: btn,
+        confirmButtonColor: '#dc3545'
+      });
     });
   }
 
   private showValidationAlert(): void {
-    Swal.fire({
-      title: 'Formulario incompleto',
-      text: 'Por favor, completa todos los campos requeridos correctamente.',
-      icon: 'warning',
-      confirmButtonText: 'Entendido',
-      confirmButtonColor: '#ffc107'
+    this.translate.get(['CONTACT.VALIDATION_TITLE','CONTACT.VALIDATION_TEXT','CONTACT.VALIDATION_BTN']).subscribe(t => {
+      Swal.fire({
+        title: t['CONTACT.VALIDATION_TITLE'],
+        text: t['CONTACT.VALIDATION_TEXT'],
+        icon: 'warning',
+        confirmButtonText: t['CONTACT.VALIDATION_BTN'],
+        confirmButtonColor: '#ffc107'
+      });
     });
   }
-
 }

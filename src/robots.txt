@@ -6,6 +6,9 @@ Sitemap: https://ariasyasociados.co/sitemap.xml
 # Prevenir el acceso a directorios sensibles o en desarrollo
 Disallow: /confidential/
 Disallow: /temp/
+Disallow: /blog/
+Disallow: /entrada/
+Disallow: /blog-details/
 
 # Asegurar que los archivos de imagen y JavaScript necesarios para el correcto renderizado están permitidos
 Allow: /assets/js/

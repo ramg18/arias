@@ -1,4 +1,7 @@
-import { Component, AfterViewInit, HostListener  } from '@angular/core';
+import { Component, AfterViewInit, HostListener } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
+import { AuthService } from '../../services/auth.service';
+
 declare var bootstrap: any;
 
 @Component({
@@ -10,24 +13,12 @@ export class HeaderComponent implements AfterViewInit {
 
   isServiciosOpen = false;
 
-  ngAfterViewInit() {
-    // const dropdownElementList: NodeListOf<HTMLElement> = document.querySelectorAll('[data-bs-toggle="dropdown"]');
-    // dropdownElementList.forEach((dropdownToggleEl: HTMLElement) => {
-     
-    //   const menu = dropdownToggleEl.nextElementSibling as HTMLElement;
-    //   if (menu) {
-        
-    //     dropdownToggleEl.addEventListener('click', function (event) {
-    //       console.log('entra menu', event);
-    //       event.preventDefault();
-    //       menu.classList.toggle('show');
-    //       dropdownToggleEl.setAttribute('aria-expanded', menu.classList.contains('show').toString());
-    //     });
-    //   } else {
-    //     console.error('Menu element not found for', dropdownToggleEl);
-    //   }
-    // });
-  }
+  constructor(
+    public languageSvc: LanguageService,
+    public authService: AuthService
+  ) {}
+
+  ngAfterViewInit() {}
 
   toggleServicios(event: Event) {
     event.preventDefault();
@@ -39,6 +30,11 @@ export class HeaderComponent implements AfterViewInit {
     this.isServiciosOpen = false;
   }
 
+  toggleLanguage(): void {
+    const newLang = this.languageSvc.getCurrentLang() === 'es' ? 'en' : 'es';
+    this.languageSvc.switchLanguage(newLang as 'es' | 'en');
+  }
+
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: Event) {
     const target = event.target as HTMLElement;
@@ -46,5 +42,4 @@ export class HeaderComponent implements AfterViewInit {
       this.isServiciosOpen = false;
     }
   }
-
 }

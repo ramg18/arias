@@ -4,8 +4,7 @@
 		<div class="row align-items-center">
 
 			<div class="col-xl-4 col-lg-5 ms-auto">
-				<p class="text-white text-lg mb-70 lg-mb-40">Ofreciendo soluciones y servicios para abordar un espectro
-					de problemas financieros.</p>
+				<p class="text-white text-lg mb-70 lg-mb-40">{{ 'SERVICES.BANNER_DESC' | translate }}</p>
 
 			</div>
 		</div>
@@ -24,9 +23,7 @@
 						</div>
 						<div class="col-lg-6">
 							<p>
-								En Arias & Asociados ofrecemos un servicio de revisoría fiscal con un enfoque integral,
-								preventivo y oportuno, orientado a minimizar riesgos y garantizar la transparencia en la
-								gestión empresarial y general valor.
+								{{ 'FISCAL_AUDIT.INTRO' | translate }}
 							</p>
 						</div>
 					</div>
@@ -37,8 +34,7 @@
 					
 					
 					<ul class="style-none list-item pb-20">
-						<li>Análisis de procesos internos y revisión de mecanismos de control.</li>
-
+						<li>{{ 'FISCAL_AUDIT.ITEM1' | translate }}</li>
 					</ul>
 
 
@@ -46,9 +42,8 @@
 				<div *ngIf="elaboracion" class="details-meta ps-xxl-5 ps-xl-3">
 					
 					<ul class="style-none list-item pb-20">
-						<li>Validación de la confiabilidad y exactitud de los estados financieros.</li>
-						<li>Identificación de riesgos y áreas de mejora en la gestión financiera.</li>
-
+						<li>{{ 'FISCAL_AUDIT.ITEM2' | translate }}</li>
+						<li>{{ 'FISCAL_AUDIT.ITEM3' | translate }}</li>
 					</ul>
 
 
@@ -57,9 +52,8 @@
 					<!-- <img src="assets/images/media/img_03.jpg" class="rounded " alt="..."> -->
 					<br>
 					<ul class="style-none list-item pb-20">
-						<li>Opinión técnica y objetiva sobre la situación financiera.</li>
-						<li>Recomendaciones para fortalecer los procedimientos y la gestión.</li>
-
+						<li>{{ 'FISCAL_AUDIT.ITEM4' | translate }}</li>
+						<li>{{ 'FISCAL_AUDIT.ITEM5' | translate }}</li>
 					</ul>
 
 
@@ -68,9 +62,8 @@
 					<!-- <img src="assets/images/media/img_03.jpg" class="rounded " alt="..."> -->
 					<br>
 					<ul class="style-none list-item pb-20">
-						<li>Aplicación de metodologías alineadas con la normativa vigente.</li>
-						<li>Actuación bajo principios de ética, integridad y profesionalismo.</li>
-
+						<li>{{ 'FISCAL_AUDIT.ITEM6' | translate }}</li>
+						<li>{{ 'FISCAL_AUDIT.ITEM7' | translate }}</li>
 					</ul>
 
 				</div>
@@ -78,8 +71,7 @@
 					<!-- <img src="assets/images/media/img_03.jpg" class="rounded " alt="..."> -->
 					<br>
 					<ul class="style-none list-item pb-20">
-						<li>Control del cumplimiento de disposiciones legales, fiscales y estatutarias.</li>
-
+						<li>{{ 'FISCAL_AUDIT.ITEM8' | translate }}</li>
 					</ul>
 
 				</div>
@@ -90,27 +82,27 @@
 						<ul class="style-none">
 							<li><a (click)="mostrar(1)" style="cursor: pointer; text-align: left;" class=" w-100">
 
-									<span>¿Cómo lo hacemos?</span>
+									<span>{{ 'FISCAL_AUDIT.NAV1' | translate }}</span>
 								</a></li>
 							<li><a (click)="mostrar(2)" style="cursor: pointer; text-align: left;" class=" w-100">
 
-									<span>Conocimiento del negocio y evaluación de controles</span>
+									<span>{{ 'FISCAL_AUDIT.NAV2' | translate }}</span>
 								</a></li>
 							<li><a (click)="mostrar(3)" style="cursor: pointer; text-align: left;" class=" w-100">
 
-									<span>Aseguramiento y análisis de la información financiera</span>
+									<span>{{ 'FISCAL_AUDIT.NAV3' | translate }}</span>
 								</a></li>
 							<li><a (click)="mostrar(4)" style="cursor: pointer; text-align: left;" class=" w-100">
 
-									<span>Emisión de concepto independiente</span>
+									<span>{{ 'FISCAL_AUDIT.NAV4' | translate }}</span>
 								</a></li>
 							<li><a (click)="mostrar(5)" style="cursor: pointer; text-align: left;" class=" w-100">
 
-									<span>Cumplimiento de estándares de auditoría</span>
+									<span>{{ 'FISCAL_AUDIT.NAV5' | translate }}</span>
 								</a></li>
 							<li><a (click)="mostrar(6)" style="cursor: pointer; text-align: left;" class=" w-100">
 
-									<span>Verificación del marco legal y estatutario</span>
+									<span>{{ 'FISCAL_AUDIT.NAV6' | translate }}</span>
 								</a></li>
 
 
@@ -118,14 +110,14 @@
 						</ul>
 					</div>
 					<div class="contact-portfolio text-center mt-40 lg-mt-20">
-						<h3 class="mb-20">Descarga aquí nuestro portafolio</h3>
+						<h3 class="mb-20">{{ 'SERVICES.SIDEBAR_DOWNLOAD' | translate }}</h3>
 						<a href="https://ariasyasociados.co/assets/portafolio/portafolio.pdf" target="_blank"
-							class="tran3s fw-500">Descargalo aquí</a>
+							class="tran3s fw-500">{{ 'SERVICES.SIDEBAR_DOWNLOAD_BTN' | translate }}</a>
 					</div>
 					<div class="contact-banner text-center mt-40 lg-mt-20">
-						<h3 class="mb-20">Tienes Preguntas?</h3>
-						<a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios."
-							target="_blank" class="tran3s fw-500">Hablemos</a>
+						<h3 class="mb-20">{{ 'SERVICES.SIDEBAR_QUESTIONS' | translate }}</h3>
+						<a href="https://wa.me/573113094098?text={{ 'NAV.WA_TEXT' | translate }}"
+							target="_blank" class="tran3s fw-500">{{ 'SERVICES.SIDEBAR_TALK' | translate }}</a>
 					</div>
 					<!-- /.contact-banner -->
 				</aside>

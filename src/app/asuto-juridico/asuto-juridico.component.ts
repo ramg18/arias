@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-asuto-juridico',
   templateUrl: './asuto-juridico.component.html',
   styleUrls: ['./asuto-juridico.component.css']
 })
-export class AsutoJuridicoComponent {
+export class AsutoJuridicoComponent implements OnInit {
+
+  constructor(private titleService: Title, private metaService: Meta) {}
+
+  ngOnInit(): void {
+    this.titleService.setTitle('Asesoría Jurídica | Arias & Asociados');
+    this.metaService.updateTag({ name: 'description', content: 'Asesoría legal experta en derecho comercial, laboral y tributario para empresas en Sincelejo.' });
+  }
 
   como = true;
   cumplimiento = false;

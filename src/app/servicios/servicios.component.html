@@ -16,7 +16,7 @@
 				<div class="row" style="">
           			<div class="col-xxl-9 col-lg-9 col-sm-6 order-lg-last ">
 						<div *ngIf="quienessomos" class="details-meta ps-xxl-5 ps-xl-3">
-							<h3>¿Que es Arias & Asociados?</h3>
+							<h3>{{ 'SERVICES.ABOUT.TITLE' | translate }}</h3>
 							<div class="iframe-wrapper">
 								<iframe 
 									src="https://www.youtube.com/embed/dg8OA-ai4Lw?si=wwgcjgEzzkPQv27l" 
@@ -29,7 +29,7 @@
 							</div>
 						</div>
 						<div *ngIf="contable" class="details-meta ps-xxl-5 ps-xl-3">
-							<h3>Asuntos Contables</h3>
+							<h3>{{ 'SERVICES.ACCOUNTING_SECTION.TITLE' | translate }}</h3>
 							<div class="iframe-wrapper">
 								<iframe 
 									src="https://www.youtube.com/embed/R0_FEOGJ1FQ?si=pH6AnlivV-cN8iVV" 
@@ -42,100 +42,95 @@
 							</div>
 							
 							<p>
-								En Arias y Asociados ofrecemos un acompañamiento contable y financiero integral, orientado a garantizar el cumplimiento normativo, la transparencia en la información financiera y la optimización de recursos. Nuestro equipo combina experiencia técnica y conocimiento actualizado de la normatividad colombiana, brindando soluciones estratégicas que apoyan la toma de decisiones y fortalecen la gestión empresarial.
-								Nos enfocamos en prestar servicios confiables, oportunos y adaptados a las necesidades de cada cliente, contribuyendo al crecimiento sostenible y a la correcta gestión de sus obligaciones contables y fiscales.
-
+								{{ 'SERVICES.ACCOUNTING_SECTION.DESC1' | translate }}
+							</p>
+							<p>
+								{{ 'SERVICES.ACCOUNTING_SECTION.DESC2' | translate }}
 							</p>
 							<br>
 							<div class="accordion accordion-flush" id="accordionFlushExample">
 								<div class="accordion-item">
 									<h2 class="accordion-header">
 									<button class="accordion-button collapsed servicio-header fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#cumplimiento" aria-expanded="false" aria-controls="cumplimiento">
-										Cumplimiento Normativo y Regulatorio
+										{{ 'SERVICES.ACCOUNTING_SECTION.CUMPLIMIENTO.TITLE' | translate }}
 									</button>
 									</h2>
 									<div id="cumplimiento" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
 										<ul class="style-none list-item pb-20">
-											<li class="fs-6">Cumplimiento de obligaciones contables y societarias ante entes de control: Supersociedades, UGPP, DIAN y demás autoridades competentes.</li>
-											<li class="fs-6">Aplicación actualizada de las Normas de Información Financiera (NIIF) conforme al marco técnico colombiano.</li>
-											
+											<li class="fs-6">{{ 'SERVICES.ACCOUNTING_SECTION.CUMPLIMIENTO.ITEM1' | translate }}</li>
+											<li class="fs-6">{{ 'SERVICES.ACCOUNTING_SECTION.CUMPLIMIENTO.ITEM2' | translate }}</li>
 										</ul>
 									</div>
 								</div>
 								<div class="accordion-item">
 									<h2 class="accordion-header">
 									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#elaboracion" aria-expanded="false" aria-controls="elaboracion">
-										Elaboración y Presentación de Estados Financieros
+										{{ 'SERVICES.ACCOUNTING_SECTION.ELABORACION.TITLE' | translate }}
 									</button>
 									</h2>
 									<div id="elaboracion" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
 										<ul class="style-none list-item pb-20">
-											<li>Preparación y análisis de estados financieros.</li>
-											<li>Elaboración y análisis de informes contables para juntas directivas, asambleas, entes de control y entidades financieras.</li>
-											<li>Presentación de información financiera ante los diferentes entes de control (DIAN, Supersociedades, Supersalud, entidades municipales, entre otros).</li>
-											
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.ELABORACION.ITEM1' | translate }}</li>
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.ELABORACION.ITEM2' | translate }}</li>
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.ELABORACION.ITEM3' | translate }}</li>
 										</ul>
 									</div>
 								</div>
 								<div class="accordion-item">
 									<h2 class="accordion-header">
 									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#optimizacion" aria-expanded="false" aria-controls="optimizacion">
-										Optimización Fiscal y Tributaria
+										{{ 'SERVICES.ACCOUNTING_SECTION.OPTIMIZACION.TITLE' | translate }}
 									</button>
 									</h2>
 									<div id="optimizacion" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
 										<ul class="style-none list-item pb-20">
-											<li>Elaboración y revisión de declaraciones tributarias: renta, IVA, retenciones, ICA, industria y comercio, patrimonio, activos en el exterior entre otras.</li>
-											<li>Cumplimiento de obligaciones formales y sustanciales para personas jurídicas y naturales obligadas a llevar contabilidad.</li>
-											<li>Asesoría en planeación tributaria para optimizar cargas fiscales dentro del marco legal vigente.</li>
-											
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.OPTIMIZACION.ITEM1' | translate }}</li>
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.OPTIMIZACION.ITEM2' | translate }}</li>
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.OPTIMIZACION.ITEM3' | translate }}</li>
 										</ul>
 									</div>
 								</div>
 								<div class="accordion-item">
 									<h2 class="accordion-header">
 									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#analisis" aria-expanded="false" aria-controls="analisis">
-										Análisis Financiero y Reportes Gerenciales
+										{{ 'SERVICES.ACCOUNTING_SECTION.ANALISIS.TITLE' | translate }}
 									</button>
 									</h2>
 									<div id="analisis" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
 										<ul class="style-none list-item pb-20">
-											<li>Elaboración de análisis financieros e indicadores de gestión (liquidez, rentabilidad, endeudamiento, eficiencia operativa).</li>
-											<li>Análisis por líneas de negocio para la toma estratégica de decisiones.</li>
-											<li>Generación de informes ejecutivos para gerencia, inversionistas y socios.</li>
-											<li>Proyecciones financieras para una gestión oportuna y estratégica.</li>
-											
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.ANALISIS.ITEM1' | translate }}</li>
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.ANALISIS.ITEM2' | translate }}</li>
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.ANALISIS.ITEM3' | translate }}</li>
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.ANALISIS.ITEM4' | translate }}</li>
 										</ul>
 									</div>
 								</div>
 								<div class="accordion-item">
 									<h2 class="accordion-header">
 									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#gestion" aria-expanded="false" aria-controls="gestion">
-										Gestión de Riesgos Contables y Control Interno
+										{{ 'SERVICES.ACCOUNTING_SECTION.GESTION.TITLE' | translate }}
 									</button>
 									</h2>
 									<div id="gestion" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
 										<ul class="style-none list-item pb-20">
-											<li>Diagnóstico de riesgos contables, financieros y de cumplimiento normativo.</li>
-											<li>Implementación o fortalecimiento de políticas contables internas.</li>
-											<li>Revisión de procedimientos contables y formulación de recomendaciones para mitigar contingencias.</li>
-											<li>Identificación de riesgos asociados a facturación electrónica, retenciones y obligaciones fiscales.</li>
-											
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.GESTION.ITEM1' | translate }}</li>
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.GESTION.ITEM2' | translate }}</li>
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.GESTION.ITEM3' | translate }}</li>
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.GESTION.ITEM4' | translate }}</li>
 										</ul>
 									</div>
 								</div>
 								<div class="accordion-item">
 									<h2 class="accordion-header">
 									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#planificacion" aria-expanded="false" aria-controls="planificacion">
-										Planificación Financiera y Presupuestal
+										{{ 'SERVICES.ACCOUNTING_SECTION.PLANIFICACION.TITLE' | translate }}
 									</button>
 									</h2>
 									<div id="planificacion" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
 										<ul class="style-none list-item pb-20">
-											<li>Elaboración de presupuestos operativos, de inversión y de flujo de caja.</li>
-											<li>Acompañamiento en procesos de expansión, inversión o reestructuración financiera.</li>
-											<li>Proyecciones de flujos de efectivo futuros, planes de inversión y estrategias de sostenibilidad.</li>
-											
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.PLANIFICACION.ITEM1' | translate }}</li>
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.PLANIFICACION.ITEM2' | translate }}</li>
+											<li>{{ 'SERVICES.ACCOUNTING_SECTION.PLANIFICACION.ITEM3' | translate }}</li>
 										</ul>
 									</div>
 								</div>							
@@ -143,7 +138,7 @@
 
 						</div>
 						<div *ngIf="juridico" class="details-meta ps-xxl-5 ps-xl-3">
-							<h3>Asuntos Jurídicos</h3>
+							<h3>{{ 'SERVICES.LEGAL_SECTION.TITLE' | translate }}</h3>
 							<div class="iframe-wrapper">
 								<iframe 
 									src="https://www.youtube.com/embed/5Wp2KKzNptA?si=CKodef619c3eZEky" 
@@ -155,59 +150,56 @@
 								</iframe>
 							</div>
 							<p>
-								Buscamos generar valor agregado a las empresas a través de la asistencia jurídica en los diferentes asuntos relacionados con el derecho laboral, comercial y administrativo,
-								participando activamente en el desarrollo de los negocioa de nuestros clientes por media del acompañamiento jurídico que ofrecemos y de esta forma fortalecer y brindar seguridad
-								a sus actividades en todos los temas legales.
+								{{ 'SERVICES.LEGAL_SECTION.DESC' | translate }}
 							</p>
               				<div class="accordion accordion-flush" id="accordionFlushExample">
 								<div class="accordion-item">
 									<h2 class="accordion-header">
 									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#proteccion" aria-expanded="false" aria-controls="proteccion">
-										Protección del Patrimonio Familiar
+										{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.TITLE' | translate }}
 									</button>
 									</h2>
 									<div id="proteccion" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
-										<p>Acompañamos a las familias en la organización, preservación y transmisión segura de su patrimonio, evitando conflictos y asegurando su estabilidad generacional a través de:</p>
+										<p>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.INTRO' | translate }}</p>
 										<br>
 										<ul class="style-none list-item pb-20">
-											<li><strong>Protocolos de familia:</strong> El protocolo de familia es una herramienta esencial para mantener la armonía y la estabilidad del patrimonio familiar, especialmente cuando existen empresas o bienes comunes entre parientes. En Arias & Asociados diseñamos, estructuramos y formalizamos protocolos que: Definen reglas claras para la participación de los miembros de la familia en el negocio o en la administración del patrimonio. Regulan la sucesión, la toma de decisiones y la incorporación de nuevas generaciones. Establecen mecanismos de solución de conflictos y órganos de gobierno familiar.</li>
-											<li ><strong>Fideicomisos y propiedad fiduciaria:</strong> El fideicomiso es una de las estructuras más efectivas para proteger y administrar el patrimonio familiar. A través de la propiedad fiduciaria, permitimos que los bienes sean gestionados bajo condiciones previamente definidas, asegurando su destino y la protección de los beneficiarios. En Arias & Asociados asesoramos en:
+											<li><strong>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.PROTOCOLOS.TITLE' | translate }}</strong> {{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.PROTOCOLOS.DESC' | translate }}</li>
+											<li ><strong>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.FIDEICOMISOS.TITLE' | translate }}</strong> {{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.FIDEICOMISOS.DESC' | translate }}
 												<br>
 												<ul class="mt-20" style="list-style: none;">
-													<li>La constitución de fideicomisos familiares o de administración para garantizar el manejo responsable del patrimonio.</li>
-													<li>La transferencia de bienes a título fiduciario, evitando su exposición ante contingencias personales, conyugales o judiciales.</li>
-													<li>La creación de fideicomisos sucesorales, que permiten la entrega ordenada y controlada de bienes tras el fallecimiento del constituyente.</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.FIDEICOMISOS.ITEM1' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.FIDEICOMISOS.ITEM2' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.FIDEICOMISOS.ITEM3' | translate }}</li>
 												</ul>
 											</li>
-											<li><strong>Sucesiones notariales y judiciales:</strong> Brindamos acompañamiento integral en la planificación y ejecución de procesos sucesorales, tanto en vía notarial (cuando hay acuerdo entre herederos) como en vía judicial (cuando existen controversias). Nuestro enfoque combina agilidad, conciliación y técnica jurídica, para garantizar una distribución justa y transparente de los bienes. <br>
-											Asesoramos en la planeación sucesoral anticipada, incluyendo testamentos y pactos sucesorales al igual que el trámite de sucesiones notariales con enfoque en economía procesal y seguridad jurídica. Representamos a herederos o legatarios en procesos judiciales para la reclamación o defensa de derechos hereditarios.
+											<li><strong>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.SUCESIONES.TITLE' | translate }}</strong> {{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.SUCESIONES.DESC' | translate }}
 											</li>
-											<li><strong>Capitulaciones matrimoniales y pactos de convivencia:</strong> Las capitulaciones son la herramienta más eficaz para proteger el patrimonio personal y empresarial antes o durante una unión. En Arias & Asociados elaboramos y registramos capitulaciones y pactos de convivencia que:
+											<li><strong>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.CAPITULACIONES.TITLE' | translate }}</strong> {{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.CAPITULACIONES.DESC' | translate }}
 												<br>
 												<ul style="list-style: none;">
-													<li>Determinan qué bienes forman parte o no del patrimonio común.</li>
-													<li>Previenen conflictos económicos en caso de separación o disolución.</li>
-													<li>Permiten planificar financieramente la relación sin poner en riesgo los activos individuales o familiares.</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.CAPITULACIONES.ITEM1' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.CAPITULACIONES.ITEM2' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.CAPITULACIONES.ITEM3' | translate }}</li>
 												</ul>
 											</li>
-											<li><strong>Uniones maritales y liquidación de sociedades conyugales o patrimoniales:</strong> 
-												Ofrecemos asesoría completa en la formalización, reconocimiento o liquidación de uniones maritales de hecho y sociedades conyugales o patrimoniales, tanto en vía notarial como judicial. Nuestro trabajo se centra en garantizar que las decisiones económicas sean justas, transparentes y orientadas a la preservación del patrimonio común.
+											<li><strong>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.UNIONES.TITLE' | translate }}</strong> 
+												{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.UNIONES.DESC' | translate }}
 												<br>
 												<ul style="list-style: none;">
-													<li>Reconocimiento o disolución de uniones maritales de hecho.</li>
-													<li>Liquidación de sociedades conyugales o patrimoniales.</li>
-													<li>Asesoría en la división de bienes, manejo de pasivos y distribución equitativa.</li>
-													<li>Representación judicial en controversias por bienes conyugales o de pareja.</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.UNIONES.ITEM1' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.UNIONES.ITEM2' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.UNIONES.ITEM3' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.UNIONES.ITEM4' | translate }}</li>
 												</ul>
 											</li>
-											<li><strong>Asesoría en alimentos y regulación de relaciones familiares:</strong> 
-												Los conflictos derivados de las obligaciones alimentarias o de la regulación de relaciones familiares exigen sensibilidad y estrategia jurídica. Nuestro enfoque combina la protección de los derechos fundamentales con la seguridad patrimonial, buscando soluciones equilibradas y sostenibles.
+											<li><strong>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.ALIMENTOS.TITLE' | translate }}</strong> 
+												{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.ALIMENTOS.DESC' | translate }}
 												<br>
 												<ul style="list-style: none;">
-													<li>Asesoría en la fijación, aumento o reducción de cuotas alimentarias.</li>
-													<li>Negociación y formalización de acuerdos de custodia, visitas y manutención.</li>
-													<li>Defensa o reclamación de derechos ante autoridades de familia o juzgados.</li>
-													<li>Regulación integral de relaciones familiares desde una perspectiva preventiva.</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.ALIMENTOS.ITEM1' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.ALIMENTOS.ITEM2' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.ALIMENTOS.ITEM3' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.ALIMENTOS.ITEM4' | translate }}</li>
 												</ul>
 											</li>
 											
@@ -217,66 +209,64 @@
 								<div class="accordion-item">
 									<h2 class="accordion-header">
 									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#inmobiliario" aria-expanded="false" aria-controls="inmobiliario">
-										Protección del Patrimonio Inmobiliario
+										{{ 'SERVICES.LEGAL_SECTION.PROTECCION_INMOBILIARIA.TITLE' | translate }}
 									</button>
 									</h2>
 									<div id="inmobiliario" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-										<p style="font-size: 22px;">En Arias & Asociados entendemos que el patrimonio inmobiliario es uno de los activos más valiosos y vulnerables, por ello nos enfocamos en proteger jurídicamente la propiedad, garantizar la legalidad en las transacciones y evitar riesgos que comprometan el valor o la posesión de los bienes. Asesoramos integralmente en su adquisición, tenencia, uso, administración y defensa, para asegurar la plena protección jurídica de los bienes raíces urbanos y rurales a través de:</p>
+										<p style="font-size: 22px;">{{ 'SERVICES.LEGAL_SECTION.PROTECCION_INMOBILIARIA.INTRO' | translate }}</p>
 										<br>
 										<ul class="style-none list-item pb-20">
-											<li><strong>Contratos inmobiliarios:</strong> estructuración, revisión y acompañamiento en compraventas, promesas, arrendamientos, leasing, contratos de obra y fiducias inmobiliarias, servidumbres, expropiaciones, propiedad fiduciaria, usufructo.</li>
-											<li><strong>Propiedad horizontal:</strong> asesoría jurídica integral a conjuntos y edificios en su constitución, administración, reformas de reglamento y manejo de conflictos internos y reclamaciones ante promotoras.</li>
-											<li><strong>Procesos judiciales sobre bienes inmuebles:</strong> representación en procesos de pertenencia, reivindicación, restitución de tenencia y protección de la posesión.</li>
-											<li><strong>Restitución de tierras:</strong> defensa técnica tanto de reclamantes de tierras despojadas como de opositores legítimos, con enfoque en la protección del derecho de propiedad y la justicia transicional.</li>
-											<li><strong>Protección al consumidor inmobiliario:</strong> asesoría y defensa en casos de incumplimiento en proyectos de vivienda o afectación de derechos en la adquisición de inmuebles.</li>
-											<li><strong>Gestión predial y saneamiento de títulos:</strong> acompañamiento en procesos de formalización, tradición y administración de bienes rurales y urbanos.</li>
-											
+											<li [innerHTML]="'SERVICES.LEGAL_SECTION.PROTECCION_INMOBILIARIA.ITEM1' | translate"></li>
+											<li [innerHTML]="'SERVICES.LEGAL_SECTION.PROTECCION_INMOBILIARIA.ITEM2' | translate"></li>
+											<li [innerHTML]="'SERVICES.LEGAL_SECTION.PROTECCION_INMOBILIARIA.ITEM3' | translate"></li>
+											<li [innerHTML]="'SERVICES.LEGAL_SECTION.PROTECCION_INMOBILIARIA.ITEM4' | translate"></li>
+											<li [innerHTML]="'SERVICES.LEGAL_SECTION.PROTECCION_INMOBILIARIA.ITEM5' | translate"></li>
+											<li [innerHTML]="'SERVICES.LEGAL_SECTION.PROTECCION_INMOBILIARIA.ITEM6' | translate"></li>
 										</ul>
 									</div>
 								</div>
 								<div class="accordion-item">
 									<h2 class="accordion-header">
 									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#patrimonio" aria-expanded="false" aria-controls="patrimonio">
-										Protección del Patrimonio Empresarial
+										{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.TITLE' | translate }}
 									</button>
 									</h2>
 									<div id="patrimonio" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-										<p style="font-size: 22px;">Acompañamos a los emprendedores y empresarios en todas las etapas del ciclo empresarial, desde la creación de su negocio hasta la defensa judicial de su estructura patrimonial. Nuestro propósito es fortalecer las decisiones corporativas con visión estratégica y jurídica sólida a través de las siguientes líneas de trabajo:</p>
+										<p style="font-size: 22px;">{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.INTRO' | translate }}</p>
 										<ul class="style-none list-item pb-20">
 											
-											<li><strong>Emprendimiento y Constitución Empresarial:</strong> Pensado para emprendedores y negocios en etapa de creación, que necesitan comenzar con bases jurídicas seguras y estructuras patrimoniales eficientes. Ofrecemos:
+											<li><strong>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.TITLE' | translate }}</strong> {{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.DESC' | translate }}
 												<br>
 												<ul style="list-style: none;">
-													<li>Constitución de sociedades y selección del tipo asociativo más conveniente. (contratos de cuentas en participación, joint venture, etc, agencia mercantil, etc.).</li>
-													<li>Redacción de estatutos sociales y acuerdos fundacionales.</li>
-													<li>Asesoría en la vinculación de socios, inversionistas o aliados estratégicos.</li>
-													<li>Registro de marcas, patentes, nombres comerciales y demás activos de propiedad industrial.</li>
-													<li>Estructuración contractual con proveedores, clientes y aliados.</li>
-													<li>Acompañamiento legal inicial en el cumplimiento normativo y tributario.</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.ITEM1' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.ITEM2' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.ITEM3' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.ITEM4' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.ITEM5' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.ITEM6' | translate }}</li>
 												</ul>
 											</li>
 											
-											<li><strong>Empresas Formalizadas y Gestión Corporativa:</strong> Dirigido a empresas ya consolidadas o en crecimiento, que enfrentan retos de gobierno corporativo, control interno y sostenibilidad jurídica. Ofrecemos: 
+											<li><strong>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.TITLE' | translate }}</strong> {{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.DESC' | translate }}
 												<br>
 												<ul style="list-style: none;">
-													<li>Reformas estatutarias y actualización de órganos de administración.</li>
-													<li>Elaboración de acuerdos de socios y protocolos de familia empresaria.</li>
-													<li>Manejo de conflictos entre socios, accionistas o administradores.</li>
-													<li>Asesoría en fusiones, escisiones, adquisiciones y reorganizaciones empresariales.</li>
-													<li>Revisión de contratos mercantiles, distribución y representación.</li>
-													<li>Implementación de programas de cumplimiento (compliance) y gestión de riesgos jurídicos.</li>
-													<li>Protección de activos intangibles: marcas, patentes, know-how y derechos de autor empresariales. </li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.ITEM1' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.ITEM2' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.ITEM3' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.ITEM4' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.ITEM5' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.ITEM6' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.ITEM7' | translate }}</li>
 												</ul>
 											</li>
-											<li><strong>Protección Judicial y Defensa Societaria:</strong> Cuando surgen conflictos que amenazan el capital o la operación empresarial, defendemos el patrimonio corporativo con estrategia procesal y conocimiento especializado en derecho societario. Ofrecemos:
+											<li><strong>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.DEFENSA.TITLE' | translate }}</strong> {{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.DEFENSA.DESC' | translate }}
 												<br>
 												<ul style="list-style: none;">
-													<li>Mediación y gestión extrajudicial y judicial entre socios, administradores o accionistas.</li>
-													<li>Acciones de responsabilidad contra administradores y revisores fiscales.</li>
-													<li>Impugnación de decisiones sociales y asambleas irregulares.</li>
-													<li>Defensa frente a sanciones o investigaciones de autoridades administrativas.</li>
-													<li>Litigios derivados de contratos mercantiles, incumplimientos o competencia desleal.</li>
-													
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.DEFENSA.ITEM1' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.DEFENSA.ITEM2' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.DEFENSA.ITEM3' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.DEFENSA.ITEM4' | translate }}</li>
+													<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.DEFENSA.ITEM5' | translate }}</li>
 												</ul>
 											</li>											
 										</ul>
@@ -285,36 +275,34 @@
 								<div class="accordion-item">
 									<h2 class="accordion-header">
 									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#preventiva" aria-expanded="false" aria-controls="preventiva">
-										Protección Patrimonial Preventiva
+										{{ 'SERVICES.LEGAL_SECTION.PREVENTIVA.TITLE' | translate }}
 									</button>
 									</h2>
 									<div id="preventiva" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-										<p style="font-size: 22px;">Anticipamos riesgos mediante asesorías preventivas, diseño contractual y diagnósticos legales, orientados a evitar pérdidas y contingencias futuras, a través de:</p>
+										<p style="font-size: 22px;">{{ 'SERVICES.LEGAL_SECTION.PREVENTIVA.INTRO' | translate }}</p>
 										<br>
 										<ul class="style-none list-item pb-20">
-											<li>Auditorías y diagnósticos jurídicos (due diligence).</li>
-											<li>Redacción y revisión de contratos civiles, comerciales y laborales.</li>
-											<li>Estructuración de modelos contractuales ajustados al negocio.</li>
-											<li>Acompañamiento en trámites ante entidades públicas y privadas.</li>
-											
+											<li>{{ 'SERVICES.LEGAL_SECTION.PREVENTIVA.ITEM1' | translate }}</li>
+											<li>{{ 'SERVICES.LEGAL_SECTION.PREVENTIVA.ITEM2' | translate }}</li>
+											<li>{{ 'SERVICES.LEGAL_SECTION.PREVENTIVA.ITEM3' | translate }}</li>
+											<li>{{ 'SERVICES.LEGAL_SECTION.PREVENTIVA.ITEM4' | translate }}</li>
 										</ul>
 									</div>
 								</div>
 								<div class="accordion-item">
 									<h2 class="accordion-header">
 									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#litigiosa" aria-expanded="false" aria-controls="litigiosa">
-										Protección Patrimonial Litigiosa: 
+										{{ 'SERVICES.LEGAL_SECTION.LITIGIOSA.TITLE' | translate }}
 									</button>
 									</h2>
 									<div id="litigiosa" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-										<p style="font-size: 22px;">Cuando el conflicto es inevitable, defendemos el patrimonio de nuestros clientes con estrategia, técnica y evidencia jurídica sólida, buscando siempre el restablecimiento de sus derechos y la minimización del impacto económico a través de la gestión de procesos.</p>
+										<p style="font-size: 22px;">{{ 'SERVICES.LEGAL_SECTION.LITIGIOSA.INTRO' | translate }}</p>
 										<br>
 										<ul class="style-none list-item pb-20">
-											<li>Procesos civiles, comerciales, laborales y administrativos.</li>
-											<li>Responsabilidad contractual y extracontractual.</li>
-											<li>Procesos de reparación directa y defensa del Estado.</li>
-											<li>Cuantificación y prueba pericial de perjuicios patrimoniales y extrapatrimoniales.</li>
-											
+											<li>{{ 'SERVICES.LEGAL_SECTION.LITIGIOSA.ITEM1' | translate }}</li>
+											<li>{{ 'SERVICES.LEGAL_SECTION.LITIGIOSA.ITEM2' | translate }}</li>
+											<li>{{ 'SERVICES.LEGAL_SECTION.LITIGIOSA.ITEM3' | translate }}</li>
+											<li>{{ 'SERVICES.LEGAL_SECTION.LITIGIOSA.ITEM4' | translate }}</li>
 										</ul>
 									</div>
 								</div>
@@ -324,172 +312,34 @@
 
 						</div>
 						<div *ngIf="tributario" class="details-meta ps-xxl-5 ps-xl-3">
-							<h3>Asuntos Tributarios</h3>
+							<h3>{{ 'SERVICES.TAX_SECTION.TITLE' | translate }}</h3>
 							<p style="font-size: 22px;">
-								En Arias & Asociados ofrecemos asesoría integral en materia fiscal, ayudando a nuestros clientes a cumplir con la normatividad vigente y optimizar su carga impositiva de manera estratégica.
+								{{ 'SERVICES.TAX_SECTION.DESC' | translate }}
 							</p>
 							<br>
-							<div class="accordion accordion-flush" id="accordionFlushExample">
-								
-								
-								<div class="accordion-item">
-									<h2 class="accordion-header">
-									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#planeaciotrib" aria-expanded="false" aria-controls="planeaciotrib">
-										Planeación Tributaria
-									</button>
-									</h2>
-									<div id="planeaciotrib" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-										<br>
-										<ul class="style-none list-item pb-20">
-											<li>Auditorías y diagnósticos jurídicos (due diligence).</li>
-											
-										</ul>
-									</div>
-								</div>
-								<div class="accordion-item">
-									<h2 class="accordion-header">
-									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#asconau" aria-expanded="false" aria-controls="asconau">
-										Asesoría, Consultoría y Auditoría Tributaria
-									</button>
-									</h2>
-									<div id="asconau" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-										<br>
-										<ul class="style-none list-item pb-20">
-											<li>Impuestos nacionales y municipales.</li>
-											<li>Revisión y verificación de cumplimiento normativo.</li>
-											
-										</ul>
-									</div>
-								</div>
-								<div class="accordion-item">
-									<h2 class="accordion-header">
-									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#devtram" aria-expanded="false" aria-controls="devtram">
-										Devoluciones y Trámites Tributarios
-									</button>
-									</h2>
-									<div id="devtram" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-										<br>
-										<ul class="style-none list-item pb-20">
-											<li>Solicitud y gestión de devoluciones de saldos a favor.</li>
-											<li>Trámite de pagos en exceso y pagos no debidos.</li>
-											
-										</ul>
-									</div>
-								</div>
-								<div class="accordion-item">
-									<h2 class="accordion-header">
-									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#capemp" aria-expanded="false" aria-controls="capemp">
-										Capacitación Empresarial
-									</button>
-									</h2>
-									<div id="capemp" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-										<br>
-										<ul class="style-none list-item pb-20">
-											<li>Formación a directivos y equipos en temas tributarios clave.</li>
-											
-										</ul>
-									</div>
-								</div>
-								<div class="accordion-item">
-									<h2 class="accordion-header">
-									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#atereq" aria-expanded="false" aria-controls="atereq">
-										Atención de Requerimientos
-									</button>
-									</h2>
-									<div id="atereq" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-										<br>
-										<ul class="style-none list-item pb-20">
-											<li>Respuesta a requerimientos ordinarios y especiales de la DIAN, UGPP y demás autoridades municipales.</li>
-											
-										</ul>
-									</div>
-								</div>
-								
-														
-							</div>
+							<ul class="style-none list-item pb-20">
+								<li>{{ 'SERVICES.TAX_SECTION.ITEM1' | translate }}</li>
+								<li>{{ 'SERVICES.TAX_SECTION.ITEM2' | translate }}</li>
+								<li>{{ 'SERVICES.TAX_SECTION.ITEM3' | translate }}</li>
+								<li>{{ 'SERVICES.TAX_SECTION.ITEM4' | translate }}</li>
+								<li>{{ 'SERVICES.TAX_SECTION.ITEM5' | translate }}</li>
+								<li>{{ 'SERVICES.TAX_SECTION.ITEM6' | translate }}</li>
+								<li>{{ 'SERVICES.TAX_SECTION.ITEM7' | translate }}</li>
+								<li>{{ 'SERVICES.TAX_SECTION.ITEM8' | translate }}</li>
+								<li>{{ 'SERVICES.TAX_SECTION.ITEM9' | translate }}</li>
+							</ul>
 							
 						</div>
 						<div *ngIf="revisoria" class="details-meta ps-xxl-5 ps-xl-3">
-							<h3>Revisoría Fiscal</h3>
-							<p style="font-size: 22px;">
-								En Arias & Asociados ofrecemos un servicio de revisoría fiscal con un enfoque integral, preventivo y oportuno, orientado a minimizar riesgos y garantizar la transparencia en la gestión empresarial y general valor. 
-							</p>
-							<div class="accordion accordion-flush" id="accordionFlushExample">
-								
-								
-								<div class="accordion-item">
-									<h2 class="accordion-header">
-									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#controles" aria-expanded="false" aria-controls="controles">
-										Conocimiento del negocio y evaluación de controles
-									</button>
-									</h2>
-									<div id="controles" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-										<br>
-										<ul class="style-none list-item pb-20">
-											<li>Análisis de procesos internos y revisión de mecanismos de control.</li>
-											
-										</ul>
-									</div>
-								</div>
-								<div class="accordion-item">
-									<h2 class="accordion-header">
-									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#aseguramiento" aria-expanded="false" aria-controls="aseguramiento">
-										Aseguramiento y análisis de la información financiera
-									</button>
-									</h2>
-									<div id="aseguramiento" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-										<br>
-										<ul class="style-none list-item pb-20">
-											<li>Validación de la confiabilidad y exactitud de los estados financieros.</li>
-											<li>Identificación de riesgos y áreas de mejora en la gestión financiera.</li>
-											
-										</ul>
-									</div>
-								</div>
-								<div class="accordion-item">
-									<h2 class="accordion-header">
-									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#emision" aria-expanded="false" aria-controls="emision">
-										Emisión de concepto independiente
-									</button>
-									</h2>
-									<div id="emision" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-										<br>
-										<ul class="style-none list-item pb-20">
-											<li>Opinión técnica y objetiva sobre la situación financiera.</li>
-											<li>Recomendaciones para fortalecer los procedimientos y la gestión.</li>
-											
-										</ul>
-									</div>
-								</div>
-								<div class="accordion-item">
-									<h2 class="accordion-header">
-									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#cumplimiento" aria-expanded="false" aria-controls="cumplimiento">
-										Cumplimiento de estándares de auditoría
-									</button>
-									</h2>
-									<div id="cumplimiento" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-										<br>
-										<ul class="style-none list-item pb-20">
-											<li>Aplicación de metodologías alineadas con la normativa vigente.</li>
-											<li>Actuación bajo principios de ética, integridad y profesionalismo.</li>
-											
-										</ul>
-									</div>
-								</div>
-								<div class="accordion-item">
-									<h2 class="accordion-header">
-									<button class="accordion-button collapsed servicio-header" type="button" data-bs-toggle="collapse" data-bs-target="#verificacion" aria-expanded="false" aria-controls="verificacion">
-										Verificación del marco legal y estatutario
-									</button>
-									</h2>
-									<div id="verificacion" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-										<br>
-										<ul class="style-none list-item pb-20">
-											<li>Control del cumplimiento de disposiciones legales, fiscales y estatutarias.</li>
-											
-										</ul>
-									</div>
-								</div>
+							<ul class="style-none list-item pb-20">
+								<li>{{ 'SERVICES.FISCAL_SECTION.ITEM1' | translate }}</li>
+								<li>{{ 'SERVICES.FISCAL_SECTION.ITEM2' | translate }}</li>
+								<li>{{ 'SERVICES.FISCAL_SECTION.ITEM3' | translate }}</li>
+								<li>{{ 'SERVICES.FISCAL_SECTION.ITEM4' | translate }}</li>
+								<li>{{ 'SERVICES.FISCAL_SECTION.ITEM5' | translate }}</li>
+							</ul>
+						</div>
+						<div *ngIf="certificados" class="details-meta ps-xxl-5 ps-xl-3">
 								
 														
 							</div>
@@ -502,34 +352,34 @@
 								<ul class="style-none">
 									<li><a (click)="mostrar(1)" style="cursor: pointer;" class="d-flex align-items-center w-100">
 										<img src="assets/images/lazy.svg" data-src="assets/images/icon/icon_72.svg" alt="" class="lazy-img">
-										<span>¿Qué es Arias & Asociados?</span>
+										<span>{{ 'NAV.ABOUT' | translate }}</span>
 									</a></li>
 									<li><a (click)="mostrar(2)" style="cursor: pointer;" class="d-flex align-items-center w-100">
 										<img src="assets/images/lazy.svg" data-src="assets/images/icon/icon_72.svg" alt="" class="lazy-img">
-										<span>Asuntos Contables</span>
+										<span>{{ 'NAV.ACCOUNTING' | translate }}</span>
 									</a></li>
 									<li><a (click)="mostrar(3)" style="cursor: pointer;" class="d-flex align-items-center w-100">
 										<img src="assets/images/lazy.svg" data-src="assets/images/icon/icon_73.svg" alt="" class="lazy-img">
-										<span>Asuntos Jurídicos</span>
+										<span>{{ 'NAV.LEGAL' | translate }}</span>
 									</a></li>
 									<li><a (click)="mostrar(4)" style="cursor: pointer;" class="d-flex align-items-center w-100">
 										<img src="assets/images/lazy.svg" data-src="assets/images/icon/icon_74.svg" alt="" class="lazy-img">
-										<span>Asuntos Tributarios</span>
+										<span>{{ 'NAV.TAX' | translate }}</span>
 									</a></li>
 									<li><a (click)="mostrar(5)" style="cursor: pointer;" class="d-flex align-items-center w-100">
 										<img src="assets/images/lazy.svg" data-src="assets/images/icon/icon_75.svg" alt="" class="lazy-img">
-										<span>Revisoría Fiscal</span>
+										<span>{{ 'NAV.FISCAL' | translate }}</span>
 									</a></li>
 
 								</ul>
 							</div>
 						<div class="contact-portfolio text-center mt-40 lg-mt-20">
-							<h3 class="mb-20">Descarga aquí nuestro portafolio</h3>
-							<a href="https://ariasyasociados.co/assets/portafolio/portafolio.pdf" target="_blank" class="tran3s fw-500">Descargalo aquí</a>
+							<h3 class="mb-20">{{ 'SERVICES.SIDEBAR_DOWNLOAD' | translate }}</h3>
+							<a href="https://ariasyasociados.co/assets/portafolio/portafolio.pdf" target="_blank" class="tran3s fw-500">{{ 'SERVICES.SIDEBAR_DOWNLOAD_BTN' | translate }}</a>
 						</div>
 						<div class="contact-banner text-center mt-40 lg-mt-20">
-							<h3 class="mb-20">Tienes Preguntas?</h3>
-							<a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios." target="_blank" class="tran3s fw-500">Hablemos</a>
+							<h3 class="mb-20">{{ 'SERVICES.SIDEBAR_QUESTIONS' | translate }}</h3>
+							<a href="https://wa.me/573113094098?text={{ 'NAV.WA_TEXT' | translate }}" target="_blank" class="tran3s fw-500">{{ 'SERVICES.SIDEBAR_TALK' | translate }}</a>
 						</div>
 	
 						</aside>

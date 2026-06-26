@@ -67,13 +67,14 @@
     <priority>0.9</priority>
   </url>
   
-  <!-- Blog -->
+  <!-- Blog (Deshabilitado temporalmente)
   <url>
     <loc>https://ariasyasociados.co/blog</loc>
     <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  -->
   
 
   <!-- Artículos de Blog - Agregar según tus artículos -->

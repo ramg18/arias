@@ -2,5 +2,17 @@
     {
         "nombre": "RENTA PERSONA NATURAL 2024",
         "valor": 1
+    },
+    {
+        "nombre": "IMPUESTOS TERRITORIALES Y PROCEDIMIENTO TRIBUTARIO",
+        "valor": 2
+    },
+    {
+        "nombre": "PROCEDIMIENTO TRIBUTARIO 2025",
+        "valor": 3
+    },
+    {
+        "nombre": "4TO CONGRESO DE DERECHO TRIBUTARIO Y CONTABILIDAD 2025",
+        "valor": 4
     }
 ]

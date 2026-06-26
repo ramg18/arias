@@ -64,18 +64,17 @@
     <div class="row">
       <div class="col-xl-6 col-lg-12 ms-auto">
         <h1 class="hero-heading d-inline-block position-relative wow fadeInUp display-4">
-          Tu Aliado Estratégico en Soluciones Empresariales Contables, Jurídicas y Tributarias
+          {{ 'HOME.HERO_TITLE' | translate }}
         </h1>
         <p
           class="text-xl text-white pt-35 pb-25 wow fadeInUp"
           data-wow-delay="0.1s"
         >
-          Fortalece tu negocio con estrategias innovadoras y soluciones
-          efectivas.
+          {{ 'HOME.HERO_DESC' | translate }}
         </p>
         
-        <a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios." target="_blank" class="btn-two icon-link wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-							<span>Hablemos!</span>
+        <a [href]="'https://wa.me/573113094098?text=' + ('NAV.WA_TEXT' | translate)" target="_blank" class="btn-two icon-link wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+							<span>{{ 'NAV.CTA' | translate }}</span>
 							<img src="assets/images/icon/icon_02.svg" data-src="assets/images/icon/icon_02.svg" alt="" class="lazy-img icon ms-2">
 						</a>
           <!-- <a class="btn-two icon-link fancybox wow fadeInUp" data-fancybox="" href="https://www.youtube.com/embed/aXFSJTjVjw0">
@@ -118,8 +117,7 @@
 >
   <div class="row align-items-center">
     <div class="col-md-6 text-center text-md-end">
-      <h2 class="pe-xl-5 pe-md-4 sm-pb-50">
-        Que te parece si <span>EMPEZAMOS</span>
+      <h2 class="pe-xl-5 pe-md-4 sm-pb-50" [innerHTML]="'HOME.GET_STARTED' | translate">
       </h2>
     </div>
     <div class="col-md-6">
@@ -128,13 +126,13 @@
       >
         <div>
           <h4 class="fw-bold display-1">+20</h4>
-          <p class="text-md m0">Clientes satisfechos</p>
+          <p class="text-md m0">{{ 'HOME.SATISFIED_CLIENTS' | translate }}</p>
         </div>
 
         <img
           src="assets/images/testimonial/3.jpg"
           data-src="assets/images/assets/screen_01.png"
-          alt=""
+          alt="Arias & Asociados"
           class="lazy-img screen me-xxl-5 rounded-circle"
         />
       </div>
@@ -160,15 +158,13 @@
               <img
                 src="assets/images/icon/icon_03.svg"
                 data-src="assets/images/icon/icon_03.svg"
-                alt=""
+                alt="Precios Competitivos"
                 class="lazy-img"
               />
             </div>
             <div class="text ps-4">
-              <h4 class="fw-bold">Precios competitivos</h4>
-              <p class="pe-xl-4 ">
-                Gracias a nuestra eficiencia operativa y alianzas estratégicas con proveedores, aseguramos valor y calidad a nuestros clientes.
-              </p>
+              <h4 class="fw-bold">{{ 'HOME.FEATURE1_TITLE' | translate }}</h4>
+              <p class="pe-xl-4 ">{{ 'HOME.FEATURE1_DESC' | translate }}</p>
             </div>
           </div>
           <!-- /.card-style-one -->
@@ -181,15 +177,13 @@
               <img
                 src="assets/images/icon/icon_04.svg"
                 data-src="assets/images/icon/icon_04.svg"
-                alt=""
+                alt="Asesores Expertos"
                 class="lazy-img"
               />
             </div>
             <div class="text ps-4">
-              <h4 class="fw-bold">Asesores expertos</h4>
-              <p class="pe-xl-4">
-                Nuestro equipo combina experiencia y conocimiento para ofrecer soluciones a medida y resultados óptimos.
-              </p>
+              <h4 class="fw-bold">{{ 'HOME.FEATURE2_TITLE' | translate }}</h4>
+              <p class="pe-xl-4">{{ 'HOME.FEATURE2_DESC' | translate }}</p>
             </div>
           </div>
           <!-- /.card-style-one -->
@@ -202,15 +196,13 @@
               <img
                 src="assets/images/icon/icon_05.svg"
                 data-src="assets/images/icon/icon_05.svg"
-                alt=""
+                alt="Soporte Efectivo"
                 class="lazy-img"
               />
             </div>
             <div class="text ps-4">
-              <h4 class="fw-bold">Soporte efectivo</h4>
-              <p class="pe-xl-4">
-                garantizamos respuestas rápidas y soluciones precisas para cada desafío.
-              </p>
+              <h4 class="fw-bold">{{ 'HOME.FEATURE3_TITLE' | translate }}</h4>
+              <p class="pe-xl-4">{{ 'HOME.FEATURE3_DESC' | translate }}</p>
             </div>
           </div>
           <!-- /.card-style-one -->
@@ -225,7 +217,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="title-one text-center text-md-start mb-30 sm-mb-10">
-            <h2>Proporcionamos servicios de calidad.</h2>
+            <h2>{{ 'HOME.SERVICES_TITLE' | translate }}</h2>
           </div>
           <!-- /.title-one -->
         </div>
@@ -236,13 +228,11 @@
             <img
               src="assets/images/icon/calculator.svg"
               data-src="assets/images/icon/icon_07.svg"
-              alt=""
+              alt="Servicios Contables"
               class="lazy-img icon me-auto"
             />
-            <h4 class="fw-bold mt-30 mb-25">Asuntos Contables</h4>
-            <p class="mb-20">
-              Asesoramos a nuestros clientes de manera integral, permitiendoles conocer de forma clara y sencilla las fortalezas de su empresa. Así mis...
-            </p>
+            <h4 class="fw-bold mt-30 mb-25">{{ 'HOME.SVC_ACCOUNTING_TITLE' | translate }}</h4>
+            <p class="mb-20">{{ 'HOME.SVC_ACCOUNTING_DESC' | translate }}</p>
             <a
 
               [routerLink]="['/servicios-contables']"
@@ -264,13 +254,11 @@
             <img
               src="assets/images/icon/gavel.svg"
               data-src="assets/images/icon/icon_07.svg"
-              alt=""
+              alt="Servicios Jurídicos"
               class="lazy-img icon me-auto"
             />
-            <h4 class="fw-bold mt-30 mb-25">Asuntos Jurídicos</h4>
-            <p class="mb-20">
-              Buscamos generar valor agregado a las empresas a traves de la asistencia jurídica en los diferentes asuntos relacionados con el derecho laboral, comercial y administrativo.
-            </p>
+            <h4 class="fw-bold mt-30 mb-25">{{ 'HOME.SVC_LEGAL_TITLE' | translate }}</h4>
+            <p class="mb-20">{{ 'HOME.SVC_LEGAL_DESC' | translate }}</p>
             <a
 
               [routerLink]="['/servicios-juridicos']"
@@ -292,13 +280,11 @@
             <img
               src="assets/images/icon/tax-alt.svg"
               data-src="assets/images/icon/icon_08.svg"
-              alt=""
+              alt="Asesoría Tributaria"
               class="lazy-img icon me-auto"
             />
-            <h4 class="fw-bold mt-30 mb-25">Asuntos Tributarios</h4>
-            <p class="mb-20">
-              En nuestra firma contamos con una amplia experiencia en brindar asesoría especializada en materia tributaria, abarcando desde la planificación estratégica de impuestos...
-            </p>
+            <h4 class="fw-bold mt-30 mb-25">{{ 'HOME.SVC_TAX_TITLE' | translate }}</h4>
+            <p class="mb-20">{{ 'HOME.SVC_TAX_DESC' | translate }}</p>
             <a
 
               [routerLink]="['/servicios-tributarios']"
@@ -320,14 +306,11 @@
             <img
               src="assets/images/icon/search-dollar.svg"
               data-src="assets/images/icon/icon_08.svg"
-              alt=""
+              alt="Revisoría Fiscal"
               class="lazy-img icon me-auto"
             />
-            <h4 class="fw-bold mt-30 mb-25">Revisoría Fiscal</h4>
-            <p class="mb-20">
-              La revisoría fiscal brinda un enfoque integral, preventivo y oportuno
-              de los diferentes riesgos a los que se expone cada ente económico.
-            </p>
+            <h4 class="fw-bold mt-30 mb-25">{{ 'HOME.SVC_FISCAL_TITLE' | translate }}</h4>
+            <p class="mb-20">{{ 'HOME.SVC_FISCAL_DESC' | translate }}</p>
             <a
 
               [routerLink]="['/revisoria-fiscal']"
@@ -344,11 +327,9 @@
       </div>
 
       <div class="section-subheading sm-mt-40">
-        <p class="text-lg">
-          Nos dedicamos a proporcionar servicios de calidad superior, superando las expectativas de nuestros clientes en cada proyecto.
-        </p>
+        <p class="text-lg">{{ 'HOME.PORTFOLIO_DESC' | translate }}</p>
         <a  href="https://ariasyasociados.co/assets/portafolio/portafolio.pdf" target="_blank" class="btn-three icon-link">
-          <span>Descarga nuestro portafolio</span>
+          <span>{{ 'HOME.DOWNLOAD_PORTFOLIO' | translate }}</span>
           <img
             src="assets/images/icon/icon_09.svg"
             data-src="assets/images/icon/icon_09.svg"
@@ -375,12 +356,10 @@
       <div class="col-xl-5 col-lg-6 wow fadeInLeft">
         <div class="title-one">
 
-          <h2>+20 Clientes usan nuestros servicios.</h2>
+          <h2>{{ 'HOME.CLIENTS_TITLE' | translate }}</h2>
         </div>
         <!-- /.title-one -->
-        <p class="text-lg mt-45 lg-mt-30 mb-35 lg-mb-20">
-          Su éxito es nuestra misión. Como profesionales, ofrecemos orientación experta, liberando su potencial de crecimiento y rentabilidad.
-        </p>
+        <p class="text-lg mt-45 lg-mt-30 mb-35 lg-mb-20">{{ 'HOME.CLIENTS_DESC' | translate }}</p>
 
       </div>
       <div class="col-xl-7 col-lg-6 wow fadeInRight">
@@ -388,9 +367,9 @@
           class="media-list-item ms-auto pe-xxl-5 pe-4 ps-xxl-5 ps-4 pb-35 md-mt-60 d-flex align-items-end"
         >
           <ul class="style-none">
-            <li>Confidencialidad de la información.</li>
-            <li>Reputación y Confianza.</li>
-            <li>Personalización de Servicios.</li>
+            <li>{{ 'HOME.CLIENTS_LIST1' | translate }}</li>
+            <li>{{ 'HOME.CLIENTS_LIST2' | translate }}</li>
+            <li>{{ 'HOME.CLIENTS_LIST3' | translate }}</li>
           </ul>
         </div>
       </div>
@@ -409,8 +388,8 @@
     <div class="wrapper">
       <div class="row align-items-center">
         <div class="title-one">
-          <div class="upper-title">Nosotros</div>
-          <h2 style="text-align: center;">Comprende como hemos sido una marca de éxito.</h2>
+          <div class="upper-title">{{ 'HOME.ABOUT_LABEL' | translate }}</div>
+          <h2 style="text-align: center;">{{ 'HOME.ABOUT_TITLE' | translate }}</h2>
         </div>
         <div class="col-md-4">
           <div class="card-style-three pt-45 md-pt-30 pb-35 sm-pb-30">
@@ -420,11 +399,8 @@
               alt=""
               class="lazy-img icon"
             />
-            <h4 class="fw-bold mt-40 sm-mt-20 mb-20">Misión</h4>
-            <p>
-              En Arias y Asociados brindamos soluciones estratégicas, integrales, personalizadas y de alta calidad en materia contable, financiera, tributaria y jurídica, orientadas a impulsar la sostenibilidad y el crecimiento de nuestros clientes.
-              Nuestro compromiso es generar valor sostenible, optimizar la gestión de las organizaciones y contribuir al logro de sus objetivos estratégicos, actuando siempre con los más altos estándares de ética, confidencialidad y compromiso profesional.
-            </p>
+            <h4 class="fw-bold mt-40 sm-mt-20 mb-20">{{ 'HOME.MISSION_TITLE' | translate }}</h4>
+            <p>{{ 'HOME.MISSION_DESC' | translate }}</p>
           </div>
 
           <!-- /.card-style-three -->
@@ -438,10 +414,8 @@
                 alt=""
                 class="lazy-img icon"
               />
-              <h4 class="fw-bold mt-40 sm-mt-20 mb-20">Visión.</h4>
-              <p>
-                Para el año 2028, ser una firma referente en la Región caribe y Colombia en la prestación de servicios profesionales en contabilidad, derecho, finanzas, y tributación, reconocida por su excelencia, innovación y cultura de servicio. Nuestro propósito es fortalecer la confianza de los clientes, generar impacto positivo en sus resultados y consolidarnos como aliados estratégicos en su crecimiento sostenible.
-              </p>
+              <h4 class="fw-bold mt-40 sm-mt-20 mb-20">{{ 'HOME.VISION_TITLE' | translate }}</h4>
+              <p>{{ 'HOME.VISION_DESC' | translate }}</p>
             </div>
             <!-- /.card-style-three -->
           </div>
@@ -449,10 +423,7 @@
         <div class="col-md-3">
           <div class="ps-lg-5 sm-pb-30 sm-pt-30">
             <div class="numb fw-500"><span class="counter">+</span>7</div>
-            <p class="m0">
-              Años de experiencia <br />
-              comprobada.
-            </p>
+            <p class="m0">{{ 'HOME.EXPERIENCE_LABEL' | translate }}</p>
           </div>
         </div>
       </div>
@@ -466,13 +437,8 @@
                 alt=""
                 class="lazy-img icon"
               />
-              <h4 class="fw-bold mt-40 sm-mt-20 mb-20">Historia.</h4>
-              <p>
-                Arias & Asociados nace como producto de la visión clara sobre el resultado esperado, bajo la fórmula de la construcción en el proceso, con ingredientes de sacrificio, estudio y riesgo, fundamentales para el desarrollo y seguimiento de cualquier emprendimiento. 
-                Hoy somos una firma sólida y en constante crecimiento, reconocida por nuestra experiencia en asuntos contables, jurídicos, financieros, tributarios y administrativos. Nos distingue un equipo comprometido, apasionado y altamente capacitado, que asume cada reto con responsabilidad y excelencia.
-                En Arias & Asociados creemos que más que servicios, ofrecemos confianza y resultados. Por eso, nuestro sello es claro: <strong>“Tu tranquilidad en nuestras manos”</strong>.
-
-              </p>
+              <h4 class="fw-bold mt-40 sm-mt-20 mb-20">{{ 'HOME.HISTORY_TITLE' | translate }}</h4>
+              <p [innerHTML]="'HOME.HISTORY_DESC' | translate"></p>
             </div>
             <!-- /.card-style-three -->
           </div>
@@ -639,30 +605,18 @@
 <div class="feedback-section-one mt-150 lg-mt-80 pb-80">
   <div class="container">
     <div class="position-relative">
-      <div class="title-one sm-mb-40">
-        <h2>
-          Testimonios de<br />
-          clientes.
-        </h2>
-      </div>
-      <!-- /.title-one -->
       <div class="feedback-slider-one">
         <div class="item">
           <div class="feedback-block-one">
             <div class="row align-items-end">
               <div class="col-md-7 ms-auto order-md-last">
-                <blockquote style="font-size: 24px;">
-                  "con una larga trayectoria de mas de 7 años de experiencia, ratificamos que son los mejores en lo que hacen.
-                  Con Arias & Asociados hemos encontrado un aliado estratégico que entiende a la perfección nuestras necesidades contables y financieras.
-                  Su asesoría precisa y su acompañamiento constante nos han permitido tomar decisiones clave para el crecimiento de nuestra empresa.
-                  Los recomendamos plenamente por ser un equipo confiable y plenamente profesional."
-                </blockquote>
+                <blockquote style="font-size: 24px;">{{ 'HOME.TESTIMONIAL1' | translate }}</blockquote>
                 <div class="d-flex align-items-center">
                   <img
                     width="120"
                     height="120"
                     src="assets/images/testimonial/CONCREACEROS.png"
-                    alt=""
+                    alt="Testimonio Concreaceros"
                     class="rounded-circle"
                   />
                   <div class="ps-4">
@@ -672,6 +626,9 @@
                 </div>
               </div>
               <div class="col-md-4 order-md-first">
+                <div class="mb-40">
+                  <h2 style="font-size: 50px; font-weight: 500;">{{ 'HOME.TESTIMONIALS_TITLE' | translate }}</h2>
+                </div>
                 <div
                   class="d-flex align-items-center justify-content-between sm-mt-40"
                 >
@@ -688,16 +645,13 @@
           <div class="feedback-block-one">
             <div class="row align-items-end">
               <div class="col-md-7 ms-auto order-md-last">
-                <blockquote style="font-size: 24px;">
-                  "Arias & Asociados ha sido una de nuestras mejores decisiones. Su equipo nos ha brindado una visión integral para gestionar tanto los aspectos financieros como contables de nuestros proyectos.
-                  Gracias a su apoyo, podemos enfocarnos en lo que hacemos mejor: construir el futuro."
-                </blockquote>
+                <blockquote style="font-size: 24px;">{{ 'HOME.TESTIMONIAL2' | translate }}</blockquote>
                 <div class="d-flex align-items-center">
                   <img
                     width="120"
                     height="120"
                     src="assets/images/testimonial/ATLANTIS.png"
-                    alt=""
+                    alt="Testimonio Atlantis Constructora"
                     class=" rounded-circle"
                   />
                   <div class="ps-4">
@@ -707,6 +661,9 @@
                 </div>
               </div>
               <div class="col-md-4 order-md-first">
+                <div class="mb-40">
+                  <h2 style="font-size: 50px; font-weight: 500;">{{ 'HOME.TESTIMONIALS_TITLE' | translate }}</h2>
+                </div>
                 <div
                   class="d-flex align-items-center justify-content-between sm-mt-40"
                 >
@@ -723,16 +680,13 @@
           <div class="feedback-block-one">
             <div class="row align-items-end">
               <div class="col-md-7 ms-auto order-md-last">
-                <blockquote style="font-size: 24px;">
-                  "Manejar una clínica pediátrica es un desafio enorme, y saber que podemos contar con Arias & Asociados para todos los asuntos financieros y contables nos da tranquilidad.
-                   Son como un apoyo extra que siempre está a la mano. Lo mejor es que explican todo con un lenguaje simple y directo, sin tecnicismos. Nos hacen sentir acompañados en cada paso."
-                </blockquote>
+                <blockquote style="font-size: 24px;">{{ 'HOME.TESTIMONIAL3' | translate }}</blockquote>
                 <div class="d-flex align-items-center">
                   <img
                     width="120"
                     height="120"
                     src="assets/images/testimonial/CARDIOCENTRO.png"
-                    alt=""
+                    alt="Testimonio Cardiocentro Pediátrico"
                     class=" rounded-circle"
                   />
                   <div class="ps-4">
@@ -742,6 +696,9 @@
                 </div>
               </div>
               <div class="col-md-4 order-md-first">
+                <div class="mb-40">
+                  <h2 style="font-size: 50px; font-weight: 500;">{{ 'HOME.TESTIMONIALS_TITLE' | translate }}</h2>
+                </div>
                 <div
                   class="d-flex align-items-center justify-content-between sm-mt-40"
                 >
@@ -758,16 +715,13 @@
           <div class="feedback-block-one">
             <div class="row align-items-end">
               <div class="col-md-7 ms-auto order-md-last">
-                <blockquote style="font-size: 24px;">
-                  "Es un honor contar con Arias & Asociados como aliados estratégicos. Son 7 años en el mercado y han sido un pilar fundamental en el manejo contable y legal de nuestra clínica.
-                   Su dedicación y atención al detalle nos han permitido concentrarnos en brindar una atención médica integral y de calidad, mientras ellos se encargan de todo lo demas con mayor eficiencia."
-                </blockquote>
+                <blockquote style="font-size: 24px;">{{ 'HOME.TESTIMONIAL4' | translate }}</blockquote>
                 <div class="d-flex align-items-center">
                   <img
                     width="120"
                     height="120"
                     src="assets/images/testimonial/CORAZÓN.png"
-                    alt=""
+                    alt="Testimonio Clínica del Corazón"
                     class=" rounded-circle"
                   />
                   <div class="ps-4">
@@ -777,6 +731,9 @@
                 </div>
               </div>
               <div class="col-md-4 order-md-first">
+                <div class="mb-40">
+                  <h2 style="font-size: 50px; font-weight: 500;">{{ 'HOME.TESTIMONIALS_TITLE' | translate }}</h2>
+                </div>
                 <div
                   class="d-flex align-items-center justify-content-between sm-mt-40"
                 >
@@ -793,10 +750,7 @@
           <div class="feedback-block-one">
             <div class="row align-items-end">
               <div class="col-md-7 ms-auto order-md-last">
-                <blockquote style="font-size: 24px;">
-                  "Gracias a Arias & Asociados hemos podido optimizar nuestra estructura contable y financiera, lo que no sha permitido crecer de manera segura y eficiente.
-                  Su equipo está siempre disponible para resolver nuestras dudas y guiarnos con un enfoque personalizado y profesional"
-                </blockquote>
+                <blockquote style="font-size: 24px;">{{ 'HOME.TESTIMONIAL5' | translate }}</blockquote>
                 <div class="d-flex align-items-center">
                   <img
                   width="120"
@@ -812,6 +766,9 @@
                 </div>
               </div>
               <div class="col-md-4 order-md-first">
+                <div class="mb-40">
+                  <h2 style="font-size: 50px; font-weight: 500;">{{ 'HOME.TESTIMONIALS_TITLE' | translate }}</h2>
+                </div>
                 <div
                   class="d-flex align-items-center justify-content-between sm-mt-40"
                 >
@@ -850,7 +807,7 @@
   <div class="container">
     <div class="position-relative">
       <div class="title-one mb-40 lg-mb-20 wow fadeInUp">
-        <h2>Nuestros colaboradores.</h2>
+        <h2>{{ 'HOME.TEAM_TITLE' | translate }}</h2>
       </div>
       <!-- /.title-one -->
 
@@ -873,7 +830,7 @@
               ></a> -->
             </div>
             <h4 class="fw-500 pt-20 m0">Anuar Arias</h4>
-            <div class="fs-6">Gerente General</div>
+            <div class="fs-6">{{ 'HOME.ROLE_GENERAL_MANAGER' | translate }}</div>
           </div>
           <!-- /.card-style-four -->
         </div>
@@ -899,7 +856,7 @@
               ></a> -->
             </div>
             <h4 class="fw-500 pt-20 m0">Karen Sequeda</h4>
-            <div class="fs-6">Directora Contable</div>
+            <div class="fs-6">{{ 'HOME.ROLE_ACCOUNTING_DIRECTOR' | translate }}</div>
           </div>
           <!-- /.card-style-four -->
         </div>
@@ -921,7 +878,7 @@
               ></a> -->
             </div>
             <h4 class="fw-500 pt-20 m0">Ernesto Ortíz</h4>
-            <div class="fs-6">Director jurídico</div>
+            <div class="fs-6">{{ 'HOME.ROLE_LEGAL_DIRECTOR' | translate }}</div>
           </div>
           <!-- /.card-style-four -->
         </div>
@@ -943,7 +900,7 @@
               ></a> -->
             </div>
             <h4 class="fw-500 pt-20 m0">Lorena Arias</h4>
-            <div class="fs-6">Asistente Contable</div>
+            <div class="fs-6">{{ 'HOME.ROLE_ACCOUNTING_ASSISTANT' | translate }}</div>
           </div>
           <!-- /.card-style-four -->
         </div>
@@ -965,7 +922,7 @@
               ></a> -->
             </div>
             <h4 class="fw-500 pt-20 m0">Mileth Agámez</h4>
-            <div class="fs-6">Directora Comercial</div>
+            <div class="fs-6">{{ 'HOME.ROLE_COMMERCIAL_DIRECTOR' | translate }}</div>
           </div>
           <!-- /.card-style-four -->
         </div>
@@ -1156,15 +1113,15 @@
 			Blog Section One
 		=====================================================
 		-->
-<div class="blog-section-one position-relative mt-150 lg-mt-80 pt-120 lg-pt-80">
+<!-- <div class="blog-section-one position-relative mt-150 lg-mt-80 pt-120 lg-pt-80">
   <div class="container">
     <div class="position-relative">
       <div class="title-one mb-20 lg-mb-10">
-        <h2>Últimas noticias.</h2>
+        <h2>{{ 'HOME.BLOG_TITLE' | translate }}</h2>
       </div>
 
       <p class="text-lg mb-40 lg-mb-10">
-        Obtenga las últimas actualizaciones y tips de parte de nuestros expertos.
+        {{ 'HOME.BLOG_DESC' | translate }}
       </p>
 
       <div class="row gx-xxl-5">
@@ -1180,7 +1137,7 @@
                 </h4></a
               >
             </div>
-            <!-- <figure
+            <figure
               class="post-img position-relative d-flex justify-content-end align-items-end m0"
               [ngStyle]="{'background-image': 'url(https://blog.ariasyasociados.co/storage/' + post.image_url  + ')'}"
             >
@@ -1190,7 +1147,7 @@
                 class="round-btn stretched-link rounded-circle d-flex align-items-center justify-content-center tran3s"
                 ><i class="bi bi-arrow-up-right"></i
               ></a>
-            </figure> -->
+            </figure>
             <p style="text-align: justify; padding: 5%;" [innerHTML]="post.body"></p>
           </article>
 
@@ -1200,7 +1157,7 @@
 
       <div class="section-btn sm-mt-40">
         <a [routerLink]="['/blog']" class="btn-five icon-link">
-          <span class="text">Todas las noticias</span>
+          <span class="text">{{ 'HOME.BLOG_ALL' | translate }}</span>
           <div
             class="icon tran3s rounded-circle d-flex align-items-center justify-content-center"
           >
@@ -1210,7 +1167,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <!-- /.blog-section-one -->
 
 <!--
@@ -1240,7 +1197,7 @@
     <div class="partner-logo-one pt-80 lg-pt-50 pb-80 lg-pb-50" style="text-align: center;">
       <div class="container">
         <div class="title-one mb-100 lg-mb-10">
-          <h2>Nuestros Clientes.</h2>
+          <h2>{{ 'HOME.CLIENTS_SECTION_TITLE' | translate }}</h2>
         </div>
           <div class="partner-slider-one">
               <div class="item">

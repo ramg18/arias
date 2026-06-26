@@ -4,7 +4,7 @@
         <div class="row align-items-center">
 
             <div class="col-xl-4 col-lg-5 ms-auto">
-                <p class="text-white text-lg mb-70 lg-mb-40">Información contable con respaldo sólido para cada uno de nuestros clientes.</p>
+                <p class="text-white text-lg mb-70 lg-mb-40">{{ 'SERVICES.BANNER_DESC' | translate }}</p>
 
             </div>
         </div>
@@ -25,35 +25,23 @@
                         </iframe>
                     </div>
                     <p>
-                        En Arias y Asociados ofrecemos un acompañamiento contable y financiero integral, orientado a
-                        garantizar el cumplimiento normativo, la transparencia en la información financiera y la
-                        optimización de recursos. Nuestro equipo combina experiencia técnica y conocimiento actualizado
-                        de la normatividad colombiana, brindando soluciones estratégicas que apoyan la toma de
-                        decisiones y fortalecen la gestión empresarial.
-                        Nos enfocamos en prestar servicios confiables, oportunos y adaptados a las necesidades de cada
-                        cliente, contribuyendo al crecimiento sostenible y a la correcta gestión de sus obligaciones
-                        contables y fiscales.
-
+                        {{ 'ACCOUNTING.INTRO' | translate }}
                     </p>
                 </div>
                 <div *ngIf="cumplimiento" class="details-meta ps-xxl-5 ps-xl-3">
 
 
                     <ul class="style-none list-item pb-20">
-                        <li>Cumplimiento de obligaciones contables y societarias ante entes de
-                            control: Supersociedades, UGPP, DIAN y demás autoridades competentes.</li>
-                        <li>Aplicación actualizada de las Normas de Información Financiera
-                            (NIIF) conforme al marco técnico colombiano.</li>
+                        <li>{{ 'ACCOUNTING.CUMPLIMIENTO.ITEM1' | translate }}</li>
+                        <li>{{ 'ACCOUNTING.CUMPLIMIENTO.ITEM2' | translate }}</li>
                     </ul>
 
                 </div>
                 <div *ngIf="elaboracion" class="details-meta ps-xxl-5 ps-xl-3">
                     <ul class="style-none list-item pb-20">
-                        <li>Preparación y análisis de estados financieros.</li>
-                        <li>Elaboración y análisis de informes contables para juntas directivas, asambleas, entes de
-                            control y entidades financieras.</li>
-                        <li>Presentación de información financiera ante los diferentes entes de control (DIAN,
-                            Supersociedades, Supersalud, entidades municipales, entre otros).</li>
+                        <li>{{ 'ACCOUNTING.ELABORACION.ITEM1' | translate }}</li>
+                        <li>{{ 'ACCOUNTING.ELABORACION.ITEM2' | translate }}</li>
+                        <li>{{ 'ACCOUNTING.ELABORACION.ITEM3' | translate }}</li>
                     </ul>
 
 
@@ -61,49 +49,38 @@
                 </div>
                 <div *ngIf="optimizacion" class="details-meta ps-xxl-5 ps-xl-3">
                     <ul class="style-none list-item pb-20">
-                        <li>Elaboración y revisión de declaraciones tributarias: renta, IVA, retenciones, ICA, industria
-                            y comercio, patrimonio, activos en el exterior entre otras.</li>
-                        <li>Cumplimiento de obligaciones formales y sustanciales para personas jurídicas y naturales
-                            obligadas a llevar contabilidad.</li>
-                        <li>Asesoría en planeación tributaria para optimizar cargas fiscales dentro del marco legal
-                            vigente.</li>
-
+                        <li>{{ 'ACCOUNTING.OPTIMIZACION.ITEM1' | translate }}</li>
+                        <li>{{ 'ACCOUNTING.OPTIMIZACION.ITEM2' | translate }}</li>
+                        <li>{{ 'ACCOUNTING.OPTIMIZACION.ITEM3' | translate }}</li>
                     </ul>
 
 
                 </div>
                 <div *ngIf="analisis" class="details-meta ps-xxl-5 ps-xl-3">
                     <ul class="style-none list-item pb-20">
-                        <li>Elaboración de análisis financieros e indicadores de gestión (liquidez, rentabilidad,
-                            endeudamiento, eficiencia operativa).</li>
-                        <li>Análisis por líneas de negocio para la toma estratégica de decisiones.</li>
-                        <li>Generación de informes ejecutivos para gerencia, inversionistas y socios.</li>
-                        <li>Proyecciones financieras para una gestión oportuna y estratégica.</li>
-
+                        <li>{{ 'ACCOUNTING.ANALISIS.ITEM1' | translate }}</li>
+                        <li>{{ 'ACCOUNTING.ANALISIS.ITEM2' | translate }}</li>
+                        <li>{{ 'ACCOUNTING.ANALISIS.ITEM3' | translate }}</li>
+                        <li>{{ 'ACCOUNTING.ANALISIS.ITEM4' | translate }}</li>
                     </ul>
 
 
                 </div>
                 <div *ngIf="gestion" class="details-meta ps-xxl-5 ps-xl-3">
                     <ul class="style-none list-item pb-20">
-                        <li>Diagnóstico de riesgos contables, financieros y de cumplimiento normativo.</li>
-                        <li>Implementación o fortalecimiento de políticas contables internas.</li>
-                        <li>Revisión de procedimientos contables y formulación de recomendaciones para mitigar
-                            contingencias.</li>
-                        <li>Identificación de riesgos asociados a facturación electrónica, retenciones y obligaciones
-                            fiscales.</li>
-
+                        <li>{{ 'ACCOUNTING.RIESGOS.ITEM1' | translate }}</li>
+                        <li>{{ 'ACCOUNTING.RIESGOS.ITEM2' | translate }}</li>
+                        <li>{{ 'ACCOUNTING.RIESGOS.ITEM3' | translate }}</li>
+                        <li>{{ 'ACCOUNTING.RIESGOS.ITEM4' | translate }}</li>
                     </ul>
 
 
                 </div>
                 <div *ngIf="planificacion" class="details-meta ps-xxl-5 ps-xl-3">
                     <ul class="style-none list-item pb-20">
-                        <li>Elaboración de presupuestos operativos, de inversión y de flujo de caja.</li>
-                        <li>Acompañamiento en procesos de expansión, inversión o reestructuración financiera.</li>
-                        <li>Proyecciones de flujos de efectivo futuros, planes de inversión y estrategias de
-                            sostenibilidad.</li>
-
+                        <li>{{ 'ACCOUNTING.PLANIFICACION.ITEM1' | translate }}</li>
+                        <li>{{ 'ACCOUNTING.PLANIFICACION.ITEM2' | translate }}</li>
+                        <li>{{ 'ACCOUNTING.PLANIFICACION.ITEM3' | translate }}</li>
                     </ul>
 
 
@@ -116,44 +93,44 @@
                         <ul class="style-none">
                             <li><a (click)="mostrar(1)" style="cursor: pointer;" class=" w-100">
                                     
-                                    <span>¿Cómo lo hacemos?</span>
+                                    <span>{{ 'ACCOUNTING.NAV1' | translate }}</span>
                                 </a></li>
                             <li><a (click)="mostrar(2)" style="cursor: pointer; text-align: left;" class=" w-100">
                                     
-                                    <span>Cumplimiento Normativo y Regulatorio</span>
+                                    <span>{{ 'ACCOUNTING.NAV2' | translate }}</span>
                                 </a></li>
                             <li><a (click)="mostrar(3)" style="cursor: pointer; text-align: left;" class=" w-100">
                                     
-                                    <span>Elaboración y Presentación de Estados Financieros</span>
+                                    <span>{{ 'ACCOUNTING.NAV3' | translate }}</span>
                                 </a></li>
                             <li><a (click)="mostrar(4)" style="cursor: pointer; text-align: left;" class=" w-100">
                                     
-                                    <span>Optimización Fiscal y Tributaria</span>
+                                    <span>{{ 'ACCOUNTING.NAV4' | translate }}</span>
                                 </a></li>
                             <li><a (click)="mostrar(5)" style="cursor: pointer; text-align: left;" class=" w-100">
                                     
-                                    <span>Análisis Financiero y Reportes Gerenciales</span>
+                                    <span>{{ 'ACCOUNTING.NAV5' | translate }}</span>
                                 </a></li>
                             <li><a (click)="mostrar(6)" style="cursor: pointer; text-align: left;" class=" w-100">
                                     
-                                    <span>Gestión de Riesgos Contables y Control Interno</span>
+                                    <span>{{ 'ACCOUNTING.NAV6' | translate }}</span>
                                 </a></li>
                             <li><a (click)="mostrar(7)" style="cursor: pointer; text-align: left;" class=" w-100">
                                     
-                                    <span>Planificación Financiera y Presupuestal</span>
+                                    <span>{{ 'ACCOUNTING.NAV7' | translate }}</span>
                                 </a></li>
 
                         </ul>
                     </div>
                     <div class="contact-portfolio text-center mt-40 lg-mt-20">
-                        <h3 class="mb-20">Descarga aquí nuestro portafolio</h3>
+                        <h3 class="mb-20">{{ 'SERVICES.SIDEBAR_DOWNLOAD' | translate }}</h3>
                         <a href="https://ariasyasociados.co/assets/portafolio/portafolio.pdf" target="_blank"
-                            class="tran3s fw-500">Descargalo aquí</a>
+                            class="tran3s fw-500">{{ 'SERVICES.SIDEBAR_DOWNLOAD_BTN' | translate }}</a>
                     </div>
                     <div class="contact-banner text-center mt-40 lg-mt-20">
-                        <h3 class="mb-20">Tienes Preguntas?</h3>
-                        <a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios."
-                            target="_blank" class="tran3s fw-500">Hablemos</a>
+                        <h3 class="mb-20">{{ 'SERVICES.SIDEBAR_QUESTIONS' | translate }}</h3>
+                        <a href="https://wa.me/573113094098?text={{ 'NAV.WA_TEXT' | translate }}"
+                            target="_blank" class="tran3s fw-500">{{ 'SERVICES.SIDEBAR_TALK' | translate }}</a>
                     </div>
                     <!-- /.contact-banner -->
                 </aside>
