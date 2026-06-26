@@ -1,0 +1,220 @@
+<div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative"
+	style="background-image: url(assets/images/media/sjuridico.jpg);">
+	<div class="container position-relative">
+		<div class="row align-items-center">
+
+			<div class="col-xl-4 col-lg-5 ms-auto">
+				<p class="text-white text-lg mb-70 lg-mb-40">{{ 'SERVICES.BANNER_DESC' | translate }}</p>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="service-details mt-150 lg-mt-80 mb-100 lg-mb-80" style="text-align: justify;">
+	<div class="container">
+		<div class="row" style="">
+			<div class="col-xxl-9 col-lg-9 col-sm-6 order-lg-last ">
+				<div *ngIf="como" class="details-meta ps-xxl-5 ps-xl-3">
+
+					<div class="iframe-wrapper">
+						<iframe src="https://www.youtube.com/embed/5Wp2KKzNptA?si=CKodef619c3eZEky"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+						</iframe>
+					</div>
+					<p>
+						{{ 'SERVICES.LEGAL_SECTION.DESC' | translate }}
+					</p>
+				</div>
+				<div *ngIf="cumplimiento" class="details-meta ps-xxl-5 ps-xl-3">
+
+					<p>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.INTRO' | translate }}
+					</p>
+
+					<h4>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.PROTOCOLOS.TITLE' | translate }}</h4>
+					<p>
+						{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.PROTOCOLOS.DESC' | translate }}
+					</p>
+					<h4>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.FIDEICOMISOS.TITLE' | translate }}</h4>
+					<p>
+						{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.FIDEICOMISOS.DESC' | translate }}
+					</p>
+					<ul class="style-none list-item pb-20">
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.FIDEICOMISOS.ITEM1' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.FIDEICOMISOS.ITEM2' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.FIDEICOMISOS.ITEM3' | translate }}</li>
+					</ul>
+
+					<h4>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.SUCESIONES.TITLE' | translate }}</h4>
+					<p>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.SUCESIONES.DESC' | translate }}
+					</p>
+					<h4>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.CAPITULACIONES.TITLE' | translate }}</h4>
+					<p>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.CAPITULACIONES.DESC' | translate }}
+					</p>
+					<ul class="style-none list-item pb-20">
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.CAPITULACIONES.ITEM1' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.CAPITULACIONES.ITEM2' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.CAPITULACIONES.ITEM3' | translate }}</li>
+					</ul>
+					<h4>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.UNIONES.TITLE' | translate }}</h4>
+					<p>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.UNIONES.DESC' | translate }}
+					</p>
+					<ul class="style-none list-item pb-20">
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.UNIONES.ITEM1' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.UNIONES.ITEM2' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.UNIONES.ITEM3' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.UNIONES.ITEM4' | translate }}</li>
+					</ul>
+					<h4>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.ALIMENTOS.TITLE' | translate }}</h4>
+					<p>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.ALIMENTOS.DESC' | translate }}
+					</p>
+					<ul class="style-none list-item pb-20">
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.ALIMENTOS.ITEM1' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.ALIMENTOS.ITEM2' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.ALIMENTOS.ITEM3' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_FAMILIAR.ALIMENTOS.ITEM4' | translate }}</li>
+					</ul>
+
+				</div>
+				<div *ngIf="elaboracion" class="details-meta ps-xxl-5 ps-xl-3">
+					<p>
+						{{ 'SERVICES.LEGAL_SECTION.PROTECCION_INMOBILIARIA.INTRO' | translate }}
+					</p>
+
+					<ul class="style-none list-item pb-20">
+						<li [innerHTML]="'SERVICES.LEGAL_SECTION.PROTECCION_INMOBILIARIA.ITEM1' | translate"></li>
+						<li [innerHTML]="'SERVICES.LEGAL_SECTION.PROTECCION_INMOBILIARIA.ITEM2' | translate"></li>
+						<li [innerHTML]="'SERVICES.LEGAL_SECTION.PROTECCION_INMOBILIARIA.ITEM3' | translate"></li>
+						<li [innerHTML]="'SERVICES.LEGAL_SECTION.PROTECCION_INMOBILIARIA.ITEM4' | translate"></li>
+						<li [innerHTML]="'SERVICES.LEGAL_SECTION.PROTECCION_INMOBILIARIA.ITEM5' | translate"></li>
+						<li [innerHTML]="'SERVICES.LEGAL_SECTION.PROTECCION_INMOBILIARIA.ITEM6' | translate"></li>
+					</ul>
+
+
+
+				</div>
+				<div *ngIf="optimizacion" class="details-meta ps-xxl-5 ps-xl-3">
+					<p>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.INTRO' | translate }}
+					</p>
+					<h4>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.TITLE' | translate }}</h4>
+					<p>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.DESC' | translate }}
+					</p>
+					<ul class="style-none list-item pb-20">
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.ITEM1' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.ITEM2' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.ITEM3' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.ITEM4' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.ITEM5' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.EMPRENDIMIENTO.ITEM6' | translate }}</li>
+					</ul>
+					<h4>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.TITLE' | translate }}</h4>
+					<p>
+						{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.DESC' | translate }}
+					</p>
+					<ul class="style-none list-item pb-20">
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.ITEM1' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.ITEM2' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.ITEM3' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.ITEM4' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.ITEM5' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.ITEM6' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.GESTION.ITEM7' | translate }}</li>
+					</ul>
+
+					<h4>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.DEFENSA.TITLE' | translate }}</h4>
+					<p>
+						{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.DEFENSA.DESC' | translate }}
+					</p>
+					<ul class="style-none list-item pb-20">
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.DEFENSA.ITEM1' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.DEFENSA.ITEM2' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.DEFENSA.ITEM3' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.DEFENSA.ITEM4' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PROTECCION_EMPRESARIAL.DEFENSA.ITEM5' | translate }}</li>
+					</ul>
+
+
+				</div>
+				<div *ngIf="analisis" class="details-meta ps-xxl-5 ps-xl-3">
+
+					<h4>{{ 'SERVICES.LEGAL_SECTION.PREVENTIVA.TITLE' | translate }}</h4>
+					<p>
+						{{ 'SERVICES.LEGAL_SECTION.PREVENTIVA.INTRO' | translate }}
+					</p>
+
+					<ul class="style-none list-item pb-20">
+						<li>{{ 'SERVICES.LEGAL_SECTION.PREVENTIVA.ITEM1' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PREVENTIVA.ITEM2' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PREVENTIVA.ITEM3' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.PREVENTIVA.ITEM4' | translate }}</li>
+					</ul>
+
+
+				</div>
+				<div *ngIf="gestion" class="details-meta ps-xxl-5 ps-xl-3">
+
+					<h4>{{ 'SERVICES.LEGAL_SECTION.LITIGIOSA.TITLE' | translate }}</h4>
+					<p>{{ 'SERVICES.LEGAL_SECTION.LITIGIOSA.INTRO' | translate }}</p>
+
+					<ul class="style-none list-item pb-20">
+						<li>{{ 'SERVICES.LEGAL_SECTION.LITIGIOSA.ITEM1' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.LITIGIOSA.ITEM2' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.LITIGIOSA.ITEM3' | translate }}</li>
+						<li>{{ 'SERVICES.LEGAL_SECTION.LITIGIOSA.ITEM4' | translate }}</li>
+					</ul>
+
+
+				</div>
+
+
+			</div>
+			<div class="col-xxl-3 col-lg-3 col-sm-6 order-lg-first ">
+				<aside class="md-mt-40">
+					<div class="service-nav-item">
+						<ul class="style-none">
+							<li><a (click)="mostrar(1)" style="cursor: pointer; text-align: left;" class=" w-100">
+
+									<span>{{ 'LEGAL.NAV1' | translate }}</span>
+								</a></li>
+							<li><a (click)="mostrar(2)" style="cursor: pointer; text-align: left;" class=" w-100">
+
+									<span>{{ 'LEGAL.NAV2' | translate }}</span>
+								</a></li>
+							<li><a (click)="mostrar(3)" style="cursor: pointer; text-align: left;" class=" w-100">
+
+									<span>{{ 'LEGAL.NAV3' | translate }}</span>
+								</a></li>
+							<li><a (click)="mostrar(4)" style="cursor: pointer; text-align: left;" class=" w-100">
+
+									<span>{{ 'LEGAL.NAV4' | translate }}</span>
+								</a></li>
+							<li><a (click)="mostrar(5)" style="cursor: pointer; text-align: left;" class=" w-100">
+
+									<span>{{ 'LEGAL.NAV5' | translate }}</span>
+								</a></li>
+							<li><a (click)="mostrar(6)" style="cursor: pointer; text-align: left;" class=" w-100">
+
+									<span>{{ 'LEGAL.NAV6' | translate }}</span>
+								</a></li>
+
+
+						</ul>
+					</div>
+					<div class="contact-portfolio text-center mt-40 lg-mt-20">
+						<h3 class="mb-20">{{ 'SERVICES.SIDEBAR_DOWNLOAD' | translate }}</h3>
+						<a href="https://ariasyasociados.co/assets/portafolio/portafolio.pdf" target="_blank"
+							class="tran3s fw-500">{{ 'SERVICES.SIDEBAR_DOWNLOAD_BTN' | translate }}</a>
+					</div>
+					<div class="contact-banner text-center mt-40 lg-mt-20">
+						<h3 class="mb-20">{{ 'SERVICES.SIDEBAR_QUESTIONS' | translate }}</h3>
+						<a href="https://wa.me/573113094098?text={{ 'NAV.WA_TEXT' | translate }}"
+							target="_blank" class="tran3s fw-500">{{ 'SERVICES.SIDEBAR_TALK' | translate }}</a>
+					</div>
+					<!-- /.contact-banner -->
+				</aside>
+			</div>
+		</div>
+	</div>
+</div>

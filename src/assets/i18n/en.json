@@ -1,0 +1,429 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "SERVICES": "Services",
+    "ACCOUNTING": "Accounting Services",
+    "LEGAL": "Legal Services",
+    "TAX": "Tax Services",
+    "FISCAL": "Fiscal Audit",
+    "CERTIFICATES": "Certificates",
+    "BLOG": "Blog",
+    "CONTACT": "Contact Us",
+    "CTA": "Let's Talk!",
+    "WA_TEXT": "Hello, I am interested in learning about your services."
+  },
+  "FOOTER": {
+    "TAGLINE": "Top-rated firm",
+    "TAGLINE_SUB": "Consulting for your success.",
+    "LINKS": "Links",
+    "COMPANY": "Company",
+    "PRIVACY": "Privacy Policy",
+    "COPYRIGHT": "© 2024 Arias & Asociados S.A.S. All rights reserved."
+  },
+  "HOME": {
+    "HERO_TITLE": "Your Strategic Partner in Accounting, Legal, and Tax Business Solutions",
+    "HERO_DESC": "Strengthen your business with innovative strategies and effective solutions.",
+    "HERO_CTA": "Let's Talk!",
+    "GET_STARTED": "How about we <span>GET STARTED</span>",
+    "SATISFIED_CLIENTS": "Satisfied clients",
+    "FEATURE1_TITLE": "Competitive pricing",
+    "FEATURE1_DESC": "Thanks to our operational efficiency and strategic partnerships with suppliers, we ensure value and quality for our clients.",
+    "FEATURE2_TITLE": "Expert advisors",
+    "FEATURE2_DESC": "Our team combines experience and knowledge to offer tailored solutions and optimal results.",
+    "FEATURE3_TITLE": "Effective support",
+    "FEATURE3_DESC": "We guarantee fast responses and precise solutions for every challenge.",
+    "SERVICES_TITLE": "We provide quality services.",
+    "SVC_ACCOUNTING_TITLE": "Accounting Matters",
+    "SVC_ACCOUNTING_DESC": "We advise our clients comprehensively, allowing them to clearly and simply understand their company's strengths and opportunities.",
+    "SVC_LEGAL_TITLE": "Legal Matters",
+    "SVC_LEGAL_DESC": "We seek to generate added value for businesses through legal assistance in matters related to labor, commercial, and administrative law.",
+    "SVC_TAX_TITLE": "Tax Matters",
+    "SVC_TAX_DESC": "Our firm has extensive experience providing specialized tax advisory, covering everything from strategic tax planning to compliance and optimization.",
+    "SVC_FISCAL_TITLE": "Fiscal Audit",
+    "SVC_FISCAL_DESC": "Fiscal auditing provides a comprehensive, preventive, and timely approach to the various risks faced by each economic entity.",
+    "PORTFOLIO_DESC": "We are dedicated to providing superior quality services, exceeding our clients' expectations in every project.",
+    "DOWNLOAD_PORTFOLIO": "Download our portfolio",
+    "CLIENTS_TITLE": "+20 Clients use our services.",
+    "CLIENTS_DESC": "Your success is our mission. As professionals, we provide expert guidance, unlocking your potential for growth and profitability.",
+    "CLIENTS_LIST1": "Information Confidentiality.",
+    "CLIENTS_LIST2": "Reputation and Trust.",
+    "CLIENTS_LIST3": "Personalized Services.",
+    "ABOUT_LABEL": "About Us",
+    "ABOUT_TITLE": "Discover how we have become a successful firm.",
+    "MISSION_TITLE": "Mission",
+    "MISSION_DESC": "At Arias & Asociados, we provide strategic, comprehensive, personalized, and high-quality solutions in accounting, financial, tax, and legal matters, aimed at driving the sustainability and growth of our clients. Our commitment is to generate sustainable value, optimize organizational management, and contribute to achieving their strategic objectives, always acting with the highest standards of ethics, confidentiality, and professional dedication.",
+    "VISION_TITLE": "Vision.",
+    "VISION_DESC": "By 2028, to be a leading firm in the Caribbean Region and Colombia in the provision of professional services in accounting, law, finance, and taxation, recognized for its excellence, innovation, and service culture.",
+    "EXPERIENCE_LABEL": "Years of proven experience.",
+    "HISTORY_TITLE": "History.",
+    "HISTORY_DESC": "Arias & Asociados was born from a clear vision of the expected outcome, built on a formula of dedication, study, and risk — the essential ingredients for any entrepreneurial journey. Today we are a solid and constantly growing firm, recognized for our expertise in accounting, legal, financial, tax, and administrative matters. We stand out for our committed, passionate, and highly trained team, which approaches every challenge with responsibility and excellence. At Arias & Asociados we believe that more than services, we offer trust and results. That is why our motto is clear: <strong>\"Your peace of mind in our hands.\"</strong>",
+    "TEAM_TITLE": "Our team.",
+    "ROLE_GENERAL_MANAGER": "General Manager",
+    "ROLE_ACCOUNTING_DIRECTOR": "Accounting Director",
+    "ROLE_LEGAL_DIRECTOR": "Legal Director",
+    "ROLE_ACCOUNTING_ASSISTANT": "Accounting Assistant",
+    "ROLE_COMMERCIAL_DIRECTOR": "Commercial Director",
+    "TESTIMONIALS_TITLE": "Client Testimonials.",
+    "TESTIMONIAL1": "\"With a long track record of over 7 years of experience, we confirm they are the best at what they do. With Arias & Asociados we have found a strategic partner that perfectly understands our accounting and financial needs. Their precise advice and constant support have allowed us to make key decisions for the growth of our company. We fully recommend them as a reliable and thoroughly professional team.\"",
+    "TESTIMONIAL2": "\"Arias & Asociados has been one of our best decisions. Their team has given us a comprehensive vision to manage both the financial and accounting aspects of our projects. Thanks to their support, we can focus on what we do best: building the future.\"",
+    "TESTIMONIAL3": "\"Managing a pediatric clinic is a huge challenge, and knowing we can count on Arias & Asociados for all financial and accounting matters gives us peace of mind. They are like an extra support that is always at hand. The best part is that they explain everything in simple, direct language, without technical jargon. They make us feel supported at every step.\"",
+    "TESTIMONIAL4": "\"It is an honor to have Arias & Asociados as strategic partners. Seven years in the market and they have been a fundamental pillar in the accounting and legal management of our clinic. Their dedication and attention to detail have allowed us to focus on providing comprehensive, quality medical care, while they handle everything else with great efficiency.\"",
+    "TESTIMONIAL5": "\"Thanks to Arias & Asociados we have been able to optimize our accounting and financial structure, which has allowed us to grow safely and efficiently. Their team is always available to resolve our questions and guide us with a personalized and professional approach.\"",
+    "BLOG_TITLE": "Latest news.",
+    "BLOG_DESC": "Get the latest updates and tips from our experts.",
+    "BLOG_ALL": "All news",
+    "CLIENTS_SECTION_TITLE": "Our Clients."
+  },
+  "CONTACT": {
+    "PAGE_TITLE": "Contact Us | Arias & Asociados S.A.S",
+    "META_DESC": "Get in touch with our team of experts in accounting and legal advisory. We are ready to help you.",
+    "BANNER_TITLE": "Contact Us",
+    "WATCH_VIDEO": "Watch video",
+    "ADDRESS_TITLE": "Address",
+    "PHONE_TITLE": "Phone",
+    "HOURS_TITLE": "Business Hours",
+    "HOURS_VALUE": "Monday - Friday: 8:00 AM - 6:00 PM",
+    "FORM_TITLE": "Send us a message",
+    "FORM_NAME": "Name",
+    "FORM_EMAIL": "Email address",
+    "FORM_PHONE": "Phone number",
+    "FORM_MESSAGE": "Message",
+    "FORM_SUBMIT": "Send message",
+    "FORM_SENDING": "Sending...",
+    "ERR_REQUIRED": "is required",
+    "ERR_EMAIL": "Invalid email format",
+    "ERR_MIN": "must be at least {{min}} characters",
+    "ERR_PHONE": "Invalid phone format (10 digits)",
+    "SUCCESS_TITLE": "Success!",
+    "SUCCESS_TEXT": "Your message has been sent successfully. We will contact you soon.",
+    "SUCCESS_BTN": "Accept",
+    "ERROR_BTN": "Try again",
+    "VALIDATION_TITLE": "Incomplete form",
+    "VALIDATION_TEXT": "Please complete all required fields correctly.",
+    "VALIDATION_BTN": "Got it"
+  },
+  "CERTIFICATES": {
+    "BANNER_DESC": "Download your seminar certificates here.",
+    "FORM_TITLE": "Download your certificate here",
+    "ID_LABEL": "ID Card",
+    "ID_PLACEHOLDER": "EX:11223456789",
+    "SEMINAR_LABEL": "Seminar",
+    "SELECT_OPTION": "Select",
+    "DOWNLOAD_BTN": "Download",
+    "PAGE_TITLE": "Certificates | Arias & Asociados",
+    "TITLE": "Certificates",
+    "DESC": "Download your certificates here"
+  },
+  "BLOG": {
+    "BANNER_TITLE": "Stay Informed",
+    "BANNER_DESC": "Learn from our experts about topics in the financial world",
+    "LAST_PAGE": "Last"
+  },
+  "SERVICES": {
+    "ABOUT": {
+      "TITLE": "What is Arias & Asociados?",
+      "VIDEO_TITLE": "Corporate Video Arias & Asociados"
+    },
+    "ACCOUNTING_SECTION": {
+      "TITLE": "Accounting Matters",
+      "DESC1": "At Arias & Asociados, we offer comprehensive accounting and financial support, aimed at ensuring regulatory compliance, transparency in financial information, and resource optimization. Our team combines technical expertise with up-to-date knowledge of Colombian regulations, providing strategic solutions that support decision-making and strengthen business management.",
+      "DESC2": "We focus on providing reliable, timely services tailored to each client's needs, contributing to sustainable growth and proper management of their accounting and tax obligations.",
+      "CUMPLIMIENTO": {
+        "TITLE": "Regulatory and Normative Compliance",
+        "ITEM1": "Compliance with accounting and corporate obligations before control entities: Supersociedades, UGPP, DIAN, and other competent authorities.",
+        "ITEM2": "Up-to-date application of Financial Reporting Standards (IFRS) according to the Colombian technical framework."
+      },
+      "ELABORACION": {
+        "TITLE": "Preparation and Presentation of Financial Statements",
+        "ITEM1": "Preparation and analysis of financial statements.",
+        "ITEM2": "Preparation and analysis of accounting reports for boards of directors, assemblies, control entities, and financial institutions.",
+        "ITEM3": "Presentation of financial information before the different control entities (DIAN, Supersociedades, Supersalud, municipal entities, among others)."
+      },
+      "OPTIMIZACION": {
+        "TITLE": "Fiscal and Tax Optimization",
+        "ITEM1": "Preparation and review of tax returns: income, VAT, withholdings, ICA, industry and commerce, wealth, foreign assets, among others.",
+        "ITEM2": "Compliance with formal and substantial obligations for legal entities and natural persons required to keep accounting records.",
+        "ITEM3": "Taxes planning advice to optimize tax burdens within the current legal framework."
+      },
+      "ANALISIS": {
+        "TITLE": "Financial Analysis and Management Reports",
+        "ITEM1": "Preparation of financial analysis and management indicators (liquidity, profitability, debt, operational efficiency).",
+        "ITEM2": "Analysis by business lines for strategic decision making.",
+        "ITEM3": "Generation of executive reports for management, investors, and partners.",
+        "ITEM4": "Financial projections for timely and strategic management."
+      },
+      "GESTION": {
+        "TITLE": "Accounting Risk Management and Internal Control",
+        "ITEM1": "Diagnosis of accounting, financial, and regulatory compliance risks.",
+        "ITEM2": "Implementation or strengthening of internal accounting policies.",
+        "ITEM3": "Review of accounting procedures and formulation of recommendations to mitigate contingencies.",
+        "ITEM4": "Identification of risks associated with electronic invoicing, withholdings, and tax obligations."
+      },
+      "PLANIFICACION": {
+        "TITLE": "Financial and Budgetary Planning",
+        "ITEM1": "Preparation of operating, investment, and cash flow budgets.",
+        "ITEM2": "Support in processes of expansion, investment, or financial restructuring.",
+        "ITEM3": "Projections of future cash flows, investment plans, and sustainability strategies."
+      }
+    },
+    "LEGAL_SECTION": {
+      "TITLE": "Legal Matters",
+      "DESC": "We seek to generate added value for companies through legal assistance in the different matters related to labor, commercial, and administrative law, actively participating in the development of our clients' businesses through the legal support we offer and thus strengthening and providing security to their activities in all legal topics.",
+      "PROTECCION_FAMILIAR": {
+        "TITLE": "Family Wealth Protection",
+        "INTRO": "We accompany families in the organization, preservation, and secure transmission of their wealth, avoiding conflicts and ensuring their generational stability through:",
+        "PROTOCOLOS": {
+          "TITLE": "Family protocols:",
+          "DESC": "The family protocol is an essential tool to maintain harmony and stability of family wealth, especially when there are companies or common assets among relatives. At Arias & Asociados we design, structure, and formalize protocols that: Define clear rules for the participation of family members in the business or in the administration of wealth. Regulate succession, decision-making, and the incorporation of new generations. Establish conflict resolution mechanisms and family governance bodies."
+        },
+        "FIDEICOMISOS": {
+          "TITLE": "Trusts and fiduciary property:",
+          "DESC": "The trust is one of the most effective structures to protect and manage family wealth. Through fiduciary property, we allow assets to be managed under previously defined conditions, ensuring their destination and the protection of beneficiaries. At Arias & Asociados we advise on:",
+          "ITEM1": "The constitution of family or administration trusts to guarantee responsible management of wealth.",
+          "ITEM2": "The transfer of assets under fiduciary title, avoiding their exposure to personal, marital, or judicial contingencies.",
+          "ITEM3": "The creation of successional trusts, which allow the orderly and controlled delivery of assets after the death of the constituent."
+        },
+        "SUCESIONES": {
+          "TITLE": "Notarial and judicial successions:",
+          "DESC": "We provide comprehensive support in the planning and execution of successional processes, both through notarial means (when there is agreement among heirs) and judicial means (when there are controversies). Our approach combines agility, conciliation, and legal technique to guarantee a fair and transparent distribution of assets. We advise on early successional planning, including wills and successional pacts, as well as the processing of notarial successions with a focus on procedural economy and legal security. We represent heirs or legatees in judicial processes for the claim or defense of hereditary rights."
+        },
+        "CAPITULACIONES": {
+          "TITLE": "Prenuptial agreements and cohabitation pacts:",
+          "DESC": "Prenuptial agreements are the most effective tool to protect personal and business wealth before or during a union. At Arias & Asociados we prepare and register prenuptial agreements and cohabitation pacts that:",
+          "ITEM1": "Determine which assets are part or not of the common wealth.",
+          "ITEM2": "Prevent economic conflicts in case of separation or dissolution.",
+          "ITEM3": "Allow financial planning of the relationship without putting individual or family assets at risk."
+        },
+        "UNIONES": {
+          "TITLE": "Marital unions and liquidation of marital or patrimonial partnerships:",
+          "DESC": "We offer complete advice on the formalization, recognition, or liquidation of de facto marital unions and marital or patrimonial partnerships, both through notarial and judicial means. Our work focuses on ensuring that economic decisions are fair, transparent, and oriented towards the preservation of common wealth.",
+          "ITEM1": "Recognition or dissolution of de facto marital unions.",
+          "ITEM2": "Liquidation of marital or patrimonial partnerships.",
+          "ITEM3": "Advice on the division of assets, management of liabilities, and equitable distribution.",
+          "ITEM4": "Judicial representation in controversies over marital or partner assets."
+        },
+        "ALIMENTOS": {
+          "TITLE": "Alimony advice and regulation of family relationships:",
+          "DESC": "Conflicts derived from alimony obligations or the regulation of family relationships demand sensitivity and legal strategy. Our approach combines the protection of fundamental rights with patrimonial security, seeking balanced and sustainable solutions.",
+          "ITEM1": "Advice on fixing, increasing, or reducing alimony payments.",
+          "ITEM2": "Negotiation and formalization of custody, visitation, and maintenance agreements.",
+          "ITEM3": "Defense or claim of rights before family authorities or courts.",
+          "ITEM4": "Comprehensive regulation of family relationships from a preventive perspective."
+        }
+      },
+      "PROTECCION_INMOBILIARIA": {
+        "TITLE": "Real Estate Wealth Protection",
+        "INTRO": "At Arias & Asociados we understand that real estate wealth is one of the most valuable and vulnerable assets, which is why we focus on legally protecting property, ensuring legality in transactions, and avoiding risks that compromise the value or possession of assets. We provide comprehensive advice on their acquisition, holding, use, administration, and defense, to ensure full legal protection of urban and rural real estate through:",
+        "ITEM1": "<strong>Real estate contracts:</strong> structuring, review, and support in purchases/sales, promises, leases, leasing, construction contracts and real estate trusts, easements, expropriations, fiduciary property, usufruct.",
+        "ITEM2": "<strong>Horizontal property:</strong> comprehensive legal advice to complexes and buildings in their constitution, administration, regulation reforms, and management of internal conflicts and claims against developers.",
+        "ITEM3": "<strong>Judicial processes on real estate:</strong> representation in processes of adverse possession, recovery, restitution of possession, and protection of possession.",
+        "ITEM4": "<strong>Land restitution:</strong> technical defense of both claimants of dispossessed lands and legitimate opponents, with a focus on the protection of property rights and transitional justice.",
+        "ITEM5": "<strong>Real estate consumer protection:</strong> advice and defense in cases of breach in housing projects or affectation of rights in the acquisition of real estate.",
+        "ITEM6": "<strong>Property management and title sanitation:</strong> support in processes of formalization, tradition, and administration of rural and urban assets."
+      },
+      "PROTECCION_EMPRESARIAL": {
+        "TITLE": "Business Wealth Protection",
+        "INTRO": "We accompany entrepreneurs and business owners at all stages of the business cycle, from the creation of their business to the judicial defense of their patrimonial structure. Our purpose is to strengthen corporate decisions with strategic vision and solid legal grounding through the following lines of work:",
+        "EMPRENDIMIENTO": {
+          "TITLE": "Entrepreneurship and Business Constitution:",
+          "DESC": "Designed for entrepreneurs and businesses in the creation stage, who need to start with secure legal foundations and efficient patrimonial structures. We offer:",
+          "ITEM1": "Constitution of companies and selection of the most convenient associative type (participation account contracts, joint venture, etc., commercial agency, etc.).",
+          "ITEM2": "Drafting of social statutes and foundational agreements.",
+          "ITEM3": "Advice on linking partners, investors, or strategic allies.",
+          "ITEM4": "Registration of trademarks, patents, trade names, and other industrial property assets.",
+          "ITEM5": "Contractual structuring with suppliers, clients, and allies.",
+          "ITEM6": "Initial legal support in regulatory and tax compliance."
+        },
+        "GESTION": {
+          "TITLE": "Formalized Companies and Corporate Management:",
+          "DESC": "Aimed at companies already established or growing, facing challenges in corporate governance, internal control, and legal sustainability. We offer:",
+          "ITEM1": "Statutory reforms and updating of administration bodies.",
+          "ITEM2": "Drafting of shareholder agreements and business family protocols.",
+          "ITEM3": "Management of conflicts between partners, shareholders, or administrators.",
+          "ITEM4": "Advice on mergers, demergers, acquisitions, and corporate reorganizations.",
+          "ITEM5": "Review of commercial, distribution, and representation contracts.",
+          "ITEM6": "Implementation of compliance programs and legal risk management.",
+          "ITEM7": "Protection of intangible assets: trademarks, patents, know-how, and corporate copyrights."
+        },
+        "DEFENSA": {
+          "TITLE": "Judicial Protection and Corporate Defense:",
+          "DESC": "When conflicts arise that threaten capital or business operation, we defend corporate wealth with procedural strategy and specialized knowledge in corporate law. We offer:",
+          "ITEM1": "Mediation and extrajudicial and judicial management between partners, administrators, or shareholders.",
+          "ITEM2": "Liability actions against administrators and statutory auditors.",
+          "ITEM3": "Challenge of social decisions and irregular assemblies.",
+          "ITEM4": "Defense against sanctions or investigations by administrative authorities.",
+          "ITEM5": "Litigation derived from commercial contracts, breaches, or unfair competition."
+        }
+      },
+      "PREVENTIVA": {
+        "TITLE": "Preventive Wealth Protection",
+        "INTRO": "We anticipate risks through preventive advice, contractual design, and legal diagnoses, aimed at avoiding future losses and contingencies, through:",
+        "ITEM1": "Legal audits and diagnoses (due diligence).",
+        "ITEM2": "Drafting and review of civil, commercial, and labor contracts.",
+        "ITEM3": "Structuring of contractual models adjusted to the business.",
+        "ITEM4": "Support in procedures before public and private entities."
+      },
+      "LITIGIOSA": {
+        "TITLE": "Litigious Wealth Protection:",
+        "INTRO": "When conflict is inevitable, we defend our clients' wealth with strategy, technique, and solid legal evidence, always seeking the restoration of their rights and the minimization of the economic impact through process management.",
+        "ITEM1": "Civil, commercial, labor, and administrative processes.",
+        "ITEM2": "Contractual and extra-contractual liability.",
+        "ITEM4": "Quantification and expert evidence of patrimonial and extra-patrimonial damages."
+      }
+    },
+    "TAX_SECTION": {
+      "TITLE": "Tax Services",
+      "DESC": "Our tax compliance service seeks to provide comprehensive and permanent support to companies and individuals in a timely manner, mitigating tax risk and optimizing tax burdens through consulting in:",
+      "ITEM1": "Preparation of income tax returns (Legal entities and natural persons).",
+      "ITEM2": "Preparation of exogenous information reports (National and municipal).",
+      "ITEM3": "Preparation of Withholding Tax, VAT, ICA, and Wealth Tax returns.",
+      "ITEM4": "Tax reconciliation.",
+      "ITEM5": "Technical tax-related consultations.",
+      "ITEM6": "Tax refunds and/or offsets.",
+      "ITEM7": "Tax planning.",
+      "ITEM8": "Tax compliance diagnostics.",
+      "ITEM9": "Support in processes before administrative authorities (DIAN, SHD, UGPP)."
+    },
+    "FISCAL_SECTION": {
+      "TITLE": "Fiscal Audit",
+      "DESC": "We perform a comprehensive review of your organization's management and operation, ensuring that legal, statutory, and accounting compliance is developed under the highest ethical and technical standards, protecting the interests of partners and third parties, as well as promoting administrative and financial transparency of the company under international auditing standards.",
+      "ITEM1": "We ensure that financial information is reliable and timely, complying with accepted accounting and financial information standards in Colombia.",
+      "ITEM2": "We guarantee that the company complies with current legal, statutory, and tax regulations.",
+      "ITEM3": "We evaluate the effectiveness of controls to mitigate operational, financial, and fraud risks.",
+      "ITEM4": "We attest to the reasonableness of the financial statements through audit opinions.",
+      "ITEM5": "We alert management to weaknesses or irregularities in operation, suggesting administrative and control improvements."
+    },
+    "CERT_SECTION": {
+      "TITLE": "Certificates and Others",
+      "DESC": "We provide comprehensive certification services and support in administrative procedures for individuals and companies, ensuring information veracity and agility in their processes.",
+      "ITEM1": "Income certificates (independent workers and employees).",
+      "ITEM2": "Financial Statement Certification.",
+      "ITEM3": "Renewal of Mercantile Registration (Chamber of Commerce).",
+      "ITEM4": "Single Proponent Registry (RUP).",
+      "ITEM5": "Registrations before public and private bodies.",
+      "ITEM6": "RUT applications and electronic signatures."
+    },
+    "SIDEBAR_DOWNLOAD": "Download our portfolio here",
+    "SIDEBAR_DOWNLOAD_BTN": "Download here",
+    "SIDEBAR_QUESTIONS": "Have Questions?",
+    "SIDEBAR_TALK": "Let's Talk",
+    "HOW_WE_DO_IT": "How do we do it?",
+    "BANNER_DESC": "Offering solutions and services to address a spectrum of financial challenges."
+  },
+  "ACCOUNTING": {
+    "NAV1": "How do we do it?",
+    "NAV2": "Regulatory and Normative Compliance",
+    "NAV3": "Preparation and Presentation of Financial Statements",
+    "NAV4": "Fiscal and Tax Optimization",
+    "NAV5": "Financial Analysis and Management Reports",
+    "NAV6": "Accounting Risk Management and Internal Control",
+    "NAV7": "Financial and Budgetary Planning",
+    "INTRO": "At Arias & Asociados we offer comprehensive accounting and financial support, aimed at ensuring regulatory compliance, transparency in financial information and resource optimization. Our team combines technical experience and updated knowledge of Colombian regulations, providing strategic solutions that support decision-making and strengthen business management. We focus on providing reliable, timely services adapted to the needs of each client, contributing to sustainable growth and correct management of their accounting and tax obligations.",
+    "CUMPLIMIENTO": {
+      "ITEM1": "Compliance with accounting and corporate obligations before control bodies: Supersociedades, UGPP, DIAN and other competent authorities.",
+      "ITEM2": "Updated application of Financial Information Standards (IFRS) according to the Colombian technical framework."
+    },
+    "ELABORACION": {
+      "ITEM1": "Preparation and analysis of financial statements.",
+      "ITEM2": "Preparation and analysis of accounting reports for boards of directors, assemblies, control bodies and financial entities.",
+      "ITEM3": "Presentation of financial information before different control bodies (DIAN, Supersociedades, Supersalud, municipal entities, among others)."
+    },
+    "OPTIMIZACION": {
+      "ITEM1": "Preparation and review of tax returns: income, VAT, withholdings, ICA, industry and commerce, wealth, foreign assets among others.",
+      "ITEM2": "Compliance with formal and substantial obligations for legal and natural persons obliged to keep accounting.",
+      "ITEM3": "Advisory in tax planning to optimize tax burdens within the current legal framework."
+    },
+    "ANALISIS": {
+      "ITEM1": "Preparation of financial analysis and management indicators (liquidity, profitability, indebtedness, operational efficiency).",
+      "ITEM2": "Analysis by business lines for strategic decision-making.",
+      "ITEM3": "Generation of executive reports for management, investors and partners.",
+      "ITEM4": "Financial projections for timely and strategic management."
+    },
+    "RIESGOS": {
+      "ITEM1": "Diagnosis of accounting, financial and regulatory compliance risks.",
+      "ITEM2": "Implementation or strengthening of internal accounting policies.",
+      "ITEM3": "Review of accounting procedures and formulation of recommendations to mitigate contingencies.",
+      "ITEM4": "Identification of risks associated with electronic invoicing, withholdings and tax obligations."
+    },
+    "PLANIFICACION": {
+      "ITEM1": "Preparation of operating, investment and cash flow budgets.",
+      "ITEM2": "Support in processes of expansion, investment or financial restructuring.",
+      "ITEM3": "Projections of future cash flows, investment plans and sustainability strategies."
+    }
+  },
+  "LEGAL": {
+    "NAV1": "How do we do it?",
+    "NAV2": "Protection of Family Assets",
+    "NAV3": "Protection of Real Estate Assets",
+    "NAV4": "Protection of Business Assets",
+    "NAV5": "Preventive Asset Protection",
+    "NAV6": "Litigious Asset Protection"
+  },
+  "TAX": {
+    "NAV1": "How do we do it?",
+    "NAV2": "Tax Planning",
+    "NAV3": "Tax Advisory, Consulting and Audit",
+    "NAV4": "Tax Refunds and Procedures",
+    "NAV5": "Business Training",
+    "NAV6": "Handling Requirements",
+    "INTRO": "At Arias & Asociados we offer comprehensive advisory in tax matters, helping our clients to comply with current regulations and optimize their tax burden strategically.",
+    "PLANEACION": "Tax Planning",
+    "ASESORIA": "Tax Advisory, Consulting and Audit",
+    "DEVOLUCIONES": "Tax Refunds and Procedures",
+    "REQUERIMIENTOS": "Handling Requirements",
+    "ITEM1": "Legal audits and diagnostics (due diligence).",
+    "ITEM2": "National and municipal taxes.",
+    "ITEM3": "Review and verification of regulatory compliance.",
+    "ITEM4": "Request and management of refunds of balances in favor.",
+    "ITEM5": "Processing of excess payments and non-due payments.",
+    "ITEM6": "Training for executives and teams on key tax issues.",
+    "ITEM7": "Response to ordinary and special requirements from DIAN, UGPP and other municipal authorities."
+  },
+  "FISCAL_AUDIT": {
+    "NAV1": "How do we do it?",
+    "NAV2": "Business Knowledge and Control Evaluation",
+    "NAV3": "Assurance and Analysis of Financial Information",
+    "NAV4": "Issuance of Independent Opinion",
+    "NAV5": "Compliance with Audit Standards",
+    "NAV6": "Verification of Legal and Statutory Framework",
+    "INTRO": "At Arias & Asociados we offer a fiscal auditing service with a comprehensive, preventive and timely approach, oriented to minimize risks and guarantee transparency in business management and value generation.",
+    "ITEM1": "Analysis of internal processes and review of control mechanisms.",
+    "ITEM2": "Validation of the reliability and accuracy of financial statements.",
+    "ITEM3": "Identification of risks and areas for improvement in financial management.",
+    "ITEM4": "Technical and objective opinion on the financial situation.",
+    "ITEM5": "Recommendations to strengthen procedures and management.",
+    "ITEM6": "Application of methodologies aligned with current regulations.",
+    "ITEM7": "Action under principles of ethics, integrity and professionalism.",
+    "ITEM8": "Control of compliance with legal, tax and statutory provisions."
+  },
+  "BLOG_PAGE": {
+    "TITLE": "Blog",
+    "SEARCH": "Search...",
+    "READ_MORE": "Read more"
+  },
+  "PRIVACY": {
+    "TITLE": "Privacy Policy"
+  },
+  "META": {
+    "SITE_TITLE": "Accounting & Legal Advisory for Businesses | Arias & Asociados S.A.S",
+    "SITE_DESC": "Discover our accounting advisory services. We have a team of experts ready to help you with efficient and accurate accounting management for your business."
+  },
+  "ADMIN": {
+    "LOGIN": "Administrator Login",
+    "EMAIL": "Email address",
+    "PASSWORD": "Password",
+    "LOGIN_BTN": "Login",
+    "LOGOUT_BTN": "Logout",
+    "PUBLISH_TITLE": "Upload Publication",
+    "FILE_LABEL": "Select file (PDF, DOCX, ZIP)",
+    "TYPE_LABEL": "Publication Type",
+    "TYPE_TAX": "Tax",
+    "TYPE_LEGAL": "Legal",
+    "TYPE_ACCOUNTING": "Accounting",
+    "SUBMIT": "Publish now",
+    "SUCCESS": "Publication successfully uploaded",
+    "ERROR_LOGIN": "Invalid credentials",
+    "DROP_FILE": "Drag and drop the file here or click to browse",
+    "IMAGE_URL_INFO": "The cover image will be automatically assigned based on the type."
+  }
+}
