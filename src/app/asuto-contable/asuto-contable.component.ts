@@ -11,8 +11,11 @@ export class AsutoContableComponent implements OnInit {
   constructor(private titleService: Title, private metaService: Meta) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('Asesoría Contable | Arias & Asociados');
-    this.metaService.updateTag({ name: 'description', content: 'Gestión contable eficiente, cumplimiento normativo y análisis financiero para tu empresa en Sincelejo.' });
+    this.titleService.setTitle('Asesoría Contable en Sincelejo | Contadores Públicos | Arias & Asociados');
+    this.metaService.updateTag({ name: 'description', content: 'Contadores públicos en Sincelejo especializados en gestión contable, estados financieros y cumplimiento normativo para empresas en Sucre y Colombia.' });
+    this.metaService.updateTag({ property: 'og:title', content: 'Asesoría Contable en Sincelejo | Arias & Asociados' });
+    this.metaService.updateTag({ property: 'og:description', content: 'Contadores públicos en Sincelejo. Gestión contable, estados financieros y cumplimiento normativo para tu empresa.' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://ariasyasociados.co/servicios-contables' });
   }
 
   como = true;

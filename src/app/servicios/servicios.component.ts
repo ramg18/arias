@@ -11,8 +11,11 @@ export class ServiciosComponent implements OnInit {
   constructor(private titleService: Title, private metaService: Meta) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('Nuestros Servicios Contables y Jurídicos | Arias & Asociados');
-    this.metaService.updateTag({ name: 'description', content: 'Ofrecemos un portafolio integral de servicios: Contables, Tributarios, Jurídicos y Revisoría Fiscal en Sincelejo.' });
+    this.titleService.setTitle('Servicios Contables, Fiscales y Jurídicos en Sincelejo | Arias & Asociados');
+    this.metaService.updateTag({ name: 'description', content: 'Firma contable en Sincelejo con servicios de asesoría contable, revisoría fiscal, asesoría tributaria y jurídica para empresas en Sucre y Colombia.' });
+    this.metaService.updateTag({ property: 'og:title', content: 'Servicios Contables, Fiscales y Jurídicos en Sincelejo | Arias & Asociados' });
+    this.metaService.updateTag({ property: 'og:description', content: 'Firma contable en Sincelejo: asesoría contable, revisoría fiscal, tributaria y jurídica para empresas en Sucre.' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://ariasyasociados.co/servicios' });
   }
 
   quienessomos = true;

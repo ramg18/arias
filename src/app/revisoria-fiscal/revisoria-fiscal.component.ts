@@ -11,8 +11,11 @@ export class RevisoriaFiscalComponent implements OnInit {
   constructor(private titleService: Title, private metaService: Meta) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('Revisoría Fiscal | Arias & Asociados');
-    this.metaService.updateTag({ name: 'description', content: 'Auditoría integral y aseguramiento de la información financiera para tu empresa.' });
+    this.titleService.setTitle('Revisoría Fiscal en Sincelejo | Revisor Fiscal Certificado | Arias & Asociados');
+    this.metaService.updateTag({ name: 'description', content: 'Revisoría fiscal certificada en Sincelejo y Sucre. Revisores fiscales para sociedades, empresas con obligación legal y auditoría financiera en Colombia.' });
+    this.metaService.updateTag({ property: 'og:title', content: 'Revisoría Fiscal en Sincelejo | Arias & Asociados' });
+    this.metaService.updateTag({ property: 'og:description', content: 'Revisoría fiscal certificada en Sincelejo. Revisores fiscales para sociedades y empresas con obligación legal en Sucre, Colombia.' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://ariasyasociados.co/revisoria-fiscal' });
   }
 
   como = true;

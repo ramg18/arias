@@ -1,8 +1,9 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { BlogservicesService } from '../services/blogservices.service';
 import { Router } from '@angular/router';
 import {PaginationInstance} from 'ngx-pagination';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml, Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blog',
@@ -19,11 +20,20 @@ export class BlogComponent implements OnInit {
   posicion_lista: any = 0;
   totalPosts: number = 0;
 
-  constructor( private BlogSvc:BlogservicesService, public route: Router, private sanitizer: DomSanitizer ){
-
-  }
+  constructor(
+    private BlogSvc: BlogservicesService,
+    public route: Router,
+    private sanitizer: DomSanitizer,
+    private titleService: Title,
+    private metaService: Meta,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   ngOnInit(): void {
+    this.titleService.setTitle('Blog Contable y Tributario en Sincelejo | Arias & Asociados');
+    this.metaService.updateTag({ name: 'description', content: 'Artículos sobre asesoría contable, tributaria y jurídica en Colombia. Noticias fiscales, guías de declaración de renta y novedades para empresas en Sincelejo.' });
+    this.metaService.updateTag({ property: 'og:title', content: 'Blog Contable y Tributario | Arias & Asociados Sincelejo' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://ariasyasociados.co/blog' });
     this.getPosts();
   }
 
@@ -45,7 +55,9 @@ export class BlogComponent implements OnInit {
   }
 
   truncateAndSanitizeHtml(html: string, limit: number): SafeHtml {
-
+    if (!isPlatformBrowser(this.platformId)) {
+      return this.sanitizer.bypassSecurityTrustHtml(html);
+    }
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
     const textContent = doc.body.textContent || '';
