@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { BlogservicesService } from '../services/blogservices.service';
 import { Router } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
@@ -16,10 +17,16 @@ export class HomeComponent implements OnInit {
   showChat = false;
 
 
-  constructor(private BlogSvc:BlogservicesService, public route: Router, private sanitizer: DomSanitizer){}
+  constructor(
+    private BlogSvc: BlogservicesService,
+    public route: Router,
+    private sanitizer: DomSanitizer,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   ngOnInit(): void {
     this.getPosts(this.current_page);
+    if (!isPlatformBrowser(this.platformId)) return;
     $('.hero-slider-one').slick({
       dots: false,
           arrows: false,
@@ -250,7 +257,9 @@ export class HomeComponent implements OnInit {
   }
 
   truncateAndSanitizeHtml(html: string, limit: number): SafeHtml {
-
+    if (!isPlatformBrowser(this.platformId)) {
+      return this.sanitizer.bypassSecurityTrustHtml(html);
+    }
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
     const textContent = doc.body.textContent || '';

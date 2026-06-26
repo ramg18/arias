@@ -36,7 +36,7 @@ export class CertificadosComponent implements OnInit {
       let ruta = `https://ariasyasociados.co/assets/certificados/${this.seminario}/${this.cedula}.pdf`;
 
 
-      window.open(ruta, '_blank');
+      if (typeof window !== 'undefined') window.open(ruta, '_blank');
 
     }
 

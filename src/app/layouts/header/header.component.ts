@@ -1,4 +1,5 @@
-import { Component, AfterViewInit  } from '@angular/core';
+import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 declare var bootstrap: any;
 
 @Component({
@@ -8,7 +9,10 @@ declare var bootstrap: any;
 })
 export class HeaderComponent implements AfterViewInit {
 
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngAfterViewInit() {
+    if (!isPlatformBrowser(this.platformId)) return;
     const dropdownElementList: NodeListOf<HTMLElement> = document.querySelectorAll('[data-bs-toggle="dropdown"]');
     dropdownElementList.forEach((dropdownToggleEl: HTMLElement) => {
       const menu = dropdownToggleEl.nextElementSibling as HTMLElement;
