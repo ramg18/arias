@@ -2191,13 +2191,13 @@ iframe {
     transition:all .2s ease-in-out 0s
 }
 .theme-main-menu .nav-item:hover .nav-link {
-    color:#000000
+    color:#fff
 }
 .theme-main-menu.white-vr .nav-item .nav-link {
     color:#fff
 }
 .theme-main-menu.white-vr .nav-item:hover .nav-link {
-    color:#ffe32a
+    color:#fff
 }
 .theme-main-menu.white-vr.fixed {
     background:#000000;
@@ -4865,7 +4865,7 @@ iframe {
     height:100%;
     top:0;
     left:0;
-    background:rgba(105, 107, 106, 0.7);
+    /* background:rgba(105, 107, 106, 0.7); */
     opacity:0;
     transition:all .3s ease-in-out 0s
 }
@@ -5443,9 +5443,10 @@ iframe {
     padding:0 25px
 }
 .service-details .service-nav-item a {
-    font-weight:500;
+    font-size: 16px;
+    font-weight:600;
     color:rgba(0,0,0,.4);
-    padding:24px 0;
+    padding:12px 12px;
     line-height:20px;
     border-bottom:1px dashed rgba(10,64,32,.2);
     transition:all .3s ease-in-out 0s
@@ -10092,5 +10093,10 @@ body.compensate-for-scrollbar {
 }
 .slick-arrow.slick-hidden {
     display:none
+}
+.accordion-style-two .accordion-item .accordion-body .media-wrapper .video-icon {
+    width: 90px;
+    height: 90px;
+    background: #fff
 }
 /*# sourceMappingURL=style.min.css.map */

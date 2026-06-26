@@ -1,53 +1,37 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
-import { ContactoComponent } from './contacto/contacto.component';
-import { CertificadosComponent } from './certificados/certificados.component';
+
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { BlogComponent } from './blog/blog.component';
 import { EntradaComponent } from './entrada/entrada.component';
-import { ServiciosComponent } from './servicios/servicios.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
-import { RutasPipe } from './pipes/rutas.pipe';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { DetalleBlogComponent } from './detalle-blog/detalle-blog.component';
-import { IndicadoresEconomicosComponent } from './components/indicadores-economicos/indicadores-economicos.component';
-import { IndicadoresService } from './services/indicadores.service';
-import { AsutoTributarioComponent } from './asuto-tributario/asuto-tributario.component';
-import { AsutoJuridicoComponent } from './asuto-juridico/asuto-juridico.component';
-import { AsutoContableComponent } from './asuto-contable/asuto-contable.component';
-import { RevisoriaFiscalComponent } from './revisoria-fiscal/revisoria-fiscal.component';
+import { PublicarComponent } from './components/publicar/publicar.component';
+
+import { SharedModule } from './shared/shared.module';
+
+// ngx-translate
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader, provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     HeaderComponent,
     FooterComponent,
-    ContactoComponent,
-    CertificadosComponent,
     NosotrosComponent,
     BlogComponent,
     EntradaComponent,
-    ServiciosComponent,
-    RutasPipe,
     DetalleBlogComponent,
-    IndicadoresEconomicosComponent,
-    AsutoTributarioComponent,
-    AsutoJuridicoComponent,
-    AsutoContableComponent,
-    RevisoriaFiscalComponent
+    PublicarComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,16 +39,19 @@ import { RevisoriaFiscalComponent } from './revisoria-fiscal/revisoria-fiscal.co
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    SharedModule,
     TranslateModule.forRoot({
+      defaultLanguage: 'es',
       loader: {
         provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      },
-      defaultLanguage: 'es'
+        useClass: TranslateHttpLoader
+      }
     })
   ],
-  providers: [IndicadoresService],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    ...provideTranslateHttpLoader({ prefix: '/assets/i18n/', suffix: '.json' })
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

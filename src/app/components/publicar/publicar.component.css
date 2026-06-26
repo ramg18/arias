@@ -1,0 +1,80 @@
+.bg-wrapper {
+  background: #f8f9fa;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.publish-type-selector {
+  display: flex;
+  gap: 15px;
+}
+
+.type-option label {
+  border: 2px solid #ddd;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 140px;
+  justify-content: center;
+  background: white;
+}
+
+.type-option input:checked + label {
+  border-color: #007bff; /* Primary brand color placeholder */
+  background: rgba(0, 123, 255, 0.05);
+  color: #007bff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.15);
+}
+
+.drop-zone {
+  border: 2px dashed #ccc;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.drop-zone:hover, .drop-zone.dragover {
+  border-color: #007bff;
+  background: rgba(0, 123, 255, 0.02) !important;
+}
+
+.drop-zone.has-file {
+  border-color: #28a745;
+  background: rgba(40, 167, 69, 0.02) !important;
+}
+
+.file-input-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.animate__animated {
+  animation-duration: 0.8s;
+}
+
+/* Adjustments for Arias theme consistency */
+label {
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.btn-sm {
+  padding: 6px 15px;
+  font-size: 14px;
+}

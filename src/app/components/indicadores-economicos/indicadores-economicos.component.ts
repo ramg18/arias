@@ -14,12 +14,12 @@ export class IndicadoresEconomicosComponent implements OnInit {
   ngOnInit(): void {
     this.indicadoresService.getIndicadores().subscribe({
       next: (data) => {
-        console.log(data);
+        
 
         this.indicadores = data;
       },
       error: (error) => {
-        console.error('Error al obtener los indicadores', error);
+        
       }
     });
   }

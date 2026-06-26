@@ -2,7 +2,7 @@ import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { BlogservicesService } from '../services/blogservices.service';
 import { Router } from '@angular/router';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml, Meta, Title } from '@angular/platform-browser';
 declare var $: any;
 
 @Component({
@@ -21,10 +21,15 @@ export class HomeComponent implements OnInit {
     private BlogSvc: BlogservicesService,
     public route: Router,
     private sanitizer: DomSanitizer,
+    private titleService: Title,
+    private metaService: Meta,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
+    this.titleService.setTitle('Asesoría Contable y Legal | Inicio - Arias & Asociados');
+    this.metaService.updateTag({ name: 'description', content: 'Expertos en revisoría fiscal, asesoría contable y jurídica en Sincelejo. Optimizamos la gestión financiera de tu empresa.' });
+    
     this.getPosts(this.current_page);
     if (!isPlatformBrowser(this.platformId)) return;
     $('.hero-slider-one').slick({
@@ -245,7 +250,7 @@ export class HomeComponent implements OnInit {
 
   getPosts(pagina: number) {
     this.BlogSvc.listEntradas(pagina).subscribe((response: any) => {
-      console.log(response);
+      
       this.posts = response.data.map((post: any) => ({
         ...post, // Copia todas las propiedades existentes del post
         body: this.truncateAndSanitizeHtml(post.body, 200) // Solo actualiza 'body'
@@ -257,16 +262,14 @@ export class HomeComponent implements OnInit {
   }
 
   truncateAndSanitizeHtml(html: string, limit: number): SafeHtml {
-    if (!isPlatformBrowser(this.platformId)) {
-      return this.sanitizer.bypassSecurityTrustHtml(html);
-    }
+
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
     const textContent = doc.body.textContent || '';
 
     if (textContent.length > limit) {
       const truncatedText = textContent.substr(0, limit) + '...';
-      console.log(truncatedText);
+      
 
       return this.sanitizer.bypassSecurityTrustHtml(truncatedText);
     }
@@ -276,7 +279,7 @@ export class HomeComponent implements OnInit {
 
 
   irEntrada(identrada: string){
-    console.log(identrada);
+    
 
     this.route.navigate(['/blog-details/',identrada]);
   }

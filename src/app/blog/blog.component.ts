@@ -52,7 +52,7 @@ export class BlogComponent implements OnInit {
 
     if (textContent.length > limit) {
       const truncatedText = textContent.substr(0, limit) + '...';
-      console.log(truncatedText);
+      
 
       return this.sanitizer.bypassSecurityTrustHtml(truncatedText);
     }

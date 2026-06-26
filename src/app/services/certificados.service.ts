@@ -9,7 +9,7 @@ export class CertificadosService {
   constructor( private http: HttpClient ) { }
 
   listSeminarios(){
-    return this.http.get( '../../assets/seminarios.json' )
+    return this.http.get( 'assets/seminarios.json' )
   }
 
 }

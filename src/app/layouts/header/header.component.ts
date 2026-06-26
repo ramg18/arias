@@ -1,5 +1,7 @@
-import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, AfterViewInit, HostListener } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
+import { AuthService } from '../../services/auth.service';
+
 declare var bootstrap: any;
 
 @Component({
@@ -9,23 +11,35 @@ declare var bootstrap: any;
 })
 export class HeaderComponent implements AfterViewInit {
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  isServiciosOpen = false;
 
-  ngAfterViewInit() {
-    if (!isPlatformBrowser(this.platformId)) return;
-    const dropdownElementList: NodeListOf<HTMLElement> = document.querySelectorAll('[data-bs-toggle="dropdown"]');
-    dropdownElementList.forEach((dropdownToggleEl: HTMLElement) => {
-      const menu = dropdownToggleEl.nextElementSibling as HTMLElement;
-      if (menu) {
-        dropdownToggleEl.addEventListener('click', function (event) {
-          event.preventDefault();
-          menu.classList.toggle('show');
-          dropdownToggleEl.setAttribute('aria-expanded', menu.classList.contains('show').toString());
-        });
-      } else {
-        console.error('Menu element not found for', dropdownToggleEl);
-      }
-    });
+  constructor(
+    public languageSvc: LanguageService,
+    public authService: AuthService
+  ) {}
+
+  ngAfterViewInit() {}
+
+  toggleServicios(event: Event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.isServiciosOpen = !this.isServiciosOpen;
   }
 
+  closeDropdown() {
+    this.isServiciosOpen = false;
+  }
+
+  toggleLanguage(): void {
+    const newLang = this.languageSvc.getCurrentLang() === 'es' ? 'en' : 'es';
+    this.languageSvc.switchLanguage(newLang as 'es' | 'en');
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event) {
+    const target = event.target as HTMLElement;
+    if (!target.closest('.dropdown')) {
+      this.isServiciosOpen = false;
+    }
+  }
 }

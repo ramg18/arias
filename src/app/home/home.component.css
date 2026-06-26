@@ -36,3 +36,15 @@ a {
 .show-chat {
   display: block;
 }
+
+ .video-icon {
+    width: 90px;
+    height: 90px;
+    background: #fff;
+}
+
+.color{  
+    fill: #ffffff;
+    transition: fill 0.3s ease;
+}
+

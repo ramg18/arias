@@ -1,0 +1,167 @@
+<div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative"
+  style="background-image: url(assets/images/media/img_02.jpg)">
+  <div class="container position-relative">
+    <div class="row align-items-center">
+      <div class="col-lg-9 iframe-wrapper">
+        <h3 class="hero-heading text-white d-inline-block position-relative">
+          {{ (isLoggedIn ? 'ADMIN.PUBLISH_TITLE' : 'ADMIN.LOGIN') | translate }}
+          <img src="assets/images/shape/shape_10.svg" alt="" />
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contact-us-section pt-150 lg-pt-80 pb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-8 col-lg-10 m-auto">
+        <div class="bg-wrapper light-bg p-4 p-md-5 rounded shadow-sm">
+          
+          <!-- LOGIN VIEW -->
+          <div *ngIf="!isLoggedIn" class="form-style-one animate__animated animate__fadeIn">
+            <div class="text-center mb-40">
+              <h2>{{ 'ADMIN.LOGIN' | translate }}</h2>
+              <p class="text-muted">Arias & Asociados - Panel de Administración</p>
+            </div>
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin()" novalidate>
+              <div class="row">
+                <div class="col-12 mb-30">
+                  <div class="input-group-meta form-group">
+                    <label>{{ 'ADMIN.EMAIL' | translate }}*</label>
+                    <input type="email" formControlName="email" [placeholder]="'ADMIN.EMAIL' | translate" 
+                           class="form-control" [class.is-invalid]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+                  </div>
+                </div>
+                <div class="col-12 mb-30">
+                  <div class="input-group-meta form-group">
+                    <label>{{ 'ADMIN.PASSWORD' | translate }}*</label>
+                    <input type="password" formControlName="password" [placeholder]="'ADMIN.PASSWORD' | translate"
+                           class="form-control" [class.is-invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                  </div>
+                </div>
+                <div class="col-12 mt-20">
+                  <button type="submit" class="btn-four tran3s w-100" [disabled]="loginForm.invalid">
+                    {{ 'ADMIN.LOGIN_BTN' | translate }}
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- UPLOAD VIEW -->
+          <div *ngIf="isLoggedIn" class="form-style-one animate__animated animate__fadeIn">
+            <div class="d-flex justify-content-between align-items-center mb-40">
+              <h2>{{ 'ADMIN.PUBLISH_TITLE' | translate }}</h2>
+              <button (click)="logout()" class="btn-three btn-sm tran3s">
+                {{ 'ADMIN.LOGOUT_BTN' | translate }}
+              </button>
+            </div>
+
+            <form [formGroup]="uploadForm" (ngSubmit)="onSubmitUpload()" novalidate>
+              <div class="row">
+
+
+                <!-- Type Selection -->
+                <div class="col-12 mb-40">
+                  <div class="input-group-meta form-group">
+                    <label class="mb-3">{{ 'ADMIN.TYPE_LABEL' | translate }}*</label>
+                    <div class="publish-type-selector d-flex flex-wrap gap-3">
+                      <div class="type-option">
+                        <input type="radio" id="tax" formControlName="tipo" value="tributario" class="d-none">
+                        <label for="tax" class="type-label tran3s">
+                          <i class="bi bi-file-earmark-text"></i> {{ 'ADMIN.TYPE_TAX' | translate }}
+                        </label>
+                      </div>
+                      <div class="type-option">
+                        <input type="radio" id="legal" formControlName="tipo" value="juridico" class="d-none">
+                        <label for="legal" class="type-label tran3s">
+                          <i class="bi bi-shield-lock"></i> {{ 'ADMIN.TYPE_LEGAL' | translate }}
+                        </label>
+                      </div>
+                      <div class="type-option">
+                        <input type="radio" id="accounting" formControlName="tipo" value="contable" class="d-none">
+                        <label for="accounting" class="type-label tran3s">
+                          <i class="bi bi-calculator"></i> {{ 'ADMIN.TYPE_ACCOUNTING' | translate }}
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <small class="text-muted mt-2 d-block">
+                    <i class="bi bi-info-circle me-1"></i> {{ 'ADMIN.IMAGE_URL_INFO' | translate }}
+                  </small>
+                </div>
+
+                <!-- File Upload -->
+                <div class="col-12 mb-40">
+                  <div class="drop-zone-wrapper">
+                    <label>{{ 'ADMIN.FILE_LABEL' | translate }}*</label>
+                    <div class="drop-zone border-dashed p-5 text-center mt-2 rounded bg-white position-relative tran3s"
+                         [class.has-file]="selectedFile">
+                      <input type="file" (change)="onFileChange($event)" class="file-input-overlay" accept=".pdf,.doc,.docx,.zip">
+                      <div *ngIf="!selectedFile">
+                        <img src="assets/images/icon/icon_92.svg" alt="" class="mb-3" style="width: 50px; opacity: 0.5;">
+                        <p class="m-0">{{ 'ADMIN.DROP_FILE' | translate }}</p>
+                      </div>
+                      <div *ngIf="selectedFile" class="animate__animated animate__pulse">
+                        <i class="bi bi-file-earmark-check text-success display-4"></i>
+                        <p class="fw-bold mt-2 mb-0">{{ selectedFile.name }}</p>
+                        <small class="text-muted">{{ (selectedFile.size / 1024 / 1024).toFixed(2) }} MB</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="col-12">
+                  <button type="submit" class="btn-four tran3s w-100 py-3" [disabled]="uploadForm.invalid || isLoading">
+                    <span *ngIf="!isLoading">{{ 'ADMIN.SUBMIT' | translate }}</span>
+                    <span *ngIf="isLoading">
+                      <i class="spinner-border spinner-border-sm me-2"></i>
+                       Publicando...
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Botones de Acción Extra -->
+            <div class="row mt-40">
+              <div class="col-12 d-flex justify-content-between align-items-center">
+                <button type="button" class="btn-six" (click)="logout()">
+                  <i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar Sesión
+                </button>
+                
+                <!-- 
+                <button type="button" class="btn-link" style="color: #666; text-decoration: underline;" (click)="isChangingPass = !isChangingPass">
+                  {{ isChangingPass ? 'Cancelar cambio' : 'Cambiar mi contraseña' }}
+                </button>
+                -->
+              </div>
+
+              <!-- Formulario Cambio Contraseña 
+              <div class="col-12 mt-20" *ngIf="isChangingPass">
+                <div class="card p-3" style="border: 1px solid #eee; background: #fafafa;">
+                  <form [formGroup]="changePassForm" (ngSubmit)="onChangePassword()">
+                    <div class="input-group-meta form-group">
+                      <label>Nueva Contraseña (mín. 6 caracteres)</label>
+                      <input type="password" formControlName="newPassword" class="form-control" placeholder="******">
+                      <div class="help-block with-errors" *ngIf="changePassForm.get('newPassword')?.invalid && changePassForm.get('newPassword')?.touched">
+                        Mínimo 6 caracteres.
+                      </div>
+                    </div>
+                    <button type="submit" class="btn-eight w-100 mt-10" [disabled]="changePassForm.invalid">
+                      Actualizar Mi Contraseña
+                    </button>
+                  </form>
+                </div>
+              </div>
+              -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
