@@ -2,6 +2,9 @@ User-agent: *
 Disallow: /admin/
 Disallow: /confidential/
 Disallow: /temp/
+Disallow: /blog/
+Disallow: /blog-details/
+Disallow: /entrada/
 Allow: /assets/
 Allow: /assets/js/
 Allow: /assets/images/
