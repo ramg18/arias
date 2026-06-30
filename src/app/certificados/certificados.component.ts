@@ -45,6 +45,7 @@ export class CertificadosComponent implements OnInit {
       const ruta = `/assets/certificados/${this.seminario}/${cedulaClean}.pdf`;
       const fileName = `Certificado_${cedulaClean}.pdf`;
 
+      if (typeof document === 'undefined') return;
       // Create a temporary link element to trigger the download
       const link = document.createElement('a');
       link.href = ruta;

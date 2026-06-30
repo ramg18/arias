@@ -11,8 +11,11 @@ export class AsutoTributarioComponent implements OnInit {
   constructor(private titleService: Title, private metaService: Meta) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('Asesoría Tributaria | Arias & Asociados');
-    this.metaService.updateTag({ name: 'description', content: 'Optimización de impuestos y cumplimiento tributario. Evita sanciones y maximiza tus beneficios fiscales.' });
+    this.titleService.setTitle('Asesoría Tributaria en Sincelejo | Declaración de Renta | Arias & Asociados');
+    this.metaService.updateTag({ name: 'description', content: 'Asesoría tributaria en Sincelejo: declaración de renta, optimización fiscal y cumplimiento DIAN para empresas y personas naturales en Sucre, Colombia.' });
+    this.metaService.updateTag({ property: 'og:title', content: 'Asesoría Tributaria en Sincelejo | Declaración de Renta | Arias & Asociados' });
+    this.metaService.updateTag({ property: 'og:description', content: 'Asesoría tributaria en Sincelejo. Declaración de renta, optimización fiscal y cumplimiento DIAN para empresas y personas naturales.' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://ariasyasociados.co/servicios-tributarios' });
   }
 
     como = true;

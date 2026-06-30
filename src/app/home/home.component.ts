@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { BlogservicesService } from '../services/blogservices.service';
 import { Router } from '@angular/router';
 import { DomSanitizer, SafeHtml, Meta, Title } from '@angular/platform-browser';
@@ -21,7 +22,8 @@ export class HomeComponent implements OnInit {
     public route: Router,
     private sanitizer: DomSanitizer,
     private titleService: Title,
-    private metaService: Meta
+    private metaService: Meta,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
@@ -29,6 +31,7 @@ export class HomeComponent implements OnInit {
     this.metaService.updateTag({ name: 'description', content: 'Expertos en revisoría fiscal, asesoría contable y jurídica en Sincelejo. Optimizamos la gestión financiera de tu empresa.' });
     
     this.getPosts(this.current_page);
+    if (!isPlatformBrowser(this.platformId)) return;
     $('.hero-slider-one').slick({
       dots: false,
           arrows: false,

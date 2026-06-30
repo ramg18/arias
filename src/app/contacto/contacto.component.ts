@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { ContactoService } from '../services/contacto.service';
 import { TranslateService } from '@ngx-translate/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
   styleUrls: ['./contacto.component.css']
 })
-export class ContactoComponent {
+export class ContactoComponent implements OnInit {
 
   contactForm: FormGroup;
   isLoading = false;
@@ -17,7 +18,9 @@ export class ContactoComponent {
   constructor(
     private formBuilder: FormBuilder,
     private contactoSvc: ContactoService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private titleService: Title,
+    private metaService: Meta
   ){
     this.contactForm = this.formBuilder.group({
       nombre: ['', [Validators.required, Validators.minLength(2)]],
@@ -25,6 +28,13 @@ export class ContactoComponent {
       celular: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],
       mensaje: ['', [Validators.required, Validators.minLength(10)]]
     });
+  }
+
+  ngOnInit(): void {
+    this.titleService.setTitle('Contáctenos | Contadores Públicos en Sincelejo | Arias & Asociados');
+    this.metaService.updateTag({ name: 'description', content: 'Contáctenos para una consulta sin costo con nuestros contadores públicos en Sincelejo. Revisoría fiscal, asesoría contable y tributaria en Sucre, Colombia.' });
+    this.metaService.updateTag({ property: 'og:title', content: 'Contáctenos | Arias & Asociados Sincelejo' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://ariasyasociados.co/contacto' });
   }
 
   get f() {

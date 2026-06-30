@@ -11,8 +11,11 @@ export class AsutoJuridicoComponent implements OnInit {
   constructor(private titleService: Title, private metaService: Meta) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('Asesoría Jurídica | Arias & Asociados');
-    this.metaService.updateTag({ name: 'description', content: 'Asesoría legal experta en derecho comercial, laboral y tributario para empresas en Sincelejo.' });
+    this.titleService.setTitle('Asesoría Jurídica Empresarial en Sincelejo | Arias & Asociados');
+    this.metaService.updateTag({ name: 'description', content: 'Asesoría jurídica empresarial en Sincelejo: derecho comercial, laboral y tributario. Protege tu empresa con expertos legales en Sucre, Colombia.' });
+    this.metaService.updateTag({ property: 'og:title', content: 'Asesoría Jurídica Empresarial en Sincelejo | Arias & Asociados' });
+    this.metaService.updateTag({ property: 'og:description', content: 'Asesoría jurídica en Sincelejo para empresas. Derecho comercial, laboral y tributario con expertos en Sucre.' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://ariasyasociados.co/servicios-juridicos' });
   }
 
   como = true;

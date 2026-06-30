@@ -1,15 +1,11 @@
 User-agent: *
 Disallow: /admin/
-Allow: /assets/
-Sitemap: https://ariasyasociados.co/sitemap.xml
-
-# Prevenir el acceso a directorios sensibles o en desarrollo
 Disallow: /confidential/
 Disallow: /temp/
 Disallow: /blog/
-Disallow: /entrada/
 Disallow: /blog-details/
-
-# Asegurar que los archivos de imagen y JavaScript necesarios para el correcto renderizado están permitidos
+Disallow: /entrada/
+Allow: /assets/
 Allow: /assets/js/
 Allow: /assets/images/
+Sitemap: https://ariasyasociados.co/sitemap.xml
