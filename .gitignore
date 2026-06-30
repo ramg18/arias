@@ -41,3 +41,8 @@ testem.log
 .DS_Store
 Thumbs.db
 .md
+
+# Archivos grandes — se suben manualmente al servidor via SCP
+src/assets/*.zip
+src/assets/*.pdf
+src/assets/memorias*/
