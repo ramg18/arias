@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  url: 'http://blogarias.test/api/',
-  link: 'http://blogarias.test/storage/'
+  url: 'http://localhost:8001/api/v1/',
+  link: 'http://localhost:8001/uploads/'
 };

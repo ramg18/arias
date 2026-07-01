@@ -1,91 +1,97 @@
-<!--
-		=============================================
-			Inner Banner
-		==============================================
-		-->
+<!-- Banner -->
 <div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative"
   style="background-image: url(assets/images/banners/banner3.jpg);">
   <div class="container position-relative">
     <div class="row align-items-center">
       <div class="col-lg-6">
-        <h1 class="hero-heading d-inline-block position-relative" style="color: white;">{{ 'BLOG.BANNER_TITLE' | translate }}
-          <!-- <img src="assets/images/shape/shape_35.svg" alt=""> -->
-          </h1>
+        <h1 class="hero-heading d-inline-block position-relative" style="color: white;">
+          {{ 'BLOG.BANNER_TITLE' | translate }}
+        </h1>
       </div>
       <div class="col-xl-4 col-lg-5 ms-auto">
         <p class="text-white text-lg mb-70 lg-mb-40">{{ 'BLOG.BANNER_DESC' | translate }}</p>
-        <!-- <ul class="style-none d-inline-flex pager">
-          <li><a href="index.html">Home</a></li>
-          <li>/</li>
-          <li>Blog</li>
-        </ul> -->
       </div>
     </div>
   </div>
 </div>
-<!-- /.inner-banner-one -->
 
-<!--
-		=====================================================
-			Blog Section Two
-		=====================================================
-		-->
-<div class="blog-section-two position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
+<!-- Blog Grid -->
+<div class="blog-section-two position-relative mt-80 mb-120">
   <div class="container">
-    <div class="position-relative">
-      <div class="row gx-xxl-5">
-        <div class="row">
-          <div class="col-md-3" *ngFor="let post of posts">
-            <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
-              <!-- <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
-              [ngStyle]="{'background-image': 'url(https://blog.ariasyasociados.co/storage/' + post.image_url  + ')'}">
-                <a (click)="irEntrada(post.id)" class="stretched-link rounded-5 date tran3s">
-                  {{ post.created_at | date:'dd MMM yyyy' }}
-                </a>
-              </figure> -->
-              <div class="post-data">
-                <div class="d-flex justify-content-between align-items-center flex-wrap">
-                  <a (click)="irEntrada(post.id)" class="blog-title">
-                    <h4>{{ post.title }}</h4>
-                  </a>
-                  <a (click)="irEntrada(post.id)"
-                     class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
-                    <i class="bi bi-arrow-up-right"></i>
-                  </a>
-                  <p style="text-align: justify;" [innerHTML]="post.body"></p>
-                </div>
-                <div class="post-info">
-                  <span class="fw-500 text-dark">{{post.user.name}}</span> {{ post.created_at | date:'dd MMM yyyy' }}
-                </div>
-              </div>
 
-            </article>
+    <!-- Grid de artículos -->
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-4" *ngFor="let post of posts">
+        <article class="blog-card h-100 d-flex flex-column" (click)="irEntrada(post.slug)" style="cursor:pointer;">
+
+          <!-- Imagen destacada -->
+          <div class="blog-card__img">
+            <img
+              *ngIf="post.imagen_url"
+              [src]="apiBase + post.imagen_url"
+              [alt]="post.titulo"
+              class="w-100 h-100 object-fit-cover"
+            />
+            <div *ngIf="!post.imagen_url" class="blog-card__img-placeholder d-flex align-items-center justify-content-center">
+              <i class="bi bi-journal-text" style="font-size: 2.5rem; color: #ccc;"></i>
+            </div>
+            <!-- Fecha flotante -->
+            <span class="blog-card__date">{{ post.created_at | date:'dd MMM yyyy' }}</span>
           </div>
-        </div>
+
+          <!-- Contenido -->
+          <div class="blog-card__body d-flex flex-column flex-grow-1 p-4">
+            <h5 class="blog-card__title mb-3">{{ post.titulo }}</h5>
+            <p class="blog-card__excerpt flex-grow-1" *ngIf="post.excerpt">{{ post.excerpt }}</p>
+            <p class="blog-card__excerpt flex-grow-1" *ngIf="!post.excerpt" [innerHTML]="post.cuerpo"></p>
+            <div class="blog-card__footer d-flex align-items-center justify-content-between mt-3 pt-3">
+              <span class="blog-card__author">Arias &amp; Asociados</span>
+              <span class="blog-card__link">
+                Leer más <i class="bi bi-arrow-right"></i>
+              </span>
+            </div>
+          </div>
+
+        </article>
       </div>
-
-      <div class="pagination-one mt-20" *ngIf="total_paginas > 0">
-        <ul class="style-none d-flex align-items-center justify-content-center">
-            <li>
-                <a href="#" (click)="goToPage(1, $event)" [class.disabled]="current_page === 1">1</a>
-            </li>
-            <li *ngIf="current_page > 3">
-                <span>...</span>
-            </li>
-            <li *ngFor="let page of getMiddlePages()">
-                <a href="#" (click)="goToPage(page, $event)" [class.active]="current_page === page">{{ page }}</a>
-            </li>
-            <li *ngIf="current_page < total_paginas - 2">
-                <span>...</span>
-            </li>
-            <li *ngIf="total_paginas > 1">
-                <a href="#" (click)="goToPage(total_paginas, $event)" [class.disabled]="current_page === total_paginas">Última</a>
-            </li>
-        </ul>
     </div>
 
-      <!-- /.pagination-one -->
+    <!-- Paginación -->
+    <div class="pagination-one mt-60" *ngIf="total_paginas > 1">
+      <ul class="style-none d-flex align-items-center justify-content-center gap-2">
+        <li>
+          <a href="#" (click)="goToPage(current_page - 1, $event)"
+             [class.disabled]="current_page === 1"
+             class="blog-page-btn">
+            <i class="bi bi-chevron-left"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" (click)="goToPage(1, $event)"
+             [class.active]="current_page === 1"
+             class="blog-page-btn">1</a>
+        </li>
+        <li *ngIf="current_page > 3"><span class="blog-page-dots">...</span></li>
+        <li *ngFor="let page of getMiddlePages()">
+          <a href="#" (click)="goToPage(page, $event)"
+             [class.active]="current_page === page"
+             class="blog-page-btn">{{ page }}</a>
+        </li>
+        <li *ngIf="current_page < total_paginas - 2"><span class="blog-page-dots">...</span></li>
+        <li *ngIf="total_paginas > 1">
+          <a href="#" (click)="goToPage(total_paginas, $event)"
+             [class.active]="current_page === total_paginas"
+             class="blog-page-btn">{{ total_paginas }}</a>
+        </li>
+        <li>
+          <a href="#" (click)="goToPage(current_page + 1, $event)"
+             [class.disabled]="current_page === total_paginas"
+             class="blog-page-btn">
+            <i class="bi bi-chevron-right"></i>
+          </a>
+        </li>
+      </ul>
     </div>
+
   </div>
 </div>
-<!-- /.blog-section-two -->

@@ -3,6 +3,7 @@ import { DOCUMENT } from '@angular/common';
 import { BlogservicesService } from '../services/blogservices.service';
 import { ActivatedRoute } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-detalle-blog',
@@ -13,6 +14,7 @@ export class DetalleBlogComponent implements OnInit {
 
   identrada: any;
   entrada: any;
+  apiBase = environment.link.replace('/uploads/', '');
 
   constructor(
     private router: ActivatedRoute,
@@ -22,7 +24,7 @@ export class DetalleBlogComponent implements OnInit {
     @Inject(DOCUMENT) private doc: Document
   ) {
     this.router.params.subscribe(params => {
-      this.identrada = params['id'];
+      this.identrada = params['slug'];
     });
   }
 
@@ -40,10 +42,12 @@ export class DetalleBlogComponent implements OnInit {
   }
 
   private setSeoTags(post: any): void {
-    const title = `${post.title} | Arias & Asociados`;
-    const description = post.excerpt || post.body?.replace(/<[^>]+>/g, '').substring(0, 155) || '';
+    const title = `${post.titulo} | Arias & Asociados`;
+    const description = post.excerpt || post.cuerpo?.replace(/<[^>]+>/g, '').substring(0, 155) || '';
     const url = `https://ariasyasociados.co/blog-details/${this.identrada}`;
-    const image = post.image || 'https://ariasyasociados.co/assets/images/logo/logo.png';
+    const image = post.imagen_url
+      ? `https://apicopiloto.koudelagency.cloud${post.imagen_url}`
+      : 'https://ariasyasociados.co/assets/images/logo/logo.png';
 
     this.titleService.setTitle(title);
     this.metaService.updateTag({ name: 'description', content: description });
@@ -75,7 +79,7 @@ export class DetalleBlogComponent implements OnInit {
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
-      'headline': post.title,
+      'headline': post.titulo,
       'description': post.excerpt || '',
       'image': image,
       'datePublished': post.created_at,

@@ -11,11 +11,11 @@ export class BlogservicesService {
   constructor(private http: HttpClient) { }
 
   listEntradas(page: number = 1, perPage: number = 10){
-    return this.http.get(`${this.apiUrl}blog-posts?page=${page}&per_page=${perPage}`);
+    return this.http.get(`${this.apiUrl}blog?page=${page}&per_page=${perPage}`);
   }
 
-  detalleEntrada(id:any){
-    return this.http.get(`${this.apiUrl}blog-posts/${id}`);
+  detalleEntrada(slug: string){
+    return this.http.get(`${this.apiUrl}blog/by-slug/${slug}`);
   }
 
 }

@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-// Blog temporalmente desactivado — pendiente: admin + URLs con slug
-// import { BlogComponent } from './blog/blog.component';
-// import { EntradaComponent } from './entrada/entrada.component';
-// import { DetalleBlogComponent } from './detalle-blog/detalle-blog.component';
+import { BlogComponent } from './blog/blog.component';
+import { DetalleBlogComponent } from './detalle-blog/detalle-blog.component';
 import { PublicarComponent } from './components/publicar/publicar.component';
 
 const routes: Routes = [
@@ -22,9 +20,8 @@ const routes: Routes = [
   {path: 'servicios-tributarios', loadChildren: () => import('./asuto-tributario/asuto-tributario.module').then(m => m.AsutoTributarioModule)},
   {path: 'revisoria-fiscal', loadChildren: () => import('./revisoria-fiscal/revisoria-fiscal.module').then(m => m.RevisoriaFiscalModule)},
   {path: 'politicas-de-privacidad', loadChildren: () => import('./politicas/politicas.module').then(m => m.PoliticasModule)},
-  // {path: 'blog', component: BlogComponent},           // TODO: reactivar con slug
-  // {path: 'entrada', component: EntradaComponent},     // TODO: revisar
-  // {path: 'blog-details/:slug', component: DetalleBlogComponent}, // TODO: cambiar :id → :slug
+  {path: 'blog', component: BlogComponent},
+  {path: 'blog-details/:slug', component: DetalleBlogComponent},
   {path: 'admin/publicar', component: PublicarComponent},
 ];
 

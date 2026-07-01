@@ -4,6 +4,7 @@ import { BlogservicesService } from '../services/blogservices.service';
 import { Router } from '@angular/router';
 import {PaginationInstance} from 'ngx-pagination';
 import { DomSanitizer, SafeHtml, Title, Meta } from '@angular/platform-browser';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-blog',
@@ -12,6 +13,7 @@ import { DomSanitizer, SafeHtml, Title, Meta } from '@angular/platform-browser';
 })
 export class BlogComponent implements OnInit {
 
+  apiBase = environment.link.replace('/uploads/', '');
   posts: any[] = [];
   links: any[] = [];
   current_page: number = 1;
@@ -41,8 +43,8 @@ export class BlogComponent implements OnInit {
     this.BlogSvc.listEntradas(this.current_page).subscribe((response: any) => {
 
       this.posts = response.data.map((post: any) => ({
-        ...post, // Copia todas las propiedades existentes del post
-        body: this.truncateAndSanitizeHtml(post.body, 200) // Solo actualiza 'body'
+        ...post,
+        cuerpo: this.truncateAndSanitizeHtml(post.cuerpo, 200)
       }));
 
 
@@ -110,7 +112,6 @@ export class BlogComponent implements OnInit {
 
 
   irEntrada(identrada: string){
-
     this.route.navigate(['/blog-details/', identrada]);
   }
 

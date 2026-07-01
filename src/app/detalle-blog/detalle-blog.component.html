@@ -1,86 +1,80 @@
-<!--
-		=============================================
-			Inner Banner
-		==============================================
-		-->
+<!-- Banner -->
 <div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative"
   style="background-image: url(assets/images/banners/blog.jpg);">
   <div class="container position-relative">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-
-      </div>
-      <div class="col-xl-4 col-lg-5 ms-auto">
-        <p class="text-white text-lg mb-70 lg-mb-40">Conozca de nuestros expertos a cerca de los temas del mundo financiero</p>
-
-    </div>
+    <div class="col-xl-6 col-lg-7">
+      <p class="text-white text-lg mb-0">Conozca de nuestros expertos sobre los temas del mundo financiero</p>
     </div>
   </div>
 </div>
-<!-- /.inner-banner-one -->
 
-
-
-<!--
-      =====================================================
-        Blog Details
-      =====================================================
-      -->
-<div class="blog-details position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
+<!-- Detalle -->
+<div class="blog-details position-relative mt-80 mb-120" *ngIf="entrada">
   <div class="container">
     <div class="row gx-xl-6">
-      <div class="col-lg-8">
-        <article class="blog-meta-two style-two">
-          <!-- <figure class="post-img position-relative d-flex align-items-end m0">
-            <div class="date">{{ entrada.created_at | date:'dd MMM yyyy' }}</div>
-          </figure> -->
-          <div class="post-data">
-            <!-- <div class="post-info">{{ entrada.user.name }}</div> -->
-            <div class="blog-title">
-              <h4>{{entrada.title}}</h4>
-            </div>
-            <div class="post-details-meta" [innerHTML]="entrada.body">
-            </div>
-            <!-- /.post-details-meta -->
 
+      <!-- Artículo principal -->
+      <div class="col-lg-8">
+        <article>
+
+          <!-- Imagen destacada -->
+          <div class="detalle-img mb-40" *ngIf="entrada.imagen_url">
+            <img [src]="apiBase + entrada.imagen_url" [alt]="entrada.titulo"
+                 class="w-100 rounded-4" />
           </div>
-          <!-- /.post-data -->
+
+          <!-- Meta -->
+          <div class="detalle-meta d-flex align-items-center gap-3 mb-20">
+            <span class="detalle-tag">Arias &amp; Asociados</span>
+            <span class="detalle-fecha">{{ entrada.created_at | date:'dd MMM yyyy' }}</span>
+          </div>
+
+          <!-- Título -->
+          <h1 class="detalle-titulo mb-30">{{ entrada.titulo }}</h1>
+
+          <!-- Excerpt destacado -->
+          <p class="detalle-excerpt mb-40" *ngIf="entrada.excerpt">{{ entrada.excerpt }}</p>
+
+          <!-- Cuerpo -->
+          <div class="detalle-cuerpo" [innerHTML]="entrada.cuerpo"></div>
+
         </article>
 
-        <div class="blog-comment-area grey-bg">
-
-          <div class="comment d-flex">
-            <img src="assets/images/team/a.png" data-src="assets/team/a.png" alt=""
-              class="lazy-img user-avatar rounded-circle">
-            <div class="comment-text">
-              <div class="d-md-flex align-items-center justify-content-between">
-                <div class="name fw-500">{{entrada.user.name}}</div>
-                <div class="date">{{ entrada.created_at | date:'dd MMM yyyy' }}</div>
-              </div>
-
-              <a href="#" style="width: 100px;" class="reply-btn fw-500 tran3s">CEO Arias & Asociados</a>
-            </div> <!-- /.comment-text -->
-          </div> <!-- /.comment -->
+        <!-- Autor -->
+        <div class="detalle-autor d-flex align-items-center gap-3 mt-60 p-4 rounded-4">
+          <img src="assets/images/team/a.png" alt="CEO" class="detalle-autor__avatar rounded-circle" />
+          <div>
+            <div class="fw-700" style="font-size:15px;">CEO Arias &amp; Asociados</div>
+            <div style="font-size:13px; color:#888;">{{ entrada.created_at | date:'dd MMM yyyy' }}</div>
+          </div>
         </div>
-
       </div>
-      <div class="col-lg-4 col-md-8">
-        <div class="blog-sidebar md-mt-80 ps-xxl-4">
 
-          <!-- /.blog-keyword -->
+      <!-- Sidebar -->
+      <div class="col-lg-4 col-md-8 mt-5 mt-lg-0">
+        <div class="blog-sidebar ps-xxl-4">
           <div class="contact-banner text-center mt-40 lg-mt-20">
-            <h3 class="mb-20">Tienes Preguntas?</h3>
-            <a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios." target="_blank" class="tran3s fw-500">Hablemos</a>
+            <h3 class="mb-20">¿Tienes Preguntas?</h3>
+            <a href="https://wa.me/573113094098?text=Hola, estoy interesado conocer sus servicios."
+               target="_blank" class="tran3s fw-500">Hablemos</a>
           </div>
           <br><br>
           <app-indicadores-economicos></app-indicadores-economicos>
-          <!-- /.contact-banner -->
         </div>
-        <!-- /.blog-sidebar -->
       </div>
 
     </div>
   </div>
 </div>
 
-<!-- /.blog-details -->
+<!-- Skeleton mientras carga -->
+<div class="container mt-80 mb-120" *ngIf="!entrada">
+  <div class="col-lg-8">
+    <div class="skeleton-block mb-3" style="height:300px; border-radius:16px;"></div>
+    <div class="skeleton-block mb-2" style="height:20px; width:40%;"></div>
+    <div class="skeleton-block mb-4" style="height:36px; width:80%;"></div>
+    <div class="skeleton-block mb-2" style="height:16px;"></div>
+    <div class="skeleton-block mb-2" style="height:16px; width:90%;"></div>
+    <div class="skeleton-block" style="height:16px; width:70%;"></div>
+  </div>
+</div>
