@@ -63,7 +63,7 @@ export class PublicarComponent implements OnInit {
         next: (res) => {
           this.isLoading = false;
           this.isLoggedIn = true;
-          this.currentUser = res.user.email;
+          this.currentUser = res.usuario.email;
           Swal.fire({
             icon: 'success',
             title: this.translate.instant('ADMIN.LOGIN_BTN'),

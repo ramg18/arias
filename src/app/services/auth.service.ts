@@ -3,12 +3,13 @@ import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { LoginResponse, User } from '../models/auth.model';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'https://blog.ariasyasociados.co/api/login';
+  private apiUrl = environment.url + 'auth/login';
   private readonly TOKEN_KEY = 'arias_auth_token';
   private readonly USER_KEY = 'arias_auth_user';
 
@@ -47,7 +48,7 @@ export class AuthService {
   login(credentials: any): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(this.apiUrl, credentials).pipe(
       tap(response => {
-        if (response && response.token) {
+        if (response && response.access_token) {
           this.saveSession(response);
         }
       })
@@ -55,10 +56,10 @@ export class AuthService {
   }
 
   private saveSession(response: LoginResponse): void {
-    this.storage?.setItem(this.TOKEN_KEY, response.token);
-    this.storage?.setItem(this.USER_KEY, JSON.stringify(response.user));
-    
-    this.currentUserSubject.next(response.user);
+    this.storage?.setItem(this.TOKEN_KEY, response.access_token);
+    this.storage?.setItem(this.USER_KEY, JSON.stringify(response.usuario));
+
+    this.currentUserSubject.next(response.usuario);
     this.isLoggedInSubject.next(true);
   }
 
