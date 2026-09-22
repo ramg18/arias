@@ -43,8 +43,22 @@ a {
     background: #fff;
 }
 
-.color{  
+.color{
     fill: #ffffff;
     transition: fill 0.3s ease;
+}
+
+/* Partner logos: uniform box, scale by height so tall/portrait logos (e.g. Di Maria) don't overflow or crop */
+.partner-logo-one .logo {
+  overflow: hidden;
+}
+
+.partner-logo-one .logo img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 140px;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
