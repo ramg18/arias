@@ -20,6 +20,18 @@ small { font-size: 13px; }
 .dz-icon { font-size: 2rem; color: #999; display: block; margin-bottom: 8px; }
 .dz-preview { max-height: 90px; max-width: 100%; border-radius: 6px; object-fit: contain; }
 .dz-file { position: relative; z-index: 2; }
+.dz-list { max-height: 220px; overflow-y: auto; }
+.dz-item {
+  display: flex; align-items: center; gap: 10px; padding: 6px 10px; margin-bottom: 6px;
+  background: #fff; border: 1px solid #e3e3e3; border-radius: 6px;
+}
+.dz-thumb { width: 36px; height: 36px; object-fit: cover; border-radius: 4px; flex: none; }
+.dz-thumb-icon { font-size: 1.4rem; width: 36px; text-align: center; flex: none; }
+.dz-item-name { flex: 1; font-size: 14px; min-width: 0; }
+.dz-item-size { flex: none; }
+.dz-remove-sm {
+  flex: none; background: none; border: 0; color: #dc3545; font-size: 22px; line-height: 1; cursor: pointer; padding: 0 4px;
+}
 .dz-remove {
   position: relative; z-index: 3; margin-top: 8px; background: none; border: 0;
   color: #dc3545; text-decoration: underline; font-size: 14px; cursor: pointer;

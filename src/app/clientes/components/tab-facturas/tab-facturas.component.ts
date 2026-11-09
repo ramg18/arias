@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import Swal from 'sweetalert2';
 import { ClientesUploadService } from '../../services/clientes-upload.service';
+
+const atLeastOne = (c: AbstractControl): ValidationErrors | null =>
+  Array.isArray(c.value) && c.value.length > 0 ? null : { required: true };
 
 @Component({
   selector: 'app-tab-facturas',
@@ -11,12 +14,15 @@ import { ClientesUploadService } from '../../services/clientes-upload.service';
 })
 export class TabFacturasComponent {
   form: FormGroup = this.fb.group({
-    xml: [null as File | null, Validators.required],
-    imagen: [null as File | null] // opcional
+    xml: [[] as File[], atLeastOne],
+    imagen: [[] as File[]] // opcional
   });
   loading = false;
   readonly xmlPattern = /xml/i;
   readonly imgPattern = /^image\//;
+  /** Máximo de archivos por campo y peso total por envío (el servidor corta en 60 MB). */
+  readonly maxFiles = 10;
+  readonly maxTotalMB = 50;
 
   constructor(
     private fb: FormBuilder,
@@ -24,25 +30,31 @@ export class TabFacturasComponent {
     private translate: TranslateService
   ) {}
 
-  setFile(control: 'xml' | 'imagen', file: File | null): void {
-    this.form.get(control)!.setValue(file);
+  get totalTooBig(): boolean {
+    const all: File[] = [...(this.form.value.xml ?? []), ...(this.form.value.imagen ?? [])];
+    return all.reduce((s, f) => s + f.size, 0) > this.maxTotalMB * 1024 * 1024;
+  }
+
+  setFiles(control: 'xml' | 'imagen', files: File[]): void {
+    this.form.get(control)!.setValue([...files]);
     this.form.get(control)!.markAsTouched();
   }
 
   submit(): void {
-    if (this.form.invalid || this.loading) {
+    if (this.form.invalid || this.loading || this.totalTooBig) {
       this.form.markAllAsTouched();
       return;
     }
     this.loading = true;
-    const { xml, imagen } = this.form.value;
-    // El comprobante de pago es opcional: solo se envía si el cliente lo adjuntó.
-    const campos: Record<string, File> = { xml };
-    if (imagen) campos['imagen'] = imagen;
+    const { xml, imagen } = this.form.value as { xml: File[]; imagen: File[] };
+    // Los comprobantes de pago son opcionales: solo se envían los que el cliente adjuntó.
+    // Cada campo se repite una vez por archivo (xml, xml, … / imagen, imagen, …).
+    const campos: Record<string, File[]> = { xml };
+    if (imagen.length) campos['imagen'] = imagen;
     this.upload.enviar('factura', campos).subscribe({
       next: () => {
         this.loading = false;
-        this.form.reset();
+        this.form.reset({ xml: [], imagen: [] });
         Swal.fire({ icon: 'success', title: this.translate.instant('CLIENTES.OK'), confirmButtonText: 'Ok' });
       },
       error: () => {

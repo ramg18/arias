@@ -19,7 +19,7 @@ export class ClientesUploadService {
    * Envía multipart/form-data a /api/clientes/upload (proxy propio → webhook de n8n)
    * con `tipo`, `usuario` y los campos dados. Autentica con el accessToken del CRM.
    */
-  enviar(tipo: TipoCarga, campos: Record<string, string | File>): Observable<unknown> {
+  enviar(tipo: TipoCarga, campos: Record<string, string | File | File[]>): Observable<unknown> {
     const token = this.auth.getToken();
     if (!token) {
       this.auth.logout();
@@ -29,7 +29,8 @@ export class ClientesUploadService {
     const body = new FormData();
     body.append('tipo', tipo);
     body.append('usuario', this.auth.getUsuario());
-    Object.entries(campos).forEach(([k, v]) => body.append(k, v));
+    // Una lista de archivos repite el mismo nombre de campo una vez por archivo.
+    Object.entries(campos).forEach(([k, v]) => (Array.isArray(v) ? v.forEach(f => body.append(k, f)) : body.append(k, v)));
 
     return this.http
       .post(environment.clientes.uploadUrl, body, {

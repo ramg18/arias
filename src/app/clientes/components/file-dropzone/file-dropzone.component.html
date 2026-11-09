@@ -1,25 +1,51 @@
 <div class="dz-wrapper">
   <label class="dz-label">{{ label | translate }}<span *ngIf="label && required">*</span><small *ngIf="label && !required" class="text-muted fw-normal ms-1">({{ 'CLIENTES.OPTIONAL' | translate }})</small></label>
-  <div class="drop-zone" [class.dragover]="dragging" [class.has-file]="file" [class.is-invalid]="invalid || error"
+  <div class="drop-zone" [class.dragover]="dragging" [class.has-file]="hasFiles" [class.is-invalid]="invalid || error"
+       [class.dz-multi]="multiple"
        (dragover)="onDragOver($event)" (dragleave)="dragging = false" (drop)="onDrop($event)">
-    <input type="file" class="file-input-overlay" [accept]="accept" (change)="onInput($event)"
+    <input type="file" class="file-input-overlay" [accept]="accept" [multiple]="multiple" (change)="onInput($event)"
            [attr.aria-label]="label | translate">
 
-    <div *ngIf="!file" class="text-center">
-      <i class="fa-solid {{ icon }} dz-icon"></i>
-      <p class="m-0">{{ 'CLIENTES.DROP' | translate }}</p>
-      <small class="text-muted" *ngIf="hint">{{ hint | translate }}</small>
-    </div>
-
-    <div *ngIf="file" class="text-center dz-file">
-      <img *ngIf="previewUrl" [src]="previewUrl" alt="" class="dz-preview">
-      <i *ngIf="!previewUrl" class="fa-solid fa-circle-check text-success dz-icon"></i>
-      <p class="fw-bold mt-2 mb-0 text-break">{{ file.name }}</p>
-      <small class="text-muted">{{ (file.size / 1024 / 1024).toFixed(2) }} MB</small>
-      <div>
-        <button type="button" class="dz-remove" (click)="clear($event)">{{ 'CLIENTES.REMOVE' | translate }}</button>
+    <!-- Un solo archivo -->
+    <ng-container *ngIf="!multiple">
+      <div *ngIf="!file" class="text-center">
+        <i class="fa-solid {{ icon }} dz-icon"></i>
+        <p class="m-0">{{ 'CLIENTES.DROP' | translate }}</p>
+        <small class="text-muted" *ngIf="hint">{{ hint | translate }}</small>
       </div>
-    </div>
+
+      <div *ngIf="file" class="text-center dz-file">
+        <img *ngIf="previewUrl" [src]="previewUrl" alt="" class="dz-preview">
+        <i *ngIf="!previewUrl" class="fa-solid fa-circle-check text-success dz-icon"></i>
+        <p class="fw-bold mt-2 mb-0 text-break">{{ file.name }}</p>
+        <small class="text-muted">{{ (file.size / 1024 / 1024).toFixed(2) }} MB</small>
+        <div>
+          <button type="button" class="dz-remove" (click)="clear($event)">{{ 'CLIENTES.REMOVE' | translate }}</button>
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- Varios archivos: la zona sigue aceptando más; cada uno se quita por separado -->
+    <ng-container *ngIf="multiple">
+      <div class="text-center dz-add">
+        <i class="fa-solid {{ icon }} dz-icon"></i>
+        <p class="m-0">{{ 'CLIENTES.DROP_MULTI' | translate }}</p>
+        <small class="text-muted" *ngIf="hint">{{ hint | translate }}</small>
+      </div>
+    </ng-container>
   </div>
-  <small class="text-danger d-block mt-1" *ngIf="error">{{ error | translate: { max: maxMB } }}</small>
+
+  <ul *ngIf="multiple && items.length" class="dz-list list-unstyled mt-2 mb-0">
+    <li *ngFor="let it of items; let i = index" class="dz-item">
+      <img *ngIf="it.preview" [src]="it.preview" alt="" class="dz-thumb">
+      <i *ngIf="!it.preview" class="fa-solid fa-circle-check text-success dz-thumb-icon"></i>
+      <span class="dz-item-name text-break">{{ it.file.name }}</span>
+      <small class="text-muted dz-item-size">{{ (it.file.size / 1024 / 1024).toFixed(2) }} MB</small>
+      <button type="button" class="dz-remove-sm" (click)="removeAt(i, $event)"
+              [attr.aria-label]="'CLIENTES.REMOVE' | translate">&times;</button>
+    </li>
+  </ul>
+  <small *ngIf="multiple && items.length" class="text-muted d-block mt-1">{{ 'CLIENTES.COUNT_SELECTED' | translate: { n: items.length } }}</small>
+
+  <small class="text-danger d-block mt-1" *ngIf="error">{{ error | translate: errorParams }}</small>
 </div>

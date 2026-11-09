@@ -22,7 +22,7 @@ import { request as httpsRequest } from 'node:https';
  *   N8N_API_KEY      valor del header x-api-key del webhook
  */
 
-const MAX_BYTES = 25 * 1024 * 1024; // 25 MB por petición (xml + imagen)
+const MAX_BYTES = 60 * 1024 * 1024; // 60 MB por petición (varios xml + varias imágenes; la UI limita a 50 MB)
 const WINDOW_MS = 60_000;
 const MAX_PER_WINDOW = 30;
 const CHECK_TIMEOUT_MS = 10_000;
