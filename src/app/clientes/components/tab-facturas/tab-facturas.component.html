@@ -1,0 +1,22 @@
+<form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+  <p class="text-muted mb-4">{{ 'CLIENTES.FACTURAS_DESC' | translate }}</p>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <app-file-dropzone label="CLIENTES.XML" hint="CLIENTES.XML_HINT" accept=".xml,text/xml,application/xml"
+        icon="fa-file-code" [typePattern]="xmlPattern" [maxMB]="5" [file]="form.value.xml"
+        [invalid]="!!(form.get('xml')?.touched && form.get('xml')?.invalid)"
+        (fileChange)="setFile('xml', $event)"></app-file-dropzone>
+    </div>
+    <div class="col-md-6 mb-4">
+      <app-file-dropzone label="CLIENTES.IMAGEN" hint="CLIENTES.IMG_HINT" accept="image/*"
+        icon="fa-image" [typePattern]="imgPattern" [maxMB]="8" [file]="form.value.imagen" [required]="false"
+        (fileChange)="setFile('imagen', $event)"></app-file-dropzone>
+    </div>
+  </div>
+  <div class="d-flex justify-content-end">
+    <button type="submit" class="btn-four tran3s cl-submit" [disabled]="form.invalid || loading">
+    <span *ngIf="!loading">{{ 'CLIENTES.SEND' | translate }}</span>
+    <span *ngIf="loading"><i class="spinner-border spinner-border-sm me-2"></i>{{ 'CLIENTES.SENDING' | translate }}</span>
+  </button>
+  </div>
+</form>

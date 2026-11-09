@@ -20,6 +20,7 @@ const routes: Routes = [
   {path: 'servicios-tributarios', loadChildren: () => import('./asuto-tributario/asuto-tributario.module').then(m => m.AsutoTributarioModule)},
   {path: 'revisoria-fiscal', loadChildren: () => import('./revisoria-fiscal/revisoria-fiscal.module').then(m => m.RevisoriaFiscalModule)},
   {path: 'politicas-de-privacidad', loadChildren: () => import('./politicas/politicas.module').then(m => m.PoliticasModule)},
+  {path: 'clientes', loadChildren: () => import('./clientes/clientes.module').then(m => m.ClientesModule)},
   {path: 'blog', component: BlogComponent},
   {path: 'blog-details/:slug', component: DetalleBlogComponent},
   {path: 'admin/publicar', component: PublicarComponent},

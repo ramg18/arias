@@ -46,3 +46,8 @@ Thumbs.db
 src/assets/*.zip
 src/assets/*.pdf
 src/assets/memorias*/
+
+# Secretos locales (llave del CRM)
+.env
+.env.*
+!.env.example

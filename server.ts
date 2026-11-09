@@ -6,6 +6,8 @@ import * as express from 'express';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { AppServerModule } from './src/main.server';
+import { clientesRouter } from './server/clientes-proxy';
+import { clientesUploadRouter } from './server/clientes-upload-proxy';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
@@ -21,8 +23,12 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', distFolder);
 
-  // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
+  // Detrás del proxy/reverse proxy del hosting, req.ip debe ser la IP real del cliente.
+  server.set('trust proxy', 1);
+
+  // Proxy al CRM para el portal de clientes (la API key no sale al navegador).
+  server.use('/api/clientes', clientesRouter());
+  server.use('/api/clientes', clientesUploadRouter());
   // Serve static files from /browser
   server.get('*.*', express.static(distFolder, {
     maxAge: '1y'

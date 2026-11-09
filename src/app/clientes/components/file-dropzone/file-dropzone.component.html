@@ -1,0 +1,25 @@
+<div class="dz-wrapper">
+  <label class="dz-label">{{ label | translate }}<span *ngIf="label && required">*</span><small *ngIf="label && !required" class="text-muted fw-normal ms-1">({{ 'CLIENTES.OPTIONAL' | translate }})</small></label>
+  <div class="drop-zone" [class.dragover]="dragging" [class.has-file]="file" [class.is-invalid]="invalid || error"
+       (dragover)="onDragOver($event)" (dragleave)="dragging = false" (drop)="onDrop($event)">
+    <input type="file" class="file-input-overlay" [accept]="accept" (change)="onInput($event)"
+           [attr.aria-label]="label | translate">
+
+    <div *ngIf="!file" class="text-center">
+      <i class="fa-solid {{ icon }} dz-icon"></i>
+      <p class="m-0">{{ 'CLIENTES.DROP' | translate }}</p>
+      <small class="text-muted" *ngIf="hint">{{ hint | translate }}</small>
+    </div>
+
+    <div *ngIf="file" class="text-center dz-file">
+      <img *ngIf="previewUrl" [src]="previewUrl" alt="" class="dz-preview">
+      <i *ngIf="!previewUrl" class="fa-solid fa-circle-check text-success dz-icon"></i>
+      <p class="fw-bold mt-2 mb-0 text-break">{{ file.name }}</p>
+      <small class="text-muted">{{ (file.size / 1024 / 1024).toFixed(2) }} MB</small>
+      <div>
+        <button type="button" class="dz-remove" (click)="clear($event)">{{ 'CLIENTES.REMOVE' | translate }}</button>
+      </div>
+    </div>
+  </div>
+  <small class="text-danger d-block mt-1" *ngIf="error">{{ error | translate: { max: maxMB } }}</small>
+</div>

@@ -1,0 +1,25 @@
+<form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+  <p class="text-muted mb-4">{{ 'CLIENTES.COMPROBANTE_DESC' | translate }}</p>
+  <div class="row">
+    <div class="col-lg-4 mb-4">
+      <div class="input-group-meta form-group">
+        <label for="numero_factura">{{ 'CLIENTES.NUM_FACTURA' | translate }}*</label>
+        <input id="numero_factura" type="text" formControlName="numero_factura" class="form-control"
+          autocomplete="off" [placeholder]="'CLIENTES.NUM_FACTURA_PH' | translate"
+          [class.is-invalid]="form.get('numero_factura')?.invalid && form.get('numero_factura')?.touched">
+      </div>
+    </div>
+    <div class="col-lg-8 mb-4">
+      <app-file-dropzone label="CLIENTES.COMPROBANTE_IMG" hint="CLIENTES.IMG_HINT" accept="image/*"
+        icon="fa-receipt" [typePattern]="imgPattern" [maxMB]="8" [file]="form.value.imagen"
+        [invalid]="!!(form.get('imagen')?.touched && form.get('imagen')?.invalid)"
+        (fileChange)="setFile($event)"></app-file-dropzone>
+    </div>
+  </div>
+  <div class="d-flex justify-content-end">
+    <button type="submit" class="btn-four tran3s cl-submit" [disabled]="form.invalid || loading">
+    <span *ngIf="!loading">{{ 'CLIENTES.SEND' | translate }}</span>
+    <span *ngIf="loading"><i class="spinner-border spinner-border-sm me-2"></i>{{ 'CLIENTES.SENDING' | translate }}</span>
+  </button>
+  </div>
+</form>

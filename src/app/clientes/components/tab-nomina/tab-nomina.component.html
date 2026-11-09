@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+  <p class="text-muted mb-4">{{ 'CLIENTES.NOMINA_DESC' | translate }}</p>
+  <div class="mb-4">
+    <app-file-dropzone label="CLIENTES.NOMINA_IMG" hint="CLIENTES.IMG_HINT" accept="image/*"
+      icon="fa-money-bill-wave" [typePattern]="imgPattern" [maxMB]="8" [file]="form.value.imagen"
+      [invalid]="!!(form.get('imagen')?.touched && form.get('imagen')?.invalid)"
+      (fileChange)="setFile($event)"></app-file-dropzone>
+  </div>
+  <div class="d-flex justify-content-end">
+    <button type="submit" class="btn-four tran3s cl-submit" [disabled]="form.invalid || loading">
+    <span *ngIf="!loading">{{ 'CLIENTES.SEND' | translate }}</span>
+    <span *ngIf="loading"><i class="spinner-border spinner-border-sm me-2"></i>{{ 'CLIENTES.SENDING' | translate }}</span>
+  </button>
+  </div>
+</form>

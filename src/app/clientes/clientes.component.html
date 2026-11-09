@@ -1,0 +1,59 @@
+<div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative"
+  style="background-image: url(assets/images/media/img_02.jpg)">
+  <div class="container position-relative">
+    <div class="row align-items-center">
+      <div class="col-lg-9">
+        <h1 class="hero-heading text-white d-inline-block position-relative">
+          {{ 'CLIENTES.TITLE' | translate }}
+          <img src="assets/images/shape/shape_10.svg" alt="" />
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contact-us-section pt-150 lg-pt-80 pb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-xl-11 m-auto">
+        <div class="bg-wrapper p-3 p-md-4 p-xl-5 rounded shadow-sm">
+
+          <!-- LOGIN -->
+          <app-login-clientes *ngIf="!(auth.currentUser$ | async)"></app-login-clientes>
+
+          <!-- PORTAL -->
+          <ng-container *ngIf="auth.currentUser$ | async as user">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
+              <div>
+                <small class="text-muted d-block">{{ 'CLIENTES.SESSION_AS' | translate }}</small>
+                <strong class="text-break">{{ user.nombre || user.usuario }}</strong>
+                <small class="text-muted d-block text-break" *ngIf="user.empresa">{{ user.empresa }}</small>
+              </div>
+              <button type="button" class="btn-three btn-sm tran3s" (click)="logout()">
+                {{ 'ADMIN.LOGOUT_BTN' | translate }}
+              </button>
+            </div>
+
+            <div class="cl-tabs" role="tablist" [attr.aria-label]="'CLIENTES.TITLE' | translate">
+              <button *ngFor="let t of tabs; let i = index" type="button" role="tab"
+                class="cl-tab" [class.active]="activeTab === t.id"
+                [id]="'tab-' + t.id" [attr.aria-selected]="activeTab === t.id"
+                [attr.aria-controls]="'panel-' + t.id" [attr.tabindex]="activeTab === t.id ? 0 : -1"
+                (click)="activeTab = t.id" (keydown)="onKeydown($event, i)">
+                <i class="fa-solid {{ t.icon }}"></i>
+                <span>{{ t.label | translate }}</span>
+              </button>
+            </div>
+
+            <div class="cl-panel" role="tabpanel" [id]="'panel-' + activeTab" [attr.aria-labelledby]="'tab-' + activeTab">
+              <app-tab-facturas *ngIf="activeTab === 'facturas'"></app-tab-facturas>
+              <app-tab-comprobante *ngIf="activeTab === 'comprobante'"></app-tab-comprobante>
+              <app-tab-nomina *ngIf="activeTab === 'nomina'"></app-tab-nomina>
+            </div>
+          </ng-container>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

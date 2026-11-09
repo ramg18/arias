@@ -9,6 +9,11 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=4000
+      # Portal de clientes: proxy al CRM (definir en .env junto al compose, nunca en el repo)
+      - CRM_BASE_URL=${CRM_BASE_URL}
+      - CRM_API_KEY=${CRM_API_KEY}
+      - N8N_WEBHOOK_URL=${N8N_WEBHOOK_URL}
+      - N8N_API_KEY=${N8N_API_KEY}
     volumes:
       # Archivos grandes (memorias, PDFs) — copiar al servidor con:
       # scp -r ./src/assets/memorias* user@servidor:/opt/arias/assets/
