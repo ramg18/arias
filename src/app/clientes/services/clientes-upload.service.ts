@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpBackend, HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, catchError, throwError } from 'rxjs';
+import { Observable, catchError, map, throwError } from 'rxjs';
+import { EnvioRespuesta, normalizar } from '../models/envio-respuesta';
 import { environment } from '../../../environments/environment';
 import { ClientesAuthService } from './clientes-auth.service';
 
@@ -19,7 +20,7 @@ export class ClientesUploadService {
    * Envía multipart/form-data a /api/clientes/upload (proxy propio → webhook de n8n)
    * con `tipo`, `usuario` y los campos dados. Autentica con el accessToken del CRM.
    */
-  enviar(tipo: TipoCarga, campos: Record<string, string | File | File[]>): Observable<unknown> {
+  enviar(tipo: TipoCarga, campos: Record<string, string | File | File[]>): Observable<EnvioRespuesta | null> {
     const token = this.auth.getToken();
     if (!token) {
       this.auth.logout();
@@ -37,6 +38,8 @@ export class ClientesUploadService {
         headers: new HttpHeaders({ Authorization: `Bearer ${token}` })
       })
       .pipe(
+        // El proxy devuelve {ok, data}; `data` es lo que respondió n8n (null si no tiene la forma esperada).
+        map(res => normalizar((res as { data?: unknown } | null)?.data)),
         catchError(err => {
           // Token vencido o inválido: volver al login.
           if (err?.status === 401) this.auth.logout();

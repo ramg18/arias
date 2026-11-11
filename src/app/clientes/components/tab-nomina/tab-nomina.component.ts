@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import Swal from 'sweetalert2';
+import { EnvioRespuesta, nivelGeneral } from '../../models/envio-respuesta';
 import { ClientesUploadService } from '../../services/clientes-upload.service';
 
 @Component({
@@ -14,6 +15,7 @@ export class TabNominaComponent {
     imagen: [null as File | null, Validators.required]
   });
   loading = false;
+  resultado: EnvioRespuesta | null = null;
   readonly imgPattern = /^image\//;
 
   constructor(
@@ -34,10 +36,17 @@ export class TabNominaComponent {
     }
     this.loading = true;
     this.upload.enviar('nomina', { imagen: this.form.value.imagen }).subscribe({
-      next: () => {
+      next: res => {
         this.loading = false;
-        this.form.reset();
-        Swal.fire({ icon: 'success', title: this.translate.instant('CLIENTES.OK'), confirmButtonText: 'Ok' });
+        if (!res) {
+          // Respuesta sin el formato esperado: mensaje genérico.
+          this.form.reset();
+          Swal.fire({ icon: 'success', title: this.translate.instant('CLIENTES.OK'), confirmButtonText: 'Ok' });
+          return;
+        }
+        this.resultado = res;
+        // Si todo falló se conserva lo cargado para que pueda reintentar.
+        if (nivelGeneral(res) !== 'error') this.form.reset();
       },
       error: () => {
         this.loading = false;

@@ -9,6 +9,7 @@ import { LoginClientesComponent } from './components/login-clientes/login-client
 import { FileDropzoneComponent } from './components/file-dropzone/file-dropzone.component';
 import { TabFacturasComponent } from './components/tab-facturas/tab-facturas.component';
 import { TabComprobanteComponent } from './components/tab-comprobante/tab-comprobante.component';
+import { ResultadoEnvioComponent } from './components/resultado-envio/resultado-envio.component';
 import { TabNominaComponent } from './components/tab-nomina/tab-nomina.component';
 
 @NgModule({
@@ -18,7 +19,8 @@ import { TabNominaComponent } from './components/tab-nomina/tab-nomina.component
     FileDropzoneComponent,
     TabFacturasComponent,
     TabComprobanteComponent,
-    TabNominaComponent
+    TabNominaComponent,
+    ResultadoEnvioComponent
   ],
   imports: [
     CommonModule,

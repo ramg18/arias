@@ -9,7 +9,7 @@ import { request as httpsRequest } from 'node:https';
  *
  * - Antes de reenviar nada, pregunta al CRM (POST /check) si el accessToken es válido y la persona sigue
  *   habilitada. No hay secretos que compartir con el CRM: se usa la misma CRM_API_KEY del login.
- * - La x-api-key de n8n vive solo aquí.
+ * - La x-api-key de n8n vive solo aquí. La respuesta JSON de n8n se devuelve al navegador como `data` (máx. 1 MB).
  * - El cuerpo multipart (tipo, usuario, archivos) se reenvía en streaming, sin tocarlo.
  * - Añade X-User-Id y X-Client-Id tomados de la respuesta del CRM: esos dos sí son confiables
  *   en n8n; los campos del formulario (incl. `usuario`) los envía el navegador.
@@ -23,6 +23,7 @@ import { request as httpsRequest } from 'node:https';
  */
 
 const MAX_BYTES = 60 * 1024 * 1024; // 60 MB por petición (varios xml + varias imágenes; la UI limita a 50 MB)
+const MAX_RESPONSE_BYTES = 1024 * 1024; // respuesta de n8n que se reenvía al navegador
 const WINDOW_MS = 60_000;
 const MAX_PER_WINDOW = 30;
 const CHECK_TIMEOUT_MS = 10_000;
@@ -175,11 +176,31 @@ export function clientesUploadRouter(): express.Router {
         }
       },
       upstreamRes => {
-        upstreamRes.resume(); // la respuesta de n8n no se reenvía al navegador
+        // Se lee la respuesta de n8n (con tope) para devolverla como `data`: la pantalla muestra el resultado del registro.
+        const chunks: Buffer[] = [];
+        let size = 0;
+        let tooBig = false;
+        upstreamRes.on('data', (c: Buffer) => {
+          size += c.length;
+          if (size > MAX_RESPONSE_BYTES) tooBig = true;
+          else chunks.push(c);
+        });
         upstreamRes.on('end', () => {
           const ok = (upstreamRes.statusCode ?? 500) < 300;
-          if (!ok) console.error('[clientes/upload] n8n respondió', upstreamRes.statusCode);
-          finish(ok ? 200 : 502, ok ? { ok: true } : { ok: false, reason: 'upstream_error' });
+          if (!ok) {
+            console.error('[clientes/upload] n8n respondió', upstreamRes.statusCode);
+            finish(502, { ok: false, reason: 'upstream_error' });
+            return;
+          }
+          let data: unknown = null;
+          if (!tooBig) {
+            try {
+              data = JSON.parse(Buffer.concat(chunks).toString('utf8'));
+            } catch {
+              data = null; // n8n respondió algo que no es JSON: el navegador mostrará el mensaje genérico
+            }
+          }
+          finish(200, { ok: true, data });
         });
       }
     );

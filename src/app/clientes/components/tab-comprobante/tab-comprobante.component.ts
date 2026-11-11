@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import Swal from 'sweetalert2';
+import { EnvioRespuesta, nivelGeneral } from '../../models/envio-respuesta';
 import { ClientesUploadService } from '../../services/clientes-upload.service';
 
 @Component({
@@ -15,6 +16,7 @@ export class TabComprobanteComponent {
     imagen: [null as File | null, Validators.required]
   });
   loading = false;
+  resultado: EnvioRespuesta | null = null;
   readonly imgPattern = /^image\//;
 
   constructor(
@@ -36,10 +38,17 @@ export class TabComprobanteComponent {
     this.loading = true;
     const { numero_factura, imagen } = this.form.value;
     this.upload.enviar('comprobante', { numero_factura, imagen }).subscribe({
-      next: () => {
+      next: res => {
         this.loading = false;
-        this.form.reset({ numero_factura: '', imagen: null });
-        Swal.fire({ icon: 'success', title: this.translate.instant('CLIENTES.OK'), confirmButtonText: 'Ok' });
+        if (!res) {
+          // Respuesta sin el formato esperado: mensaje genérico.
+          this.form.reset({ numero_factura: '', imagen: null });
+          Swal.fire({ icon: 'success', title: this.translate.instant('CLIENTES.OK'), confirmButtonText: 'Ok' });
+          return;
+        }
+        this.resultado = res;
+        // Si todo falló se conserva lo cargado para que pueda reintentar.
+        if (nivelGeneral(res) !== 'error') this.form.reset({ numero_factura: '', imagen: null });
       },
       error: () => {
         this.loading = false;

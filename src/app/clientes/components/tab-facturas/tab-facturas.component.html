@@ -23,3 +23,5 @@
   </button>
   </div>
 </form>
+
+<app-resultado-envio *ngIf="resultado" [data]="resultado" (closed)="resultado = null"></app-resultado-envio>

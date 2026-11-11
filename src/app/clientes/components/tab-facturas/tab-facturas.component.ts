@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import Swal from 'sweetalert2';
+import { EnvioRespuesta, nivelGeneral } from '../../models/envio-respuesta';
 import { ClientesUploadService } from '../../services/clientes-upload.service';
 
 const atLeastOne = (c: AbstractControl): ValidationErrors | null =>
@@ -18,6 +19,7 @@ export class TabFacturasComponent {
     imagen: [[] as File[]] // opcional
   });
   loading = false;
+  resultado: EnvioRespuesta | null = null;
   readonly xmlPattern = /xml/i;
   readonly imgPattern = /^image\//;
   /** Máximo de archivos por campo y peso total por envío (el servidor corta en 60 MB). */
@@ -52,10 +54,17 @@ export class TabFacturasComponent {
     const campos: Record<string, File[]> = { xml };
     if (imagen.length) campos['imagen'] = imagen;
     this.upload.enviar('factura', campos).subscribe({
-      next: () => {
+      next: res => {
         this.loading = false;
-        this.form.reset({ xml: [], imagen: [] });
-        Swal.fire({ icon: 'success', title: this.translate.instant('CLIENTES.OK'), confirmButtonText: 'Ok' });
+        if (!res) {
+          // Respuesta sin el formato esperado: mensaje genérico.
+          this.form.reset({ xml: [], imagen: [] });
+          Swal.fire({ icon: 'success', title: this.translate.instant('CLIENTES.OK'), confirmButtonText: 'Ok' });
+          return;
+        }
+        this.resultado = res;
+        // Si todo falló se conserva lo cargado para que pueda reintentar.
+        if (nivelGeneral(res) !== 'error') this.form.reset({ xml: [], imagen: [] });
       },
       error: () => {
         this.loading = false;

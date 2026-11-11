@@ -1,0 +1,82 @@
+<div class="re-backdrop" (click)="closed.emit()">
+  <div class="re-dialog" role="dialog" aria-modal="true" aria-labelledby="re-title" (click)="$event.stopPropagation()">
+
+    <header class="re-head" [ngClass]="nivel">
+      <i class="fa-solid re-icon"
+         [ngClass]="nivel === 'success' ? 'fa-circle-check' : nivel === 'warning' ? 'fa-triangle-exclamation' : 'fa-circle-xmark'"></i>
+      <div>
+        <h3 id="re-title">{{ titleKey | translate }}</h3>
+        <div class="re-chips">
+          <span class="re-chip neutral">{{ 'CLIENTES_RES.RECEIVED' | translate: { n: data.resumen.recibidas } }}</span>
+          <span *ngFor="let c of chips" class="re-chip" [ngClass]="c.cls">{{ c.n }} {{ c.key | translate }}</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="re-body">
+      <article *ngFor="let r of ordenados; trackBy: trackByIndex" class="re-card" [ngClass]="r.estado">
+        <div class="re-card-top">
+          <span class="re-file text-break">{{ r.archivo }}</span>
+          <span class="re-badge" [ngClass]="r.estado">{{ 'CLIENTES_RES.BADGE_' + r.estado | translate }}</span>
+        </div>
+
+        <p class="re-detail" *ngIf="r.detalle">{{ r.detalle }}</p>
+        <p class="re-note" *ngIf="r.estado !== 'ok'">{{ 'CLIENTES_RES.NOTE_' + r.estado | translate }}</p>
+
+        <!-- Nómina -->
+        <dl class="re-grid" *ngIf="esNomina(r) && r.estado !== 'error'">
+          <div *ngIf="r.empleado"><dt>{{ 'CLIENTES_RES.EMPLEADO' | translate }}</dt><dd>{{ r.empleado }}</dd></div>
+          <div *ngIf="r.cedula"><dt>{{ 'CLIENTES_RES.CEDULA' | translate }}</dt><dd>{{ cedula(r.cedula) }}</dd></div>
+          <div *ngIf="r.valor !== null"><dt>{{ 'CLIENTES_RES.VALOR' | translate }}</dt><dd class="re-money">{{ pesos(r.valor) }}</dd></div>
+          <div *ngIf="r.periodo"><dt>{{ 'CLIENTES_RES.PERIODO' | translate }}</dt><dd>{{ periodo(r.periodo) }}</dd></div>
+        </dl>
+        <a *ngIf="r.driveUrl" class="re-link" [href]="r.driveUrl" target="_blank" rel="noopener noreferrer">
+          {{ 'CLIENTES_RES.DRIVE' | translate }} <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+
+        <!-- Factura -->
+        <section class="re-block" *ngIf="r.factura">
+          <h4>{{ 'CLIENTES_RES.FACTURA' | translate }}</h4>
+          <dl class="re-grid">
+            <div *ngIf="r.factura.numero"><dt>{{ 'CLIENTES_RES.NUMERO' | translate }}</dt><dd>{{ r.factura.numero }}</dd></div>
+            <div *ngIf="r.factura.proveedor"><dt>{{ 'CLIENTES_RES.PROVEEDOR' | translate }}</dt><dd>{{ r.factura.proveedor }}</dd></div>
+            <div *ngIf="r.factura.nit"><dt>NIT</dt><dd>{{ nit(r.factura.nit) }}</dd></div>
+            <div *ngIf="r.factura.fecha"><dt>{{ 'CLIENTES_RES.FECHA' | translate }}</dt><dd>{{ fecha(r.factura.fecha) }}</dd></div>
+            <div><dt>{{ 'CLIENTES_RES.TOTAL' | translate }}</dt><dd class="re-money">{{ pesos(r.factura.total) }}</dd></div>
+          </dl>
+        </section>
+
+        <!-- Comprobante de pago -->
+        <section class="re-block" *ngIf="r.comprobante">
+          <h4>
+            {{ (esContado(r.comprobante.banco) ? 'CLIENTES_RES.CONTADO' : 'CLIENTES_RES.COMPROBANTE') | translate }}
+          </h4>
+          <dl class="re-grid">
+            <div *ngIf="r.comprobante.fecha"><dt>{{ 'CLIENTES_RES.FECHA' | translate }}</dt><dd>{{ fecha(r.comprobante.fecha) }}</dd></div>
+            <div *ngIf="!esContado(r.comprobante.banco) && r.comprobante.banco"><dt>{{ 'CLIENTES_RES.BANCO' | translate }}</dt><dd>{{ r.comprobante.banco }}</dd></div>
+            <div *ngIf="!esContado(r.comprobante.banco) && r.comprobante.cuentaOrigen"><dt>{{ 'CLIENTES_RES.ORIGEN' | translate }}</dt><dd>{{ r.comprobante.cuentaOrigen }}</dd></div>
+            <div *ngIf="!esContado(r.comprobante.banco) && r.comprobante.cuentaDestino"><dt>{{ 'CLIENTES_RES.DESTINO' | translate }}</dt><dd>{{ r.comprobante.cuentaDestino }}</dd></div>
+            <div><dt>{{ 'CLIENTES_RES.VALOR' | translate }}</dt><dd class="re-money">{{ pesos(r.comprobante.valor) }}</dd></div>
+          </dl>
+          <ng-container *ngIf="diferencia(r) as d; else sinDif">
+            <p class="re-match warn"><i class="fa-solid fa-triangle-exclamation"></i>
+              {{ 'CLIENTES_RES.DIFF' | translate: { d: difTexto(d) } }}</p>
+          </ng-container>
+          <ng-template #sinDif>
+            <p class="re-match ok" *ngIf="diferencia(r) === 0"><i class="fa-solid fa-check"></i>
+              {{ 'CLIENTES_RES.MATCH' | translate }}</p>
+          </ng-template>
+        </section>
+
+        <p class="re-compras" *ngIf="r.registroCompras.length">
+          <i class="fa-solid fa-book"></i> {{ 'CLIENTES_RES.COMPRAS' | translate }}:
+          <span *ngFor="let c of r.registroCompras; let last = last">{{ c }}<span *ngIf="!last">; </span></span>
+        </p>
+      </article>
+    </div>
+
+    <footer class="re-foot">
+      <button #closeBtn type="button" class="btn-four tran3s cl-submit" (click)="closed.emit()">{{ 'CLIENTES_RES.CLOSE' | translate }}</button>
+    </footer>
+  </div>
+</div>
